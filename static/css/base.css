@@ -1,8 +1,8 @@
 html {
-    font-size: 62.5%;
+    font-size: 62.5% !important;
     height: 100%;
 }
 
 body {
-    font-family: 'Lato';
+    font-family: 'Lato' !important;
 }
