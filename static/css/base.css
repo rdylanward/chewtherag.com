@@ -4,11 +4,23 @@ html {
 }
 
 body {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
 }
 
 .navbar {
     height: 10vh;
+}
+
+.navbar-brand-logo {
+    height: 10rem;
+    width: 10rem;
+}
+
+.navbar-brand-text {
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: #fff !important;
 }
 
 .transparent {
