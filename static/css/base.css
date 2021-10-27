@@ -1,28 +1,86 @@
+/**********************************************************************/
+/***                          Basic Setup                           ***/
+/**********************************-***********************************/
+
+
 html {
     font-size: 62.5%;
     height: 100%;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
+
+
+/**********************************************************************/
+/***                      Reusable Components                       ***/
+/**********************************-***********************************/
+
+
+.disabled {
+    display: none;
+}
+
+.no-decoration {
+    text-decoration: none;
+}
+
+.transparent {
+    background: transparent;
+}
+
+.white {
+    color: #fff !important;
+}
+
+
+/**********************************************************************/
+/***                      Navbar (base.html)                        ***/
+/**********************************-***********************************/
+
 
 .navbar {
     height: 10vh;
 }
 
 .navbar-brand-logo {
-    height: 10rem;
-    width: 10rem;
+    height: 8rem !important;
+    width: 8rem !important;
 }
 
 .navbar-brand-text {
     font-family: 'Amatic SC', cursive;
     font-weight: 900;
     font-size: 3.5rem;
+}
+
+.navbar-search input {
+    background: transparent;
+    color: #fff !important;
+    border: 0.1rem solid #fff;
+    border-radius: 0.6rem;
+}
+
+.navbar-search input::placeholder {
     color: #fff !important;
 }
 
-.transparent {
+.navbar-search-button {
     background: transparent;
+    border: 0.1rem solid #fff;
+    border-radius: 0.6rem;
 }
+
+.navbar-search-button:hover,
+.navbar-search-button:active {
+    background: #fff;
+    color: rgba(0, 0, 0, 0.7) !important;
+    transition: all 0.25s;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
