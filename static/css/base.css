@@ -6,3 +6,11 @@ html {
 body {
     font-family: 'Lato';
 }
+
+.navbar {
+    height: 10vh;
+}
+
+.transparent {
+    background: transparent;
+}
