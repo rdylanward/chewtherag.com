@@ -27,6 +27,16 @@ body {
     text-decoration: none !important;
 }
 
+.hidden {
+    display: none;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.hide-menu {
+    display: none;
+}
+
 .transparent {
     background: transparent !important;
 }
@@ -46,8 +56,28 @@ body {
 
 
 .container-navbar {
-    height: 10vh;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-areas:
+        "brand search menu";
+    grid-template-rows: 12vh;
+    background: rgba(0, 0, 0, 0.7);
     width: 100%;
+    top: 0rem;
+    left: 0rem;
+    padding: 0rem;
+    margin: 0rem;
+    align-items: center;
+    transition: all 0.3s;
+    z-index: 15;
+}
+
+.navbar-brand {
+    grid-area: brand;
+    display: inline-flex;
+    justify-content: left;
+    margin-left: 3rem;
 }
 
 .navbar-brand-logo {
@@ -55,38 +85,96 @@ body {
     width: 8rem;
 }
 
-.navbar-brand-text {
+.navbar-title {
     font-family: 'Amatic SC', cursive;
     font-weight: 900;
-    font-size: 3.5rem;
+    font-size: 3.7rem;
+    align-self: center;
+    margin-left: 1.7rem;
+}
+
+.navbar-search {
+    grid-area: search;
+    width: 100%;
+}
+
+.navbar-search-form {
+    width: 100%;
+    display: inline-grid;
+    grid-template-columns: 5% 80% 10% 5%;
+    grid-template-areas: 
+        ". search-txt search-btn .";
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
 }
 
 .navbar-search-text {
+    grid-area: search-txt;
     background: transparent;
-    color: #fff !important;
     border: 0.1rem solid #fff;
     border-radius: 0.6rem;
+    height: 150%;
+    width: 100%;
+
 }
 
 .navbar-search-text::placeholder {
-    color: #fff !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 1.4rem;
+    padding-left: 1rem;
+    align-self: center;
 }
 
 .navbar-search-button {
+    grid-area: search-btn;
     background: transparent;
     border: 0.1rem solid #fff;
     border-radius: 0.6rem;
+    height: 150%;
+    width: 100%;
 }
 
 .navbar-search-button:hover,
 .navbar-search-button:active {
     background: #fff;
-    color: rgba(0, 0, 0, 0.7) !important;
+    color: rgba(0, 0, 0, 0.7);
     transition: all 0.25s;
 }
 
-.dropdown-toggle::after {
-    content: none;
+.navbar-menu {
+    grid-area: menu;
+    justify-self: end;
+    margin: 0rem 3rem 0rem 1.5rem;
+}
+
+.navbar-menu-list {
+    list-style: none;
+    display: inline-flex;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.navbar-menu-item {
+    margin-left: 1.7rem;
+}
+
+.navbar-menu-link {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.navbar-menu-link:hover,
+.navbar-menu-link:active {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 600;
+    transition: color 0.25s;
+}
+
+.navbar-toggler {
+    font-size: 330%;
+    padding: 0rem;
+    margin: 0rem;
 }
 
 
@@ -95,5 +183,22 @@ body {
 /**********************************-***********************************/
 
 
+/**********************************************************************/
+/***                       Home (index.html)                        ***/
+/**********************************-***********************************/
 
+
+.container-home {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "header";
+    grid-template-rows: 100vh;
+    background-color: #e96c46;
+    width: 100%;
+    top: 0rem;
+    left: 0rem;
+    z-index: 1;
+}
 

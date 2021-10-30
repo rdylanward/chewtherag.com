@@ -41,48 +41,50 @@
   <body>
 
     <!--  NAVBAR  -->
-    <nav class="container-navbar" id="navbar">
+
+    <nav class="container-navbar white" id="navbar">
       <div class="navbar-brand">
         <a href="#" class="navbar-brand-icon no-decoration white">
           <img class="navbar-brand-logo" src="../media/CTR_LOGO.png" alt="CTR Logo" />
         </a>
-      </div>
-      <div class="navbar-title">
-        <span>Chew the Rag Clothing Co.</span>
+        <div class="navbar-title">
+          <span>Chew the Rag Clothing Co.</span>
+        </div>
       </div>
       <div class="navbar-search">
         <form class="navbar-search-form">
-          <input class="navbar-search-text" type="search" placeholder="Search" aria-label="Search">
-          <button class="navbar-search-button uppercase white" type="submit">Search</button>
+          <input class="navbar-search-text white" type="search" placeholder="Search" aria-label="Search">
+          <button class="navbar-search-button uppercase white" type="submit"><i class="fas fa-search"></i></button>
         </form>
       </div>
       <div class="navbar-menu">
         <ul class="navbar-menu-list">
-          <li class="hide-menu navbar-menu-item">
+          <li class="navbar-menu-item">
             <a href="" class="navbar-menu-link no-decoration uppercase white">Welcome</a>
           </li>
-          <li class="hide-menu navbar-menu-item">
+          <li class="navbar-menu-item">
             <a href="" class="navbar-menu-link no-decoration uppercase white">The Journey</a>
           </li>
-          <li class="hide-menu navbar-menu-item">
+          <li class="navbar-menu-item">
             <a href="" class="navbar-menu-link no-decoration uppercase white">Collections</a>
           </li>
-          <li class="hide-menu navbar-menu-item">
+          <li class="navbar-menu-item">
             <a href="" class="navbar-menu-link no-decoration uppercase white">Community</a>
           </li>
-          <li class="hide-menu navbar-menu-item">
+          <li class="navbar-menu-item">
             <a href="" class="navbar-menu-link no-decoration uppercase white">Contact</a>
           </li>
-          <li class="hide-toggler navbar-menu-item">
-              <a class="navbar-toggler navbar-menu-link no-decoration white" href="javascript:void(0);" onclick="mobileMenu()"><i class="fas fa-bars"></i></a>
+          <li class="navbar-menu-item hidden">
+              <a class="navbar-toggler navbar-menu-link hidden no-decoration white" href="javascript:void(0);" onclick="mobileMenu()"><i class="fas fa-bars"></i></a>
           </li>
         </ul>
       </div>
     </nav>
+
     <!--  /NAVBAR  -->
 
     <!--  MOBILE NAVBAR  -->
-    
+
     <!--  /MOBILE NAVBAR  -->
 
     {% if messages %}
