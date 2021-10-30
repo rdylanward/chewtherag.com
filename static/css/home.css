@@ -1,0 +1,18 @@
+/**********************************************************************/
+/***                       Home (index.html)                        ***/
+/**********************************-***********************************/
+
+
+.container-home {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "header";
+    grid-template-rows: 100vh;
+    background-color: #e96c46;
+    width: 100%;
+    top: 0rem;
+    left: 0rem;
+    z-index: 1;
+}

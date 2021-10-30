@@ -62,7 +62,7 @@ body {
     grid-template-areas:
         "brand search menu";
     grid-template-rows: 12vh;
-    background: rgba(0, 0, 0, 0.7);
+    background: transparent;
     width: 100%;
     top: 0rem;
     left: 0rem;
@@ -101,7 +101,7 @@ body {
 .navbar-search-form {
     width: 100%;
     display: inline-grid;
-    grid-template-columns: 5% 80% 10% 5%;
+    grid-template-columns: 10% 70% 10% 10%;
     grid-template-areas: 
         ". search-txt search-btn .";
     grid-template-rows: 1fr;
@@ -176,29 +176,3 @@ body {
     padding: 0rem;
     margin: 0rem;
 }
-
-
-/**********************************************************************/
-/***                      Header (base.html)                        ***/
-/**********************************-***********************************/
-
-
-/**********************************************************************/
-/***                       Home (index.html)                        ***/
-/**********************************-***********************************/
-
-
-.container-home {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas:
-        "header";
-    grid-template-rows: 100vh;
-    background-color: #e96c46;
-    width: 100%;
-    top: 0rem;
-    left: 0rem;
-    z-index: 1;
-}
-
