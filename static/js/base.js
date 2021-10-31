@@ -7,6 +7,7 @@ let sticky = navbar.offsetHeight;
 /* The following Javascript was originally written by W3Schools (https://www.w3schools.com/howto/howto_js_navbar_sticky.asp)
     and repurposed to aid in the function of the sticky menu */
 function stickyNavbar() {
+    
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky-navbar");
         navbarMobile.classList.add("sticky-navbar-mobile");
