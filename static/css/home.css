@@ -9,15 +9,24 @@
 
 
 .container-home {
-    position: absolute;
     display: grid;
     grid-template-columns: 100%;
     grid-template-areas:
-        "home-hdr";
-    grid-template-rows: 100vh;
-    background-color: #e96c46;
+        "home-hdr"
+        "home-tst";
+    grid-template-rows: repeat(2, 100vh);
+}
+
+.container-header {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     top: 0rem;
     left: 0rem;
     z-index: 1;
+}
+
+.test {
+    background: rgba(119, 122, 245, 0.5);
+    width: 100%;
 }
