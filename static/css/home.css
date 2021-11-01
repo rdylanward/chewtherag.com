@@ -18,7 +18,7 @@
 }
 
 .container-header {
-    position: absolute;
+    position: fixed;
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     top: 0rem;
