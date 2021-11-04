@@ -4,6 +4,7 @@ let navbar = document.getElementById("navbar");
 let navbarBrand = document.getElementById("navbar-brand")
 let navbarSearch = document.getElementById("navbar-search")
 let navbarMenu = document.getElementById("navbar-menu")
+let navbarIcons = document.getElementById("navbar-icons")
 let navbarMobile = document.getElementById("navbar-mobile");
 let sticky = navbar.offsetHeight;
 
@@ -16,12 +17,14 @@ function stickyNavbar() {
         navbarBrand.classList.add("sticky-navbar-brand");
         navbarSearch.classList.add("sticky-navbar-search");
         navbarMenu.classList.add("sticky-navbar-menu");
+        navbarIcons.classList.add("sticky-navbar-icons");
         navbarMobile.classList.add("sticky-navbar-mobile");
     } else {
         navbar.classList.remove("sticky-navbar");
         navbarBrand.classList.remove("sticky-navbar-brand");
         navbarSearch.classList.remove("sticky-navbar-search");
         navbarMenu.classList.remove("sticky-navbar-menu");
+        navbarIcons.classList.remove("sticky-navbar-icons");
         navbarMobile.classList.remove("sticky-navbar-mobile");
     }
 }

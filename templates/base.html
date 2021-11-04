@@ -45,7 +45,7 @@
     <nav class="container-navbar white" id="navbar">
       <!-- NAVBAR BRAND -->
       <div class="navbar-brand" id="navbar-brand">
-        <a href="#" class="navbar-brand-icon no-decoration white">
+        <a href="javascript:void(0);" class="navbar-brand-icon no-decoration white">
           <img class="navbar-brand-logo" src="../media/CTR_LOGO.png" alt="CTR Logo" />
         </a>
         <div class="navbar-brand-title">
@@ -58,19 +58,19 @@
       <div class="navbar-menu" id="navbar-menu">
         <ul class="navbar-menu-list">
           <li class="navbar-menu-item">
-            <a href="" class="navbar-menu-link no-decoration uppercase white">Welcome</a>
+            <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Welcome</a>
           </li>
           <li class="navbar-menu-item">
-            <a href="" class="navbar-menu-link no-decoration uppercase white">Journey</a>
+            <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Journey</a>
           </li>
           <li class="navbar-menu-item">
-            <a href="" class="navbar-menu-link no-decoration uppercase white">Collections</a>
+            <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Collections</a>
           </li>
           <li class="navbar-menu-item">
-            <a href="" class="navbar-menu-link no-decoration uppercase white">Community</a>
+            <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Community</a>
           </li>
-          <li class="navbar-menu-item">
-            <a href="" class="navbar-menu-link no-decoration uppercase white">Contact</a>
+          <li class="navbar-menu-item no-right-margin">
+            <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Contact</a>
           </li>
           <li class="navbar-menu-item hidden">
               <a class="navbar-toggler navbar-menu-link hidden no-decoration white" href="javascript:void(0);" onclick="mobileMenu()"><i class="fas fa-bars"></i></a>
@@ -89,16 +89,20 @@
       <!-- /NAVBAR SEARCH -->
 
       <!-- NAVBAR ICONS -->
-      <div class="navbar-icons">
+      <div class="navbar-icons" id="navbar-icons">
         <div class="navbar-icons-login">
-          <i class="fas fa-user fa-2x"></i>
-          <p>Login / Register</p>
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="navbar-login-text">
+          Login / Register
         </div>
         <div class="navbar-icons-cart">
           <a href="#" class="navbar-cart-link no-decoration white">
-            <i class="fas fa-shopping-cart fa-2x"></i>
-            <p>No Items</p>
+            <i class="fas fa-shopping-cart"></i>
           </a>
+        </div>
+        <div class="navbar-cart-text">
+          No Items
         </div>
       </div>
       <!-- /NAVBAR ICONS -->
