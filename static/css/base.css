@@ -131,15 +131,10 @@ body {
     margin-right: 1.7rem;
 }
 
-/* .navbar-menu-link {
-    font-size: 2.4rem;
-} */
-
-.navbar-menu-link:hover,
-.navbar-menu-link:active {
-    color: rgba(0, 0, 0, 0.7);
-    font-weight: 900;
-    transition: color 0.25s;
+.navbar-menu-item a:hover,
+.navbar-menu-item a:active {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s;
 }
 
 .navbar-toggler {
@@ -267,14 +262,14 @@ body {
     margin-left: 1.1rem !important;
 }
 
+.sticky-navbar-menu .navbar-menu-list  {
+    font-size: 1.9rem;
+}
+
 /* .sticky-navbar-search {
 
-}
+} */
 
-.sticky-navbar-menu {
-
-}
-
-.sticky-navbar-icons {
+/* .sticky-navbar-icons {
 
 } */
