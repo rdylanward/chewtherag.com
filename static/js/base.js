@@ -8,6 +8,16 @@ let navbarIcons = document.getElementById("navbar-icons")
 let navbarMobile = document.getElementById("navbar-mobile");
 let sticky = navbar.offsetHeight;
 
+let mainPosts = document.querySelectorAll(".main-post");
+let posts = document.querySelectorAll(".post");
+
+let i = 0;
+let postIndex = 0;
+let currentPost = posts[postIndex];
+let currentMainPost = mainPosts[postIndex];
+
+let progressInterval = setInterval(progress, 100); // 180
+
 /* The following Javascript was originally written by W3Schools (https://www.w3schools.com/howto/howto_js_navbar_sticky.asp)
     and repurposed to aid in the function of the sticky menu */
 function stickyNavbar() {
@@ -37,4 +47,39 @@ function mobileMenu() {
     } else {
         navbarMobile.style.display = "none";
     }
+}
+
+function progress() {
+  if (i === 100) {
+    i = -5;
+    // reset progress bar
+    currentPost.querySelector(".progress-bar__fill").style.width = 0;
+    document.querySelector(
+      ".progress-bar--primary .progress-bar__fill"
+    ).style.width = 0;
+    currentPost.classList.remove("post--active");
+
+    postIndex++;
+
+    currentMainPost.classList.add("main-post--not-active");
+    currentMainPost.classList.remove("main-post--active");
+
+    // reset postIndex to loop over the slides again
+    if (postIndex === posts.length) {
+      postIndex = 0;
+    }
+
+    currentPost = posts[postIndex];
+    currentMainPost = mainPosts[postIndex];
+  } else {
+    i++;
+    currentPost.querySelector(".progress-bar__fill").style.width = `${i}%`;
+    document.querySelector(
+      ".progress-bar--primary .progress-bar__fill"
+    ).style.width = `${i}%`;
+    currentPost.classList.add("post--active");
+
+    currentMainPost.classList.add("main-post--active");
+    currentMainPost.classList.remove("main-post--not-active");
+  }
 }
