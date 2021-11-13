@@ -31,15 +31,6 @@
 /* The following CSS was originally written by Juan Codepen.io (https://codepen.io/J0hn03cb1ac8a4/pen/MWYeQqp),
    converted to CSS from SCSS and repurposed to aid in the function of the carousel */
 
-/* .carousel {
-    min-height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 3fr 1.5fr;
-    grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
-    row-gap: 2vh;
-    position: relative;
-} */
-
 .carousel {
     display: grid;
     grid-template-rows: 1fr 3fr 1.5fr;
