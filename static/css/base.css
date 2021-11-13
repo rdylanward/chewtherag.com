@@ -289,11 +289,11 @@ body {
 
 .sticky-navbar-menu {
     align-self: flex-end;
-    padding-bottom: 0.9rem;
+    padding-bottom: 0.6rem;
 }
 
 .sticky-navbar-menu .navbar-menu-list  {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
 }
 
 .sticky-navbar-search {
