@@ -29,6 +29,10 @@ body {
     text-decoration: none !important;
 }
 
+.no-list-style {
+    list-style: none !important;
+}
+
 .no-right-margin {
     margin-right: 0rem !important;
 }
@@ -123,7 +127,6 @@ body {
     font-family: 'Amatic SC', cursive;
     font-size: 2.4rem;
     font-weight: 600;
-    list-style: none;
     display: inline-flex;
     padding: 0rem;
     margin: 0rem;
@@ -215,7 +218,7 @@ body {
     grid-template-areas:
         "icon-logn . icon-cart"
         "logn-text . cart-text";
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 50% 50%;
     align-self: center;
     justify-content: end;
 }
@@ -232,17 +235,19 @@ body {
 
 .navbar-login-text {
     grid-area: logn-text;
+    align-self: flex-end;
     justify-self: center;
 }
 
 .navbar-cart-text {
     grid-area: cart-text;
+    align-self: flex-end;
     justify-self: center;
 }
 
 .navbar-icons-icon {
     font-size: 2.1rem;
-    margin: 0.4rem;
+    margin-bottom: 0.4rem;
 }
 
 .navbar-icons-text {
@@ -257,14 +262,18 @@ body {
 
 
 .sticky-navbar {
-    grid-template-rows: 4.5vh 3.5vh;
+    grid-template-columns: 2.5% 31.7% 31.6% 31.7% 2.5%;
+    grid-template-areas:
+        ". brnd menu icon ."
+        ". brnd srch icon .";
+    /* grid-template-rows: 4.5vh 3.5vh; */
+    grid-template-rows: 3.5vh 3.5vh;
     background: rgba(0, 0, 0, 0.7) !important;
     transition: all 0.3s;
 }
 
 .sticky-navbar-brand {
     height: 100%;
-    padding-top: 0.5rem;
 }
 
 .sticky-navbar-brand img {
@@ -278,23 +287,49 @@ body {
     margin-left: 1.1rem !important;
 }
 
+.sticky-navbar-menu {
+    align-self: flex-end;
+    padding-bottom: 0.9rem;
+}
+
 .sticky-navbar-menu .navbar-menu-list  {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
+}
+
+.sticky-navbar-search {
+    grid-template-columns: 100%;
+    grid-template-areas: 
+        "srch-bar";
+    align-self: flex-start;
+    padding-top: 0.2rem;
+}
+
+.sticky-navbar-search .navbar-search-form {
+    width: 85%;
+    justify-self: center;
 }
 
 .sticky-navbar-search .navbar-search-text {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     border: 0.1rem solid #fff;
     border-radius: 0.4rem;
-    height: 90%;
+    height: 91%;
     align-self: flex-start;
+}
+
+.sticky-navbar-search .navbar-search-text::placeholder {
+    font-size: 1.5rem;
 }
 
 .sticky-navbar-search .navbar-search-button {
     border: 0.1rem solid #fff;
     border-radius: 0.4rem;
-    height: 90%;
+    height: 91%;
     align-self: flex-start;
+}
+
+.sticky-navbar-icons {
+    align-self: center;
 }
 
 .sticky-navbar-icons .navbar-icons-icon {
@@ -303,4 +338,104 @@ body {
 
 .sticky-navbar-icons .navbar-icons-text {
     font-size: 1.4rem;
+}
+
+
+/**********************************************************************/
+/***                             Footer                             ***/
+/**********************************-***********************************/
+
+
+.container-footer {
+    background: rgba(0, 0, 0, 0.6);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 20% 15% 30% 15% 20%;
+    grid-template-rows: 22rem repeat(2, 5.3rem);
+    grid-template-areas:
+        ". men mid pol ."
+        ". pay pay pay ."
+        ". cop cop cop .";
+}
+
+.footer-menu {
+    grid-area: men;
+    align-self: center;
+    justify-self: center;
+}
+
+.footer-menu-list {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.footer-middle {
+    grid-area: mid;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2.65rem 1.75rem;
+    grid-template-areas: 
+        "com"
+        "soc";
+}
+
+.footer-community {
+    grid-area: com;
+    padding: 0rem 7rem;
+    align-self: flex-end;
+    justify-self: center;
+}
+
+.footer-community-header {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.footer-community-text {
+    text-align: center;
+}
+
+.footer-social {
+    grid-area: soc;
+    align-self: flex-start;
+    justify-self: center;
+    padding-top: 3rem;
+}
+
+.footer-social-list {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.footer-social-list > li {
+    display: inline;
+    padding: 0rem 0.6rem;
+}
+
+.footer-social-icon {
+    font-size: 2rem;
+}
+
+.footer-policies {
+    grid-area: pol;
+    align-self: center;
+    justify-self: center;
+}
+
+.footer-policies-list {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.footer-pay {
+    grid-area: pay;
+    align-self: center;
+    justify-self: center;
+}
+
+.footer-copyright {
+    grid-area: cop;
+    justify-self: center;
 }

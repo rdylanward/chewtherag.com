@@ -14,7 +14,7 @@
     grid-template-areas:
         "home-hdr"
         "main-tst";
-    grid-template-rows: 100vh 92vh;
+    grid-template-rows: 100vh 93vh;
 }
 
 .container-header {

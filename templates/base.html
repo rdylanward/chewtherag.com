@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="../media/CTR Favicon.png" sizes="512x512">
+    <link rel="icon no-decoration white" type="image/png" href="../media/CTR Favicon.png" sizes="512x512">
     {% endblock %}
 
     {% block extra_meta %}
@@ -45,7 +45,7 @@
     <nav class="container-navbar white" id="navbar">
       <!-- NAVBAR BRAND -->
       <div class="navbar-brand" id="navbar-brand">
-        <a href="javascript:void(0);" class="navbar-brand-icon no-decoration white">
+        <a href="javascript:void(0);" class="navbar-brand-icon no-decoration white no-decoration white">
           <img class="navbar-brand-logo" src="../media/CTR_LOGO.png" alt="CTR Logo" />
         </a>
         <div class="navbar-brand-title">
@@ -56,7 +56,7 @@
 
       <!-- NAVBAR MENU -->
       <div class="navbar-menu" id="navbar-menu">
-        <ul class="navbar-menu-list">
+        <ul class="navbar-menu-list no-list-style">
           <li class="navbar-menu-item">
             <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Welcome</a>
           </li>
@@ -91,7 +91,7 @@
       <!-- NAVBAR ICONS -->
       <div class="navbar-icons" id="navbar-icons">
         <div class="navbar-icons-login">
-          <a href="#" class="navbar-icons-icon no-decoration white">
+          <a href="#" class="navbar-icons-icon no-decoration white no-decoration white">
             <i class="fas fa-user"></i>
           </a>
         </div>
@@ -99,7 +99,7 @@
           Login / Register
         </div>
         <div class="navbar-icons-cart">
-          <a href="#" class="navbar-icons-icon no-decoration white">
+          <a href="#" class="navbar-icons-icon no-decoration white no-decoration white">
             <i class="fas fa-shopping-cart"></i>
           </a>
         </div>
@@ -133,7 +133,7 @@
 
       <!-- FOOTER MENU -->
       <div class="footer-menu">
-        <ul class="footer-menu-list">
+        <ul class="footer-menu-list no-list-style">
           <li class="footer-menu-item">
             <a href="javascript:void(0);" class="footer-menu-link no-decoration uppercase white">Welcome</a>
           </li>
@@ -153,9 +153,48 @@
       </div>
       <!-- /FOOTER MENU-->
 
+      <div class="footer-middle">
+
+        <!-- FOOTER COMMUNITY -->
+        <div class="footer-community">
+          <p class="footer-community-header uppercase white">Join the Community</p>
+          <p class="footer-community-text white">
+            Receive news, hear the latest rumblings and be privy to announcements for promotions, new products and sales, all delivered directly to your inbox.
+          </p>
+          <form class="footer-community-form" action="" method="get">
+            <input class="community-form-email white" id="community-email" type="email" placeholder="Enter email...">
+            <input class="community-form-button uppercase white" id="community-email-submit" type="Button" value="Suscribe">
+          </form>
+        </div>
+        <!-- /FOOTER COMMUNITY -->
+
+        <!-- FOOTER SOCIAL -->
+        <div class="footer-social">
+          <ul class="footer-social-list no-list-style">
+            <li class="footer-social-item">
+              <a href="https://www.facebook.com/chewtheragclothing" class="footer-social-icon no-decoration white">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a href="https://twitter.com/ChewRag" class="footer-social-icon no-decoration white">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="footer-social-item">
+              <a href="javascript:void(0);" class="footer-social-icon no-decoration white">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- /FOOTER SOCIAL -->
+
+      </div>
+
       <!-- FOOTER POLICIES -->
       <div class="footer-policies">
-        <ul class="footer-policies-list">
+        <ul class="footer-policies-list no-list-style">
           <li class="footer-policies-item">
             <a href="javascript:void(0);" class="footer-policies-link no-decoration uppercase white">Returns Policy</a>
           </li>
@@ -169,75 +208,15 @@
       </div>
       <!-- /FOOTER POLICIES -->
 
-      <!-- FOOTER COMMUNITY -->
-      <div class="footer-community">
-        <p class="footer-community-header uppercase white">Join the Community</p>
-        <p class="footer-community-text white">
-          Receive news, hear the latest rumblings and be privy to announcements for promotions, new products and sales, all delivered directly to your inbox.
-        </p>
-        <form class="footer-community-form" action="" method="get">
-          <input class="community-form-email white" id="community-email" type="email" placeholder="Enter email...">
-          <input class="community-form-button uppercase white" id="community-email-submit" type="Button" value="Suscribe">
-        </form>
-      </div>
-      <!-- /FOOTER COMMUNITY -->
-
-      <!-- FOOTER SOCIAL -->
-      <div class="footer-social">
-        <ul class="footer-social-list">
-          <li class="footer-social-item">
-            <a href="javascript:void(0);" class="footer-social-icon">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a href="javascript:void(0);" class="footer-social-icon">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="footer-social-item">
-            <a href="javascript:void(0);" class="footer-social-icon">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <!-- /FOOTER SOCIAL -->
-
-      <!-- FOOTER CREDIT CARDS -->
+      <!-- FOOTER PAY -->
       <div class="footer-pay">
-        <ul class="footer-pay-list">
-          <li class="footer-pay-item">
-            <img src="" alt="" class="footer-pay-image">
-          </li>
-          <li class="footer-pay-item">
-            <img src="" alt="" class="footer-pay-image">
-          </li>
-          <li class="footer-pay-item">
-            <img src="" alt="" class="footer-pay-image">
-          </li>
-          <li class="footer-pay-item">
-            <img src="" alt="" class="footer-pay-image">
-          </li>
-          <li class="footer-pay-item">
-            <img src="" alt="" class="footer-pay-image">
-          </li>
-          <li class="footer-pay-item">
-            <img src="" alt="" class="footer-pay-image">
-          </li>
-          <li class="footer-pay-item">
-            <img src="" alt="" class="footer-pay-image">
-          </li>
-          <li class="footer-pay-item">
-            <img src="" alt="" class="footer-pay-image">
-          </li>
-        </ul>
+        <img class="footer-pay-image" src="https://www.merchantequip.com/image/?logos=v|m|a|p|g|me|sk|bit|gw|apl|ssp|adp&height=32" alt="Merchant Equipment Store Credit Card Logos">
       </div>
-      <!-- /FOOTER CREDIT CARDS -->
+      <!-- /FOOTER PAY -->
 
       <!-- FOOTER COPYRIGHT -->
       <div class="footer-copyright">
-        <p class="footer-copyright-text">Copyright&copy; 2021 by Chew The Rag Designs. All rights reserved.</p>
+        <p class="footer-copyright-text white">Copyright&copy; 2021 by Chew The Rag Designs. All rights reserved.</p>
       </div>
       <!-- /FOOTER COPYRIGHT -->
 
