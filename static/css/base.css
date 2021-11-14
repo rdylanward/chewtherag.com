@@ -276,7 +276,7 @@ body {
         ". brnd srch icon .";
     grid-template-rows: 3.5vh 3.5vh;
     background: rgba(0, 0, 0, 0.7) !important;
-    transition: all 0.3s;
+    transition: all 0.5s;
 }
 
 .sticky-navbar-brand {
@@ -379,13 +379,19 @@ body {
     margin: 0rem;
 }
 
+.footer-menu-link {
+    transition: all 0.3s;
+}
+
 .footer-menu-link:hover {
     color: rgba(29, 43, 81, 0.7);
     font-weight: 700;
+    transition: all 0.3s;
 }
 
 .footer-menu-link:active {
     color: rgba(29, 43, 81, 0.3);
+    transition: all 0.3s;
 }
 
 .footer-middle {
@@ -400,31 +406,52 @@ body {
 
 .footer-community {
     grid-area: com;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-areas: 
+        "com-hdr"
+        "com-txt"
+        "com-eml";
     padding: 0rem 7rem;
     align-self: center;
-    justify-self: center;
 }
 
 .footer-community-header {
+    grid-area: com-hdr;
     text-align: center;
     font-size: 2.2rem;
     margin: 0rem;
 }
 
 .footer-community-text {
+    grid-area: com-txt;
     font-size: 1.4rem;
     text-align: center;
     margin: 1.5rem 0rem;
 }
 
+.footer-community-form {
+    grid-area: com-eml;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "com-frm-eml com-frm-btn";
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+}
+
 .community-form-email {
+    grid-area: com-frm-eml;
     font-size: 1.2rem;
     font-weight: 600;
     background: transparent;
     border: 0.1rem solid #1d2b51;
     border-radius: 0.4rem;
-    width: 76.5%;
-    padding: 0.55rem 0.6rem;
+    width: auto;
+    padding: 0.56rem 0.6rem;
 }
 
 .community-form-email::placeholder {
@@ -436,24 +463,29 @@ body {
 }
 
 .community-form-button {
+    grid-area: com-frm-btn;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     font-weight: 600;
     background: transparent;
     border: 0.1rem solid #1d2b51;
     border-radius: 0.4rem;
-    padding: 0.5rem 0.8rem;
+    width: auto;
+    padding: 0.5rem 0.6rem;
+    transition: all 0.3s;
 }
 
 .community-form-button:hover {
     color: #e5b27c;
     background: #1d2b51;
+    transition: all 0.3s;
 }
 
 .community-form-button:active {
     color: #e5b27c;
     background: rgba(29, 43, 81, 0.6);
     border: 0.1rem solid rgba(29, 43, 81, 0.6);
+    transition: all 0.3s;
 }
 
 .footer-social {
@@ -474,6 +506,17 @@ body {
 
 .footer-social-icon {
     font-size: 2rem;
+    transition: all 0.3s;
+}
+
+.social-icon-facebook:hover {
+    color: rgb(59, 89, 152);
+    transition: all 0.3s;
+}
+
+.social-icon-facebook:active {
+    color: rgba(59, 89, 152, 0.6rem);
+    transition: all 0.3s;
 }
 
 .footer-policies {
@@ -490,13 +533,19 @@ body {
     margin: 0rem;
 }
 
+.footer-policies-link {
+    transition: all 0.3s;
+}
+
 .footer-policies-link:hover {
     color: rgba(29, 43, 81, 0.7);
     font-weight: 700;
+    transition: all 0.3s;
 }
 
 .footer-policies-link:active {
     color: rgba(29, 43, 81, 0.3);
+    transition: all 0.3s;
 }
 
 .footer-pay {
