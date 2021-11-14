@@ -51,12 +51,20 @@ body {
     background: transparent !important;
 }
 
+.bold {
+    font-weight: 900;
+}
+
 .uppercase {
     text-transform: uppercase !important;
 }
 
 .white {
     color: #fff !important;
+}
+
+.blue {
+    color: #1d2b51;
 }
 
 
@@ -346,14 +354,11 @@ body {
 
 
 .container-footer {
-    font-family: 'Amatic SC', cursive;
+    font-family: 'Montserrat', sans-serif;
     background: #e5b27c;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     display: grid;
-    grid-template-columns: 20% 15% 30% 15% 20%;
-    grid-template-rows: 22rem repeat(2, 5.3rem);
+    grid-template-columns: 17% 18% 30% 18% 17%;
+    grid-template-rows: 23.5rem 5.3rem 4.8rem;
     grid-template-areas:
         ". men mid pol ."
         ". pay pay pay ."
@@ -362,8 +367,9 @@ body {
 
 .footer-menu {
     grid-area: men;
-    font-size: 2.3rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    line-height: 1.9rem;
     align-self: center;
     justify-self: center;
 }
@@ -373,11 +379,20 @@ body {
     margin: 0rem;
 }
 
+.footer-menu-link:hover {
+    color: rgba(29, 43, 81, 0.7);
+    font-weight: 700;
+}
+
+.footer-menu-link:active {
+    color: rgba(29, 43, 81, 0.3);
+}
+
 .footer-middle {
     grid-area: mid;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 2.65rem 1.75rem;
+    grid-template-rows: 77% 23%;
     grid-template-areas: 
         "com"
         "soc";
@@ -386,24 +401,65 @@ body {
 .footer-community {
     grid-area: com;
     padding: 0rem 7rem;
-    align-self: flex-end;
+    align-self: center;
     justify-self: center;
 }
 
 .footer-community-header {
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    margin: 0rem;
 }
 
 .footer-community-text {
+    font-size: 1.4rem;
     text-align: center;
+    margin: 1.5rem 0rem;
+}
+
+.community-form-email {
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: transparent;
+    border: 0.1rem solid #1d2b51;
+    border-radius: 0.4rem;
+    width: 76.5%;
+    padding: 0.55rem 0.6rem;
+}
+
+.community-form-email::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgba(29, 43, 81, 0.6);
+    padding: 0rem 0.3rem;
+}
+
+.community-form-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background: transparent;
+    border: 0.1rem solid #1d2b51;
+    border-radius: 0.4rem;
+    padding: 0.5rem 0.8rem;
+}
+
+.community-form-button:hover {
+    color: #e5b27c;
+    background: #1d2b51;
+}
+
+.community-form-button:active {
+    color: #e5b27c;
+    background: rgba(29, 43, 81, 0.6);
+    border: 0.1rem solid rgba(29, 43, 81, 0.6);
 }
 
 .footer-social {
     grid-area: soc;
-    align-self: flex-start;
+    align-self: center;
     justify-self: center;
-    padding-top: 3rem;
 }
 
 .footer-social-list {
@@ -422,8 +478,9 @@ body {
 
 .footer-policies {
     grid-area: pol;
-    font-size: 2.3rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    line-height: 1.9rem;
     align-self: center;
     justify-self: center;
 }
@@ -431,6 +488,15 @@ body {
 .footer-policies-list {
     padding: 0rem;
     margin: 0rem;
+}
+
+.footer-policies-link:hover {
+    color: rgba(29, 43, 81, 0.7);
+    font-weight: 700;
+}
+
+.footer-policies-link:active {
+    color: rgba(29, 43, 81, 0.3);
 }
 
 .footer-pay {
@@ -441,5 +507,11 @@ body {
 
 .footer-copyright {
     grid-area: cop;
+    font-size: 1.2rem;
+    font-weight: 500;
     justify-self: center;
+}
+
+.footer-copyright p {
+    margin-top: 0.3rem;
 }
