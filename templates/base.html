@@ -39,16 +39,14 @@
   </head>
 
   <body>
-    
-    {% include 'includes/navbar.html' %}
-
-    <!--  MOBILE NAVBAR  -->
-
-    <!--  /MOBILE NAVBAR  -->
 
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
+    
+    {% include 'includes/navbar.html' %}
+    
+    {% include 'includes/navbar-mobile.html' %}
 
     {% block page_header %}
     {% endblock %}
