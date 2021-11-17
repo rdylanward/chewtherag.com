@@ -72,6 +72,30 @@
 
 .about-story {
     grid-area: txt;
-    font-size: 1.8rem;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: min-content max-content;
+    grid-template-areas: 
+        "story-img story-qte"
+        "story-txt story-txt";
     margin: 6rem 25%;
+}
+
+.story-image {
+    grid-area: story-img;
+    width: 42.5rem;
+    height: 28.48rem;
+    align-self: center;
+    margin: 2rem 0rem;
+}
+
+.story-quote {
+    grid-area: story-qte;
+    font-size: 1.8rem;
+    align-self: center;
+}
+
+.story-text {
+    grid-area: story-txt;
+    font-size: 1.6rem;
 }

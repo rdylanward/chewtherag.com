@@ -3,7 +3,7 @@
 <nav class="container-navbar white" id="navbar">
     <!-- NAVBAR BRAND -->
     <div class="navbar-brand" id="navbar-brand">
-        <a href="javascript:void(0);" class="navbar-brand-icon no-decoration no-decoration">
+        <a href="{% url 'home' %}" class="navbar-brand-icon no-decoration">
             <img class="navbar-brand-logo" src="../media/CTR_LOGO.png" alt="CTR Logo" />
         </a>
         <div class="navbar-brand-title">
@@ -16,10 +16,10 @@
     <div class="navbar-menu" id="navbar-menu">
         <ul class="navbar-menu-list no-list-style">
             <li class="navbar-menu-item">
-                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Welcome</a>
+                <a href="{% url 'home' %}" class="navbar-menu-link no-decoration uppercase white">Welcome</a>
             </li>
             <li class="navbar-menu-item">
-                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Journey</a>
+                <a href="{% url 'about' %}" class="navbar-menu-link no-decoration uppercase white">Journey</a>
             </li>
             <li class="navbar-menu-item">
                 <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Collections</a>
