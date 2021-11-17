@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" type="text/css">
+{% endblock %}
+
 {% block content %}
 <!--  ABOUT GRID CONTAINER  -->
 
@@ -10,17 +14,17 @@
 
     <div class="about-header">
         <div class="about-header-title">
-            <span class="header-about-text">The Journey</span>
+            <span class="header-about-text white">The Journey</span>
         </div>
         <div class="about-header-dictionary">
-            <span class="header-dictionary-title">chew the rag</span>
-            <span class="header-dictionary-category">verb, phrase</span>
-            <p class="header-dictionary-description">
+            <p class="header-dictionary-title white">chew the rag</p>
+            <p class="header-dictionary-category white">verb, phrase</p>
+            <p class="header-dictionary-description white">
                 1.  To discuss, chat, converse, etc., especially at length and in a leisurely, friendly manner.
             </p>
             <blockquote class="header-dictionary-quote">
-                <p class="dictionary-quote-text">
-                    &laquo;My sister and I haven't seen each other in nearly five years, so we stayed up half the night drinking wine and chewing the rag.&raquo;
+                <p class="dictionary-quote-text white">
+                    <span>&ldquo;</span>My sister and I haven't seen each other in nearly five years, so we stayed up half the night drinking wine and chewing the rag.<span>&rdquo;</span>
                 </p>
             </blockquote>
         </div>
@@ -31,6 +35,21 @@
     <!--  ABOUT STORY  -->
 
     <div class="about-story">
+        <img src="{% static 'media/writing-tools.jpg' %}" alt="" class="story-image">
+        <blockquote class="story-quote">
+            <p>
+                <sup>
+                    <i class="fas fa-quote-left"></i>
+                </sup>
+                &nbsp;Do the great things while they are easy and do the great things whle they are small. A journey of a thousand miles must begin with a single step.&nbsp;
+                <sub>
+                    <i class="fas fa-quote-right"></i>
+                </sub>
+            </p>
+            <footer>
+                &mdash;&nbsp;Lao Tzu
+            </footer>
+        </blockquote>
         <p>
             To say that the road to Chew The Rag Clothing Co. is a journey is an understatement. What started as an 
             idea has grown into a passion. A passion to organically grow a business that provides quality clothes at a 
