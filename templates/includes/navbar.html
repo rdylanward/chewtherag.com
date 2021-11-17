@@ -53,8 +53,36 @@
                 <i class="fas fa-user"></i>
             </a>
         </div>
-        <div class="navbar-login-text navbar-icons-text">
-            Login / Register
+        <div class="navbar-login-text" id="navbar-login-text">
+            {% if request.user.is_authenticated %}
+                <span class="navbar-icons-text">My Account</span>
+            {% else %}
+                <span class="navbar-icons-text">Login / Register</span>
+            {% endif %}
+        </div>
+        <div class="navbar-login-dropdown" id="navbar-login-dropdown">
+            <ul class="navbar-dropdown-list no-list-style">
+                {% if request.user.is_authenticated %}
+                    {% if request.user.is_authenticated %}
+                        <li class="navbar-dropdown-item">
+                            <a href="{% url 'account_logout' %}" class="navbar-dropdown-link no-decoration uppercase white">Admin</a>
+                        </li>
+                    {% endif %}
+                        <li class="navbar-dropdown-item">
+                            <a href="" class="navbar-dropdown-link no-decoration uppercase white">My Profile</a>
+                        </li>
+                        <li class="navbar-dropdown-item">
+                            <a href="{% url 'account_logout' %}" class="navbar-dropdown-link no-decoration uppercase white">Logout</a>
+                        </li>
+                {% else %}
+                    <li class="navbar-dropdown-item">
+                        <a href="{% url 'account_signup' %}" class="navbar-dropdown-link no-decoration uppercase white">Register</a>
+                    </li>
+                    <li class="navbar-dropdown-item">
+                        <a href="{% url 'account_login' %}" class="navbar-dropdown-link no-decoration uppercase white">Login</a>
+                    </li>
+                {% endif %}
+            </ul>
         </div>
         <div class="navbar-icons-cart">
             <a href="#" class="navbar-icons-icon no-decoration white">

@@ -47,6 +47,10 @@ body {
     display: none;
 }
 
+.show-dropdown {
+    display: block !important;
+}
+
 .transparent {
     background: transparent !important;
 }
@@ -247,6 +251,37 @@ body {
     justify-self: center;
 }
 
+.navbar-login-text:hover {
+    color: #e5b27c;
+}
+
+.navbar-login-dropdown {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    width: 10rem;
+    height: auto;
+    overflow: auto;
+    margin-top: 0rem;
+}
+
+.navbar-dropdown-list {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.navbar-dropdown-link {
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 0.7rem 1.6rem;
+    display: block;
+}
+
+.navbar-dropdown-link:hover {
+    background: rgba(255, 255, 255, 0.9) !important;
+    color: rgb(0, 0, 0) !important;
+}
+
 .navbar-cart-text {
     grid-area: cart-text;
     align-self: flex-end;
@@ -261,6 +296,7 @@ body {
 .navbar-icons-text {
     font-size: 1.6rem;
     font-weight: 600;
+    cursor: default;
 }
 
 
@@ -275,7 +311,7 @@ body {
         ". brnd menu icon ."
         ". brnd srch icon .";
     grid-template-rows: 3.5vh 3.5vh;
-    background: rgba(0, 0, 0, 0.7) !important;
+    background: rgba(0, 0, 0, 0.8) !important;
     transition: all 0.5s;
 }
 
@@ -516,6 +552,26 @@ body {
 
 .social-icon-facebook:active {
     color: rgba(59, 89, 152, 0.6rem);
+    transition: all 0.3s;
+}
+
+.social-icon-twitter:hover {
+    color: rgb(29, 161, 242);
+    transition: all 0.3s;
+}
+
+.social-icon-twitter:active {
+    color: rgba(29, 161, 242, 0.6rem);
+    transition: all 0.3s;
+}
+
+.social-icon-instagram:hover {
+    color: rgb(195, 42, 163);
+    transition: all 0.3s;
+}
+
+.social-icon-instagram:active {
+    color: rgba(195, 42, 163, 0.6rem);
     transition: all 0.3s;
 }
 
