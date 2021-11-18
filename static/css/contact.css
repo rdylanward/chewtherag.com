@@ -3,3 +3,225 @@
 /**********************************-***********************************/
 
 
+.container-contact {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh repeat(2, max-content);
+    grid-template-areas: 
+        "ctc-hdr"
+        "ctc-frm"
+        "ctc-dtl";
+}
+
+.contact-header {
+    grid-area: ctc-hdr;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../media/payphone-on-brick-wall.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 25vh);
+    grid-template-areas: 
+        ". ."
+        "ctc-hdr-txt ."
+        "ctc-hdr-qte ."
+        ". .";
+}
+
+.contact-header-title {
+    grid-area: ctc-hdr-txt;
+    font-size: 4.9rem;
+    align-self: flex-end;
+    margin: 2rem 7rem;
+}
+
+.contact-header-title span{
+    font-size: 5.7rem;
+    font-weight: 600;
+}
+
+.contact-header-text {
+    grid-area: ctc-hdr-qte;
+}
+
+.contact-text {
+    font-size: 1.6rem;
+    margin: 2.2rem 12rem 2.2rem 7.5rem;
+}
+
+.contact-form {
+    grid-area: ctc-frm;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: 
+        ". ctc-frm-hdr ."
+        ". ctc-frm-dsc ."
+        ". ctc-frm-frm .";
+    padding: 6rem 0rem;
+}
+
+.contact-form-header {
+    grid-area: ctc-frm-hdr;
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.contact-form-description {
+    grid-area: ctc-frm-dsc;
+    font-size: 1.5rem;
+}
+
+.contact-form-container {
+    grid-area: ctc-frm-frm;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas: 
+        "ctc-frm-fst ctc-frm-lst"
+        "ctc-frm-phn ctc-frm-eml"
+        "ctc-frm-msg ctc-frm-msg"
+        "ctc-frm-btn ctc-frm-btn";
+}
+
+.contact-form-container input {
+    font-size: 1.7rem;
+    font-weight: 500;
+    background: transparent;
+    border: 0.15rem solid #1d2b51;
+    border-radius: 0.4rem;
+    width: auto;
+    height: 4rem;
+    padding-left: 1rem;
+    margin: 0.4rem 0rem;
+}
+
+.contact-form-container input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1d2b51;
+}
+
+.contact-form-first {
+    grid-area: ctc-frm-fst;
+    margin-right: 0.4rem !important;
+}
+
+.contact-form-last {
+    grid-area: ctc-frm-lst;
+    margin-left: 0.4rem !important;
+}
+
+.contact-form-phone {
+    grid-area: ctc-frm-phn;
+    margin-right: 0.4rem !important;
+}
+
+.contact-form-email {
+    grid-area: ctc-frm-eml;
+    margin-left: 0.4rem !important;
+}
+
+.contact-form-message {
+    grid-area: ctc-frm-msg;
+    font-size: 1.7rem;
+    font-weight: 500;
+    background: transparent;
+    border: 0.15rem solid #1d2b51;
+    border-radius: 0.4rem;
+    width: auto;
+    height: 20rem;
+    padding-left: 1rem;
+    margin: 0.4rem 0rem;
+}
+
+.contact-form-message::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1d2b51;
+}
+
+.contact-form-submit {
+    grid-area: ctc-frm-btn;
+    font-size: 1.7rem;
+    font-weight: 600;
+    background: transparent;
+    border: 0.15rem solid #1d2b51;
+    border-radius: 0.4rem;
+    width: 9rem;
+    height: 4rem;
+    place-self: center center;
+    transition: all 0.3s;
+    margin: 0.4rem 0rem;
+}
+
+.contact-form-submit:hover {
+    color: #e5b27c;
+    background: #1d2b51;
+    transition: all 0.3s;
+}
+
+.contact-form-submit:active {
+    color: #e5b27c;
+    background: rgba(29, 43, 81, 0.6);
+    border: 0.1rem solid rgba(29, 43, 81, 0.6);
+    transition: all 0.3s;
+}
+
+.contact-details {
+    background: rgba(29, 43, 81, 0.15);
+    grid-area: ctc-dtl;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: 
+        ". dtl-hdr dtl-hdr ."
+        ". dtl-com dtl-map .";
+    padding: 6rem 0rem;
+}
+
+.details-header {
+    grid-area: dtl-hdr;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.details-company {
+    grid-area: dtl-com;
+    font-size: 1.7rem;
+    place-self: center center;
+}
+
+.details-company p{
+    line-height: 3rem;
+    margin: 0rem;
+}
+
+.contact-span {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-right: 1rem;
+}
+
+.details-phone {
+    margin-top: 3rem !important;
+}
+
+.details-map {
+    grid-area: dtl-map;
+    justify-self: center;
+    margin: 2rem;
+}
+
+.map-image {
+    width: 40rem;
+    height: 40rem;
+    box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
+}

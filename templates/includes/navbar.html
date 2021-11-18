@@ -1,10 +1,12 @@
+{% load static %}
+
 <!--  NAVBAR  -->
 
 <nav class="container-navbar white" id="navbar">
     <!-- NAVBAR BRAND -->
     <div class="navbar-brand" id="navbar-brand">
         <a href="{% url 'home' %}" class="navbar-brand-icon no-decoration">
-            <img class="navbar-brand-logo" src="../media/CTR_LOGO.png" alt="CTR Logo" />
+            <img class="navbar-brand-logo" src="{% static 'media/CTR_LOGO.png' %}" alt="CTR Logo" />
         </a>
         <div class="navbar-brand-title">
             Chew the Rag Clothing Co.
@@ -28,7 +30,7 @@
                 <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Community</a>
             </li>
             <li class="navbar-menu-item no-right-margin">
-                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">Contact</a>
+                <a href="{% url 'contact' %}" class="navbar-menu-link no-decoration uppercase white">Contact</a>
             </li>
             <li class="navbar-menu-item hidden">
                 <a class="navbar-toggler navbar-menu-link hidden no-decoration white" href="javascript:void(0);" onclick="mobileMenu()"><i class="fas fa-bars"></i></a>
