@@ -1,0 +1,57 @@
+/**********************************************************************/
+/***                      Community Container                       ***/
+/**********************************-***********************************/
+
+
+.container-community {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+        "ctc-hdr";
+}
+
+/**********************************************************************/
+/***                       Community Header                         ***/
+/**********************************-***********************************/
+
+
+.community-header {
+    grid-area: ctc-hdr;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../media/smiling-man-woman-pug.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 25vh);
+    grid-template-areas: 
+        ". ."
+        "com-hdr-txt ."
+        "com-hdr-qte ."
+        ". .";
+}
+
+.community-header-title {
+    grid-area: com-hdr-txt;
+    font-size: 4.9rem;
+    align-self: flex-end;
+    margin: 2rem 7rem;
+}
+
+.community-header-title span{
+    font-size: 5.7rem;
+    font-weight: 600;
+}
+
+.community-header-text {
+    grid-area: com-hdr-qte;
+}
+
+.community-text {
+    font-size: 1.6rem;
+    margin: 2.2rem 12rem 2.2rem 7.5rem;
+}
