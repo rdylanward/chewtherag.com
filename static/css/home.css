@@ -200,4 +200,47 @@
 /**********************************-***********************************/
 
 
+.home-testimonials {
+    grid-area: hom-tst;
+    background: rgba(29, 43, 81, 0.3);
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        ". tst-one tst-two tst-thr .";
+    align-self: center;
+    padding: 6rem 0rem;
+}
 
+.testimonial-one {
+    grid-area: tst-one;
+}
+
+.testimonial-two {
+    grid-area: tst-two;
+}
+
+.testimonial-three {
+    grid-area: tst-thr;
+}
+
+.testimonial-heading {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 1.8rem 2.5rem;
+}
+
+.testimonial-quote {
+    font-size: 1.7rem;
+    text-align: justify;
+    margin: 1.8rem 2.5rem;
+}
+
+.testimonial-quote i {
+    font-size: 1.4rem;
+    color: #1d2b51;
+}
+
+.testimonial-footer {
+    font-size: 1.6rem;
+}
