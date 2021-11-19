@@ -59,3 +59,62 @@
     font-size: 3.2rem;
     margin: 4.2rem 12rem 2.2rem 7.5rem;
 }
+
+
+/**********************************************************************/
+/***                       Welcome (index.html)                     ***/
+/**********************************-***********************************/
+
+
+.home-welcome {
+    grid-area: hom-wel;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        ". wel-img wel-blb .";
+    margin: 6rem 0rem;
+}
+
+.welcome-image {
+    grid-area: wel-img;
+    width: 43rem;
+    place-self: center;
+    margin: 2rem;
+}
+
+.welcome-blurb {
+    grid-area: wel-blb;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: 
+        "blb-ttl"
+        "blb-txt"
+        "blb-btn";
+    place-self: center;
+    margin: 4rem;
+}
+
+.welcome-title {
+    grid-area: blb-ttl;
+    font-size: 2.8rem;
+    font-weight: 600;
+    place-self: center center;
+    margin: 2.1rem 0rem;
+}
+
+.welcome-summary {
+    grid-area: blb-txt;
+    font-size: 1.8rem;
+    text-align: justify;
+    margin: 2.1rem 0rem;
+}
+
+.welcome-button {
+    grid-area: blb-btn;
+    width: 26rem;
+    height: 4rem;
+    justify-self: center;
+    margin: 2.1rem 0rem;
+}

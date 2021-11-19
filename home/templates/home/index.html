@@ -9,54 +9,64 @@
 
 <!--  INDEX GRID CONTAINER  -->
 
-<section class="container-home">
+<div class="container-home">
 
     <!--  HOME HEADER  -->
     
-    <div class="home-header">
+    <header class="home-header">
         <div class="home-header-title">
             <span class="white">Welcome to Chew The Rag Clothing Co.!</span>
         </div>
         <div class="home-header-summary white">
             <p>Come on in! We'll put the kettle on!</p>
         </div>
-    </div>
+    </header>
 
     <!--  /HOME HEADER  -->
 
     <!--  HOME WELOCOME  -->
 
-    <div class="home-welcome">
-
-    </div>
+    <section class="home-welcome">
+        <img class="welcome-image" src="{% static 'media/interestingly-designed-store.jpg' %}" alt="Different colour T-shirts hanging on a rack">
+        <div class="welcome-blurb">
+            <p class="welcome-title blue">Welcome to Chew The Rag Clothing Co.!</p>
+            <p class="welcome-summary blue">
+                    Clothes are important to us. At Chew The Rag, we are dedicated to providing quality, affordable 
+                    clothes to the masses. You work hard for our money and should be able to express our own individual 
+                    style without spending all of your hard-earned income.
+            </p>
+            <button class="welcome-button btn-blue-white no-decoration uppercase" onclick="window.location.href=''">Come Hear Our Story</button>
+            <!-- <a href="{% url 'about' %}" class="welcome-button btn-blue-white no-decoration uppercase">Come Hear Our Story</a> -->
+        </div>
+    </section>
 
     <!--  /HOME WELCOME  -->
 
     <!--  HOME COLLECTIONS  -->
 
-    <div class="home-collections">
+    <section class="home-collections">
 
-    </div>
+    </section>
 
     <!--  /HOME COLLECTIONS  -->
 
     <!--  HOME TESTIMONIALS  -->
 
-    <div class="home-testimonials">
+    <section class="home-testimonials">
 
-    </div>
+    </section>
 
     <!--  /HOME TESTIMONIALS  -->
 
     <!--  HOME EXTRAS  -->
 
-    <div class="home-extras">
+    <section class="home-extras">
 
-    </div>
+    </section>
 
     <!--  /HOME EXTRAS  -->
 
-</section>
+</div>
 
 <!--  /INDEX GRID CONTAINER  -->
 
