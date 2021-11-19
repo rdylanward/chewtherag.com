@@ -1,0 +1,61 @@
+/**********************************************************************/
+/***                       Home (index.html)                        ***/
+/**********************************-***********************************/
+
+
+.container-home {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh repeat(4, max-content);
+    grid-template-areas:
+        "hom-hdr"
+        "hom-wel"
+        "hom-col"
+        "hom-tst"
+        "hom-ext";
+}
+
+
+/**********************************************************************/
+/***                       Header (index.html)                      ***/
+/**********************************-***********************************/
+
+
+.home-header {
+    grid-area: hom-hdr;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../media/green-door-with-open-sign.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 25vh);
+    grid-template-areas: 
+        ". ."
+        "hdr-ttl ."
+        "hdr-sum ."
+        ". .";
+}
+
+.home-header-title {
+    grid-area: hdr-ttl;
+    align-self: flex-end;
+    margin: 0rem 7rem;
+}
+
+.home-header-title span{
+    font-size: 5.7rem;
+    font-weight: 600;
+}
+
+.home-header-summary {
+    grid-area: hdr-sum;
+}
+
+.home-header-summary p {
+    font-size: 3.2rem;
+    margin: 4.2rem 12rem 2.2rem 7.5rem;
+}
