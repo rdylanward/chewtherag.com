@@ -33,7 +33,6 @@
 
 .about-header-title {
     grid-area: hdr-txt;
-    font-size: 4.9rem;
     align-self: flex-end;
     margin: 2rem 7rem;
 }
