@@ -9,7 +9,7 @@
     grid-template-columns: 100%;
     grid-template-rows: 100vh;
     grid-template-areas: 
-        "ctc-hdr";
+        "com-hdr";
 }
 
 /**********************************************************************/
@@ -18,7 +18,7 @@
 
 
 .community-header {
-    grid-area: ctc-hdr;
+    grid-area: com-hdr;
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../media/smiling-man-woman-pug.jpg");
     background-size: cover;
     background-position: center;

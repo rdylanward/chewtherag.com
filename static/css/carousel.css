@@ -2,10 +2,70 @@
 /***                      Carousel (index.html)                     ***/
 /**********************************-***********************************/
 
+
 /* The following CSS was originally written by Juan Codepen.io (https://codepen.io/J0hn03cb1ac8a4/pen/MWYeQqp),
    converted to CSS from SCSS and repurposed to aid in the function of the carousel */
 
 .carousel {
+    width: 100%;
+    height: 100vh;
+}
+
+@keyframes display {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    30% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/**********************************************************************/
+/***                        Slide (index.html)                      ***/
+/**********************************-***********************************/
+
+
+.carousel > .slide {
+    position: absolute;
+    top: 0;
+    left: 0rem;
+    opacity: 0;
+    animation: display 9s infinite;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 6s;
+}
+
+
+
+
+/*  .carousel {
     display: grid;
     grid-template-rows: 1fr 3fr 1.5fr;
     grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
@@ -257,4 +317,4 @@
     .posts-wrapper {
         grid-column: 0.5;
     }
-}
+} */
