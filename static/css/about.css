@@ -13,6 +13,12 @@
         "txt";
 }
 
+
+/**********************************************************************/
+/***                      Header (about.html)                       ***/
+/**********************************-***********************************/
+
+
 .about-header {
     grid-area: hdr;
     background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../media/team-in-modern-office-meeting-room.jpg");
@@ -69,6 +75,12 @@
     font-size: 2.4rem;
 }
 
+
+/**********************************************************************/
+/***                       Story (about.html)                       ***/
+/**********************************-***********************************/
+
+
 .about-story {
     grid-area: txt;
     display: grid;
@@ -84,6 +96,7 @@
     grid-area: story-img;
     width: 42.5rem;
     height: 28.48rem;
+    box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
     align-self: center;
     margin: 2rem 0rem;
 }
