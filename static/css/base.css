@@ -71,6 +71,10 @@ body {
     color: #1d2b51;
 }
 
+.blue-shadow {
+    box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
+}
+
 .btn-blue-white {
     color: #1d2b51;
     font-size: 1.7rem;

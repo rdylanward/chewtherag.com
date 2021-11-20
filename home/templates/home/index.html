@@ -27,7 +27,7 @@
     <!--  HOME WELOCOME  -->
 
     <section class="home-welcome">
-        <img class="welcome-image" src="{% static 'media/interestingly-designed-store.jpg' %}" alt="Different colour T-shirts hanging on a rack">
+        <img class="welcome-image blue-shadow" src="{% static 'media/interestingly-designed-store.jpg' %}" alt="Different colour T-shirts hanging on a rack">
         <div class="welcome-blurb">
             <p class="welcome-title blue">Welcome to Chew The Rag Clothing Co.!</p>
             <p class="welcome-summary blue">
@@ -150,7 +150,7 @@
                 6PACK for a 15% discount on your purchase. You get all of the items you want and a healthy discount 
                 to boot.
             </p>
-            <img class="specials-image" src="{% static 'media/deal-deals-deals.jpg' %}" alt="Signboard with deals deals deals written on it">
+            <img class="specials-image blue-shadow" src="{% static 'media/deal-deals-deals.jpg' %}" alt="Signboard with deals deals deals written on it">
         </div>
 
         <!-- /SPECIALS -->
@@ -162,7 +162,7 @@
                 <img class="gift-image" src="{% static 'media/gift-wrapped-with-bow.jpg' %}" alt="Gift box wrapped with a bow.">
                 <p class="gift-heading blue">Share the gift of style.</p>
                 <p class="gift-summary blue">A gift card to our store is the perfect gift for all occasions!</p>
-                <button class="gift-button no-decoration uppercase white">Buy Now</button>
+                <button class="gift-button btn-blue-white no-decoration uppercase">Buy Now!</button>
             </div>
         </div>
 
@@ -171,7 +171,19 @@
         <!-- CUSTOM -->
 
         <div class="extras-custom">
-
+            <img class="custom-image blue-shadow" src="{% static 'media/custom-tshirt.jpg' %}" alt="Man and woman with roller skates on a subway.">
+            <div class="custom-group">
+                <p class="custom-heading">Custom T-shirt Design</p>
+                <div class="custom-price">
+                    <p class="custom-cost uppercase">&euro; Call for pricing</p>
+                    <p class="custom-tax">Tax included.</p>
+                </div>
+                <button class="custom-button">Contact Us Now</button>
+            </div>
+            <a class="custom-details no-decoration" href="javascript:void(0);">
+                <i class="fas fa-list"></i>
+                <p class="custom-details-link">Full Details</p>
+            </a>
         </div>
 
         <!-- /CUSTOM -->

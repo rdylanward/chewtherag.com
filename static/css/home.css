@@ -79,7 +79,6 @@
 .welcome-image {
     grid-area: wel-img;
     width: 43rem;
-    box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
     place-self: center start;
     margin: 2rem;
 }
