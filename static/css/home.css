@@ -73,7 +73,7 @@
     grid-template-rows: max-content;
     grid-template-areas: 
         ". wel-img wel-blb .";
-    margin: 6rem 0rem;
+    margin: 9rem 0rem;
 }
 
 .welcome-image {
@@ -98,9 +98,9 @@
 
 .welcome-title {
     grid-area: blb-ttl;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    place-self: center center;
+    place-self: center start;
     margin: 2.1rem 0rem;
 }
 
@@ -114,8 +114,8 @@
 .welcome-button {
     grid-area: blb-btn;
     width: 26rem;
-    height: 4rem;
-    justify-self: center;
+    height: 5rem;
+    justify-self: start;
     margin: 2.1rem 0rem;
 }
 
@@ -208,7 +208,7 @@
     grid-template-areas: 
         ". tst-one tst-two tst-thr .";
     align-self: center;
-    padding: 6rem 0rem;
+    padding: 9rem 0rem;
 }
 
 .testimonial-one {
@@ -242,4 +242,185 @@
 
 .testimonial-footer {
     font-size: 1.6rem;
+}
+
+
+/**********************************************************************/
+/***                       Extras (index.html)                      ***/
+/**********************************-***********************************/
+
+
+.home-extras {
+    grid-area: hom-ext;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: 
+        ". ext-spc ext-spc . ."
+        ". . ext-gft ext-gft ."
+        ". ext-cst ext-cst . .";
+    margin: 9rem 0rem;
+}
+
+.extras-specials {
+    grid-area: ext-spc;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "spc-grp spc-img";
+    place-self: center start;
+    margin-bottom: 6rem;
+}
+
+.specials-group {
+    grid-area: spc-grp;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas: 
+        "spc-grp-hdr"
+        "spc-grp-txt";
+    text-align: left;
+    place-self: center start;
+    margin-right: 3rem;
+}
+
+.specials-heading {
+    grid-area: spc-grp-hdr;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.specials-summary {
+    grid-area: spc-grp-txt;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.specials-image {
+    grid-area: spc-img;
+    width: 36rem;
+    place-self: center end;
+}
+
+.extras-gift {
+    grid-area: ext-gft;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "gft-wrp";
+    margin: 6rem 0rem;
+    place-self: center end;
+}
+
+.gift-wrapper {
+    grid-area: gft-wrp;
+    width: 73rem;
+    height: 34rem;
+    border: 0.3rem solid #1d2b51;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 40% repeat(2, 30%);
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "gft-wrp-img gft-wrp-grp gft-wrp-grp";
+}
+
+.gift-image {
+    grid-area: gft-wrp-img;
+    width: 30rem;
+    place-self: center end;
+    margin-right: 4rem;
+}
+
+.gift-group {
+    grid-area: gft-wrp-grp;
+    height: 55%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 45% 35%;
+    grid-template-areas: 
+        "wrp-grp-hdr"
+        "wrp-grp-sum"
+        "wrp-grp-btn";
+    place-self: center start;
+    margin: 0rem 4rem;
+}
+
+.gift-heading {
+    grid-area: wrp-grp-hdr;
+    font-size: 2.8rem;
+    font-weight: 600;
+    place-self: end start;
+    margin: 0rem;
+}
+
+.gift-summary {
+    grid-area: wrp-grp-sum;
+    font-size: 1.7rem;
+    font-weight: 500;
+    place-self: center start;
+}
+
+.gift-button {
+    grid-area: wrp-grp-btn;
+    width: 15rem;
+    height: 5rem;
+    place-self: center start;
+}
+
+.extras-custom {
+    grid-area: ext-cst;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 100%;
+    grid-template-areas: 
+        "cst-img cst-grp";
+    place-self: center start;
+    margin-top: 6rem;
+}
+
+.custom-image {
+    grid-area: cst-img;
+    width: 36rem;
+    place-self: center start;
+}
+
+.custom-group {
+    grid-area: cst-grp;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas: 
+        "cst-grp-hdr"
+        "cst-grp-prc"
+        "cst-grp-btn"
+        "cst-grp-dtl";
+    place-self: center end;
+}
+
+.custom-heading {
+    grid-area: cst-grp-hdr;
+}
+
+.custom-price {
+    grid-area: cst-grp-prc;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, 50%);
+    grid-template-areas: 
+        "grp-prc-val"
+        "grp-prc-tax";
+    place-self: center center;
+}
+
+.custom-button {
+    grid-area: cst-grp-btn;
+}
+
+.custom-details {
+    grid-area: cst-grp-dtl;
 }

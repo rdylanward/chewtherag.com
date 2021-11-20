@@ -72,6 +72,9 @@
     <!--  HOME TESTIMONIALS  -->
 
     <section class="home-testimonials">
+
+        <!-- TESTIMONIAL ONE -->
+
         <div class="testimonial-one">
             <p class="testimonial-heading blue">Pleasantly surprised!</p>
             <blockquote class="testimonial-quote blue">
@@ -91,6 +94,10 @@
                 </footer>
             </blockquote>
         </div>
+
+        <!-- /TESTIMONIAL ONE -->
+
+        <!-- TESTIMONIAL TWO -->
 
         <div class="testimonial-two">
             <p class="testimonial-heading blue">Worth a look.</p>
@@ -112,6 +119,10 @@
             </blockquote>
         </div>
 
+        <!-- /TESTIMONIAL TWO -->
+
+        <!-- TESTIMONIAL THREE -->
+
         <div class="testimonial-three">
             <p class="testimonial-heading blue">Love the shirts!</p>
             <blockquote class="testimonial-quote blue">
@@ -131,6 +142,9 @@
                 </footer>
             </blockquote>
         </div>
+
+        <!-- /TESTIMONIAL THREE -->
+
     </section>
 
     <!--  /HOME TESTIMONIALS  -->
@@ -142,14 +156,16 @@
         <!-- SPECIALS -->
 
         <div class="extras-specials">
-            <p class="specials-heading">Too much to choose form?</p>
-            <p class="specials-summary">
-                Can't decide on which one to get? Why don't you take advantage of our multi-packs. Just choose 
-                three items and use the discount code 3PACK for a 10% discount on your purchase. Is three not 
-                enough? Do you see a few more that catch your fancy? Choose six items and use the discount code 
-                6PACK for a 15% discount on your purchase. You get all of the items you want and a healthy discount 
-                to boot.
-            </p>
+            <div class="specials-group">
+                <p class="specials-heading blue">Too much to choose from?</p>
+                <p class="specials-summary blue">
+                    Can't decide on which one to get? Why don't you take advantage of our multi-packs. Just choose 
+                    three items and use the discount code 3PACK for a 10% discount on your purchase. Is three not 
+                    enough? Do you see a few more that catch your fancy? Choose six items and use the discount code 
+                    6PACK for a 15% discount on your purchase. You get all of the items you want and a healthy discount 
+                    to boot.
+                </p>
+            </div>
             <img class="specials-image blue-shadow" src="{% static 'media/deal-deals-deals.jpg' %}" alt="Signboard with deals deals deals written on it">
         </div>
 
@@ -160,9 +176,11 @@
         <div class="extras-gift">
             <div class="gift-wrapper">
                 <img class="gift-image" src="{% static 'media/gift-wrapped-with-bow.jpg' %}" alt="Gift box wrapped with a bow.">
-                <p class="gift-heading blue">Share the gift of style.</p>
-                <p class="gift-summary blue">A gift card to our store is the perfect gift for all occasions!</p>
-                <button class="gift-button btn-blue-white no-decoration uppercase">Buy Now!</button>
+                <div class="gift-group">
+                    <p class="gift-heading blue">Share the gift of style.</p>
+                    <p class="gift-summary blue">A gift card to our store is the perfect gift for all occasions!</p>
+                    <button class="gift-button btn-blue-white uppercase">Buy Now!</button>
+                </div>
             </div>
         </div>
 
@@ -178,12 +196,12 @@
                     <p class="custom-cost uppercase">&euro; Call for pricing</p>
                     <p class="custom-tax">Tax included.</p>
                 </div>
-                <button class="custom-button">Contact Us Now</button>
+                <button class="custom-button btn-blue-white uppercase">Contact Us Now</button>
+                <a class="custom-details no-decoration" href="javascript:void(0);">
+                    <i class="fas fa-list"></i>
+                    <p class="custom-details-link">Full Details</p>
+                </a>
             </div>
-            <a class="custom-details no-decoration" href="javascript:void(0);">
-                <i class="fas fa-list"></i>
-                <p class="custom-details-link">Full Details</p>
-            </a>
         </div>
 
         <!-- /CUSTOM -->
