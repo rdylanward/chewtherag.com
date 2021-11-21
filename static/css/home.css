@@ -266,7 +266,7 @@
     grid-area: ext-spc;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 100%;
+    grid-template-rows: max-content;
     grid-template-areas: 
         "spc-grp spc-img";
     place-self: center start;
@@ -283,7 +283,7 @@
         "spc-grp-txt";
     text-align: left;
     place-self: center start;
-    margin-right: 3rem;
+    margin-right: 2.5rem;
 }
 
 .specials-heading {
@@ -301,8 +301,9 @@
 
 .specials-image {
     grid-area: spc-img;
-    width: 36rem;
-    place-self: center end;
+    width: 40rem;
+    place-self: center start;
+    margin-left: 2.5rem;
 }
 
 .extras-gift {
@@ -374,9 +375,10 @@
 
 .extras-custom {
     grid-area: ext-cst;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: 100%;
+    grid-template-rows: max-content;
     grid-template-areas: 
         "cst-img cst-grp";
     place-self: center start;
@@ -385,7 +387,7 @@
 
 .custom-image {
     grid-area: cst-img;
-    width: 36rem;
+    width: 40rem;
     place-self: center start;
 }
 
@@ -404,6 +406,8 @@
 
 .custom-heading {
     grid-area: cst-grp-hdr;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .custom-price {
@@ -417,10 +421,43 @@
     place-self: center center;
 }
 
+.custom-cost {
+    grid-area: grp-prc-val;
+    font-size: 1.7rem;
+    font-weight: 500;
+    place-self: center center;
+    margin: 0rem;
+}
+
+.custom-tax {
+    grid-area: grp-prc-tax;
+    font-size: 1.5rem;
+    font-weight: 500;
+    place-self: start center;
+    margin: 0rem;
+}
+
 .custom-button {
     grid-area: cst-grp-btn;
+    width: 21rem;
+    height: 5rem;
+    place-self: center center;
+    margin: 2rem 0rem;
 }
 
 .custom-details {
     grid-area: cst-grp-dtl;
+    font-size: 1.6rem;
+    font-weight: 500;
+    place-self: center center;
+    margin: 0rem;
+
+}
+
+.custom-details p {
+    margin: 0rem;
+}
+
+.custom-details span {
+    margin-right: 1rem;
 }
