@@ -284,6 +284,7 @@
     grid-area: spc-grp-hdr;
     font-size: 2.5rem;
     font-weight: 600;
+    margin: 0rem 0rem 1rem 0rem;
 }
 
 .specials-summary {
@@ -291,6 +292,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     text-align: justify;
+    margin: 0.8rem 0rem 0rem 0rem;
 }
 
 .specials-image {
