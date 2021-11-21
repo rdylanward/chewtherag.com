@@ -1,0 +1,13 @@
+/**********************************************************************/
+/***                      Community Container                       ***/
+/**********************************-***********************************/
+
+
+.container-community {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh;
+    grid-template-areas: 
+        "com-hdr";
+}
