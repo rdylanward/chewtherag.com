@@ -101,22 +101,22 @@
     font-size: 2.5rem;
     font-weight: 600;
     place-self: center start;
-    margin: 2.1rem 0rem;
+    margin: 0rem;
 }
 
 .welcome-summary {
     grid-area: blb-txt;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: justify;
-    margin: 2.1rem 0rem;
+    margin: 1.7rem 0rem;
 }
 
 .welcome-button {
     grid-area: blb-btn;
-    width: 26rem;
-    height: 5rem;
+    width: 22rem;
+    /* height: 5rem; */
     justify-self: start;
-    margin: 2.1rem 0rem;
+    margin: 1.5rem 0rem;
 }
 
 

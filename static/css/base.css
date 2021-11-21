@@ -83,6 +83,7 @@ body {
     background: transparent;
     border: 0.25rem solid #1d2b51;
     border-radius: 0.6rem;
+    height: 4rem;
     transition: all 0.3s;
 }
 
