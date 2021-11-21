@@ -99,6 +99,30 @@ body {
     transition: all 0.3s;
 }
 
+.btn-white {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    background: transparent;
+    border: 0.25rem solid #fff;
+    border-radius: 0.6rem;
+    height: 4rem;
+    transition: all 0.3s;
+}
+
+.btn-white:hover {
+    color: rgba(0, 0, 0, 0.6);
+    background: #fff;
+    transition: all 0.3s;
+}
+
+.btn-white:active {
+    background: rgba(255, 255, 255, 0.6);
+    border: 0.1rem solid rgba(255, 255, 255, 0.6);
+    transition: all 0.3s;
+}
+
 
 /**********************************************************************/
 /***                      Navbar (base.html)                        ***/

@@ -149,9 +149,9 @@
 }
 
 .home-collections-title p {
-    font-size: 4.6rem;
+    font-size: 4.2rem;
     padding: 0rem;
-    margin: 0rem 12rem 1.7rem 7.5rem;
+    margin: 0rem 12rem 1.3rem 7.5rem;
 }
 
 .home-collections-blurb {
@@ -167,8 +167,8 @@
 
 .home-collections-summary {
     grid-area: wel-col-sum;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 500;
     align-self: flex-start;
     margin: 0rem 12rem 0rem 7.5rem;
 }
@@ -180,17 +180,11 @@
 .home-collections-link {
     grid-area: wel-col-lnk;
     justify-self: start;
-    margin: 2.2rem 12rem 2.2rem 7.5rem;
+    margin: 0rem 12rem 0rem 7.5rem;
 }
 
-.home-collections-link a span {
-    font-size: 1.4rem;
-    font-weight: 600;
-}
-
-.home-collections-link a svg {
-    margin: 0.35rem 0rem 0rem 1.2rem;
-    font-weight: 600;
+.home-collections-link button {
+    width: 19rem;
 }
 
 
@@ -224,24 +218,24 @@
 }
 
 .testimonial-heading {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     text-align: center;
     margin: 1.8rem 2.5rem;
 }
 
 .testimonial-quote {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     text-align: justify;
     margin: 1.8rem 2.5rem;
 }
 
 .testimonial-quote i {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #1d2b51;
 }
 
 .testimonial-footer {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 }
 
 
@@ -294,7 +288,7 @@
 
 .specials-summary {
     grid-area: spc-grp-txt;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 500;
     text-align: justify;
 }
@@ -319,8 +313,8 @@
 
 .gift-wrapper {
     grid-area: gft-wrp;
-    width: 73rem;
-    height: 34rem;
+    width: 69rem;
+    height: 30rem;
     border: 0.3rem solid #1d2b51;
     border-radius: 1rem;
     display: grid;
@@ -332,7 +326,7 @@
 
 .gift-image {
     grid-area: gft-wrp-img;
-    width: 30rem;
+    width: 28rem;
     place-self: center end;
     margin-right: 4rem;
 }
@@ -353,7 +347,7 @@
 
 .gift-heading {
     grid-area: wrp-grp-hdr;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     font-weight: 600;
     place-self: end start;
     margin: 0rem;
@@ -361,15 +355,14 @@
 
 .gift-summary {
     grid-area: wrp-grp-sum;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 500;
     place-self: center start;
 }
 
 .gift-button {
     grid-area: wrp-grp-btn;
-    width: 15rem;
-    height: 5rem;
+    width: 12rem;
     place-self: center start;
 }
 
@@ -408,6 +401,7 @@
     grid-area: cst-grp-hdr;
     font-size: 2.5rem;
     font-weight: 600;
+    margin: 0rem 0rem 2.5rem 0rem;
 }
 
 .custom-price {
@@ -423,7 +417,7 @@
 
 .custom-cost {
     grid-area: grp-prc-val;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 500;
     place-self: center center;
     margin: 0rem;
@@ -431,7 +425,7 @@
 
 .custom-tax {
     grid-area: grp-prc-tax;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     place-self: start center;
     margin: 0rem;
@@ -439,15 +433,14 @@
 
 .custom-button {
     grid-area: cst-grp-btn;
-    width: 21rem;
-    height: 5rem;
+    width: 18rem;
     place-self: center center;
     margin: 2rem 0rem;
 }
 
 .custom-details {
     grid-area: cst-grp-dtl;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 500;
     place-self: center center;
     margin: 0rem;
