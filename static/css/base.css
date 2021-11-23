@@ -338,8 +338,13 @@ body {
 }
 
 .navbar-dropdown-link:hover {
-    background: rgba(255, 255, 255, 0.9) !important;
-    color: rgb(0, 0, 0) !important;
+    background: #fff !important;
+    color: #000 !important;
+}
+
+.navbar-dropdown-link:active {
+    background: rgba(255, 255, 255, 0.6) !important;
+    color: rgb(0, 0, 0, 0.6) !important;
 }
 
 .navbar-cart-text {

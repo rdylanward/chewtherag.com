@@ -4,11 +4,6 @@ $(document).ready(function() {
     let navbar_offset = $(".container-navbar").offset();
     let sticky = navbar_offset.top + navbar_height;
 
-    let login_pos = $(".navbar-login-text").position();
-    let login_left = login_pos.left;
-    let login_height = $(".navbar-login-text").outerHeight()
-    let login_top = login_pos.top + login_height;
-
     /* Enable/Disable the sticky menu */
     $(window).scroll(function(){
         if ($(window).scrollTop() >= sticky) {
@@ -30,6 +25,11 @@ $(document).ready(function() {
 
     /* Enable/Disable the login dropdown menu */
     $(".navbar-login-text").mouseover(function(){
+        let login_pos = $(".navbar-login-text").position();
+        let login_height = $(".navbar-login-text").outerHeight(true)
+        let login_left = login_pos.left;
+        let login_top = login_pos.top + login_height;
+    
         $(".navbar-login-dropdown").css("left", login_left);
         $(".navbar-login-dropdown").css("top", login_top);
         $(".navbar-login-dropdown").css("display", "block");
