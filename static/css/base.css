@@ -376,7 +376,7 @@ body {
         ". brnd menu icon ."
         ". brnd srch icon .";
     grid-template-rows: 3.5vh 3.5vh;
-    background: rgba(0, 0, 0, 0.85) !important;
+    background: rgba(0, 0, 0, 0.95) !important;
     transition: all 0.5s;
 }
 

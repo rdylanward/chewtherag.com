@@ -54,7 +54,3 @@ function mobileMenu() {
         navbarMobile.style.display = "none";
     }
 }
-
-/* Enable/Disable dropdown menu for navbar login
-$(document).ready(function() {
-}); */
