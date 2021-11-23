@@ -200,9 +200,13 @@ body {
     margin-right: 1.7rem;
 }
 
-.navbar-menu-item a:hover,
-.navbar-menu-item a:active {
-    color: rgba(255, 255, 255, 0.6);
+.navbar-menu-link:hover {
+    color: #e5b27c !important;
+    transition: color 0.3s;
+}
+
+.navbar-menu-link:active {
+    color: rgba(229, 178, 124, 0.6) !important;
     transition: color 0.3s;
 }
 
