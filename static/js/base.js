@@ -8,9 +8,6 @@ let navbarIcons = document.getElementById("navbar-icons");
 let navbarMobile = document.getElementById("navbar-mobile");
 let sticky = navbar.offsetHeight;
 
-/* Enable/Disable dropdown menu for navbar login */
-document.getElementById("navbar-login-text").onclick = function() {loginFunction()};
-
 /* The following Javascript was originally written by W3Schools (https://www.w3schools.com/howto/howto_js_navbar_sticky.asp)
    and repurposed to aid in the function of the sticky menu */
 function stickyNavbar() {
@@ -42,7 +39,18 @@ function mobileMenu() {
     }
 }
 
-/* Click function for the login dropdown menu */
-function loginFunction() {
-  document.getElementById("navbar-login-dropdown").classList.toggle("show-dropdown");
-}
+/* Enable/Disable dropdown menu for navbar login */
+$(document).ready(function() {
+    $('.navbar-login-text').mouseenter(function(){
+        let height = $(".navbar-login-text").height();
+        let offset = $(".navbar-login-text").offset();
+        let left = offset.left;
+        let top = (offset.top + height + 2);
+
+        $(".navbar-login-dropdown").left(left);
+        $(".navbar-login-dropdown").top(top);
+        $(".navbar-login-dropdown").display("block");
+    }).mouseleave(function(){        
+        $(".navbar-login-dropdown").display("none");    
+    })
+});
