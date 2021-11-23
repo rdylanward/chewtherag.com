@@ -318,7 +318,7 @@ body {
 .navbar-login-dropdown {
     display: none;
     position: absolute;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(29, 43, 81, 0.8);
     width: 10rem;
     height: auto;
     overflow: auto;
@@ -339,12 +339,12 @@ body {
 
 .navbar-dropdown-link:hover {
     background: #fff !important;
-    color: #000 !important;
+    color: #1d2b51 !important;
 }
 
 .navbar-dropdown-link:active {
     background: rgba(255, 255, 255, 0.6) !important;
-    color: rgb(0, 0, 0, 0.6) !important;
+    color: rgba(29, 43, 81, 0.6) !important;
 }
 
 .navbar-cart-text {
