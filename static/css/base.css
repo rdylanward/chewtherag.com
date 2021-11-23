@@ -158,6 +158,7 @@ body {
     grid-template-rows: 100%;
     align-self: center;
     justify-self: start;
+    transition: all 0.5s;
 }
 
 .navbar-brand-icon {
@@ -185,6 +186,7 @@ body {
     grid-area: menu;
     align-self: center;
     justify-self: center;
+    transition: all 0.5s;
 }
 
 .navbar-menu-list {
@@ -225,6 +227,7 @@ body {
     grid-template-rows: 100%;
     width: 100%;
     align-self: center;
+    transition: all 0.5s;
 }
 
 .navbar-search-form {
@@ -289,6 +292,7 @@ body {
     grid-template-rows: 50% 50%;
     align-self: center;
     justify-content: end;
+    transition: all 0.5s;
 }
 
 .navbar-icons-login {
@@ -373,6 +377,7 @@ body {
 
 .sticky-navbar-brand {
     height: 100%;
+    transition: all 0.5s;
 }
 
 .sticky-navbar-brand img {
@@ -389,6 +394,7 @@ body {
 .sticky-navbar-menu {
     align-self: flex-end;
     padding-bottom: 0.6rem;
+    transition: all 0.5s;
 }
 
 .sticky-navbar-menu .navbar-menu-list  {
@@ -401,6 +407,7 @@ body {
         "srch-bar";
     align-self: flex-start;
     padding-top: 0.2rem;
+    transition: all 0.5s;
 }
 
 .sticky-navbar-search .navbar-search-form {
@@ -429,6 +436,7 @@ body {
 
 .sticky-navbar-icons {
     align-self: center;
+    transition: all 0.5s;
 }
 
 .sticky-navbar-icons .navbar-icons-icon {
