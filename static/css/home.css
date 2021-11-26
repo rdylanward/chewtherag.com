@@ -456,3 +456,150 @@
 .custom-details span {
     margin-right: 1rem;
 }
+
+
+/**********************************************************************/
+/***                         Media Queries                          ***/
+/**********************************-***********************************/
+
+
+/****  /screen and (min-width: 1400px)  ****/
+
+@media screen and (min-width: 1400px) {
+
+    /******************/
+    /****  Header  ****/
+    /******************/
+
+    .home-header-title {
+        margin: 0rem 1rem 0rem 4rem;
+    }
+
+    .home-header-summary p {
+        margin: 4.2rem 8rem 2.2rem 5rem;
+    }
+
+    /*******************/
+    /****  Welcome  ****/
+    /*******************/
+
+    .home-welcome {
+        grid-template-columns: 15% repeat(2, 35%) 15%;
+    }
+
+    /**********************/
+    /****  Collection  ****/
+    /**********************/
+
+    .home-collections {
+        grid-template-columns: 15% 70% 15%;
+    }
+
+    /************************/
+    /****  Testimonials  ****/
+    /************************/
+
+    .home-testimonials {
+        grid-template-columns: 15% repeat(3, 23.33%) 15%;
+    }
+
+    /******************/
+    /****  Extras  ****/
+    /******************/
+
+    .home-extras {
+        grid-template-columns: 15% repeat(5, 23.33%) 15%;
+    }
+
+    .specials-image {
+        width: 38rem;
+    }
+
+    .gift-wrapper {
+        width: 64.4rem;
+        height: 28rem;
+    }
+    
+    .gift-image {
+        width: 26rem;
+        margin-right: 4rem;
+    }
+
+    .custom-image {
+        width: 34rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1400px)  ****/
+
+
+/****  screen and (min-width: 1920px)  ****/
+
+@media only screen and (min-width: 1920px) {
+
+    /******************/
+    /****  Header  ****/
+    /******************/
+
+    .home-header-title {
+        margin: 0rem 7rem;
+    }
+
+    .home-header-summary p {
+        margin: 4.2rem 12rem 2.2rem 7.5rem;
+    }
+
+    /*******************/
+    /****  Welcome  ****/
+    /*******************/
+
+    .home-welcome {
+        grid-template-columns: 20% repeat(2, 30%) 20%;
+    }
+
+    /**********************/
+    /****  Collection  ****/
+    /**********************/
+
+    .home-collections {
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    /************************/
+    /****  Testimonials  ****/
+    /************************/
+
+    .home-testimonials {
+        grid-template-columns: repeat(5, 20%);
+    }
+
+    /******************/
+    /****  Extras  ****/
+    /******************/
+
+    .home-extras {
+        grid-template-columns: repeat(5, 20%);
+    }
+
+    .specials-image {
+        width: 40rem;
+    }
+
+    .gift-wrapper {
+        width: 69rem;
+        height: 30rem;
+    }
+    
+    .gift-image {
+        width: 28rem;
+        margin-right: 4rem;
+    }
+
+    .custom-image {
+        width: 40rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1920px)  ****/

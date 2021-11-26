@@ -113,3 +113,91 @@
     line-height: 2.1rem;
     margin-top: 3rem;
 }
+
+
+/**********************************************************************/
+/***                         Media Queries                          ***/
+/**********************************-***********************************/
+
+
+/****  /screen and (min-width: 1400px)  ****/
+
+@media screen and (min-width: 1400px) {
+
+    /******************/
+    /****  Header  ****/
+    /******************/
+
+    .about-header-title {
+        margin: 2rem 7rem 2rem 4rem;
+    }
+
+    .about-header-dictionary {
+        margin: 0rem 2rem 0rem 4.5rem;
+    }
+
+    /******************/
+    /****  Story  ****/
+    /******************/
+    
+    .about-story {
+        margin: 6rem 20%;
+    }
+    
+    .story-image {
+        width: 40rem;
+        height: 26.8rem;
+    }
+    
+    .story-quote {
+        margin: 1.8rem 2.1rem 1.8rem 5rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1400px)  ****/
+
+
+/****  screen and (min-width: 1920px)  ****/
+
+@media only screen and (min-width: 1920px) {
+
+    /******************/
+    /****  Header  ****/
+    /******************/
+
+    .about-header-title {
+        margin: 2rem 7rem;
+    }
+
+    .about-header-dictionary {
+        margin: 0rem 7rem;
+    }
+
+    /******************/
+    /****  Story  ****/
+    /******************/
+    
+    .about-story {
+        margin: 6rem 25%;
+    }
+    
+    .story-image {
+        width: 42.5rem;
+        height: 28.48rem;
+    }
+    
+    .story-quote {
+        margin: 1.8rem 4rem;
+    }
+    
+    .story-text {
+        grid-area: story-txt;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        margin-top: 3rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1920px)  ****/

@@ -54,3 +54,50 @@
     font-size: 1.6rem;
     margin: 2.2rem 12rem 2.2rem 7.5rem;
 }
+
+
+/**********************************************************************/
+/***                         Media Queries                          ***/
+/**********************************-***********************************/
+
+
+/****  /screen and (min-width: 1400px)  ****/
+
+@media screen and (min-width: 1400px) {
+
+    /******************/
+    /****  Header  ****/
+    /******************/
+
+    .community-header-title {
+        margin: 2rem 7rem 2rem 4rem;
+    }
+
+    .community-text {
+        margin: 2.2rem 8rem 2.2rem 5rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1400px)  ****/
+
+
+/****  screen and (min-width: 1920px)  ****/
+
+@media only screen and (min-width: 1920px) {
+
+    /******************/
+    /****  Header  ****/
+    /******************/
+
+    .community-header-title {
+        margin: 2rem 7rem;
+    }
+
+    .community-text {
+        margin: 2.2rem 12rem 2.2rem 7.5rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1920px)  ****/
