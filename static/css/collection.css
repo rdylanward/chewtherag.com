@@ -7,9 +7,10 @@
     font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100vh;
+    grid-template-rows: 100vh max-content;
     grid-template-areas: 
-        "col-hdr";
+        "col-hdr"
+        "col-itm";
 }
 
 /**********************************************************************/
@@ -55,10 +56,110 @@
     margin: 2.2rem 12rem 2.2rem 7.5rem;
 }
 
+/**********************************************************************/
+/***                        Colelction Items                        ***/
+/**********************************-***********************************/
+
+
+.collection-item {
+    grid-area: col-itm;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 6rem 8%;
+}
+
+.item-card {
+    display: grid;
+    grid-template-columns: 35rem;
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas: 
+        "itm-img"
+        "itm-bdy"
+        "itm-ftr";
+    border-radius: 0.6rem;
+    justify-self: center;
+    padding-top: 2.2rem;
+    margin: 2rem;
+}
+
+.card-image {
+    grid-area: itm-img;
+    width: 35rem;
+}
+
+.card-body {
+    grid-area: itm-bdy;
+    font-size: 1.5rem;
+    font-weight: 500;
+    height: 6.3rem;
+    padding: 0rem 0.6rem;
+}
+
+.card-footer {
+    grid-area: itm-ftr;
+    padding: 0rem 0.6rem;
+}
+
+.footer-price {
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin: 0.3rem 0rem;
+}
+
+.footer-rating {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0.6rem 0rem;
+}
+
+.footer-rating i {
+    margin-right: 0.3rem;
+}
+
 
 /**********************************************************************/
 /***                         Media Queries                          ***/
 /**********************************-***********************************/
 
 
+/****  /screen and (min-width: 1400px)  ****/
 
+@media screen and (min-width: 1400px) {
+
+    /******************/
+    /****  Header  ****/
+    /******************/
+
+    .collection-header-title {
+        margin: 2rem 7rem 2rem 4rem;
+    }
+
+    .collection-text {
+        margin: 2.2rem 8rem 2.2rem 5rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1400px)  ****/
+
+
+/****  screen and (min-width: 1920px)  ****/
+
+@media only screen and (min-width: 1920px) {
+
+    /******************/
+    /****  Header  ****/
+    /******************/
+
+    .collection-header-title {
+        margin: 2rem 7rem;
+    }
+
+    .collection-text {
+        margin: 2.2rem 12rem 2.2rem 7.5rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1920px)  ****/

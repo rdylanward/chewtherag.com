@@ -12,7 +12,7 @@
 <div class="container-collection">
 
     <!--  COLLECTION HEADER  -->
-    
+
     <div class="collection-header">
         <div class="collection-header-title">
             <span class="white">The Collection</span>
@@ -27,6 +27,48 @@
     </div>
 
     <!--  /COLLECTION HEADER  -->
+
+    <!--  COLLECTION ITEMS  -->
+
+    <div class="collection-item">
+        <div class="item-wrapper">
+            
+            {% for item in items %}
+
+                <!-- ITEM CARD -->
+
+                <div class="item-card blue-shadow">
+                    {% if item.image %}
+                        <a href="">
+                            <img class="card-image" src="{{ item.image.url }}" alt="{{ item.name }}">
+                        </a>
+                    {% else %}
+                        <a href="">
+                            <img class="card-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+                        </a>
+                    {% endif %}
+                    <div class="card-body">
+                        <p class="blue">{{ item.name }}</p>
+                    </div>
+                    <div class="card-footer">
+                        <p class="footer-price blue">€{{ item.price }}</p>
+                        {% if item.rating %}
+                            <p class="footer-rating blue"><i class="fas fa-star"></i>{{ item.rating }} / 5</p>
+                        {% else %}
+                            <p class="footer-rating blue">No Rating</p>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- ITEM CARD -->
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <!--  /COLLECTION ITEMS-->
 
 </div>
 
