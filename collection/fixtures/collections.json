@@ -1,0 +1,74 @@
+[
+  {
+    "pk": 1,
+    "model": "collection.collection",
+    "fields": {
+      "name": "activewear",
+      "friendly_name": "Activewear"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "collection.collection",
+    "fields": {
+      "name": "bed_bath",
+      "friendly_name": "Bed & Bath"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "collection.collection",
+    "fields": {
+      "name": "clearance",
+      "friendly_name": "Clearance"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "collection.collection",
+    "fields": {
+      "name": "deals",
+      "friendly_name": "Deals"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "collection.collection",
+    "fields": {
+      "name": "essentials",
+      "friendly_name": "Essentials"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "collection.collection",
+    "fields": {
+      "name": "jeans",
+      "friendly_name": "Jeans"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "collection.collection",
+    "fields": {
+      "name": "kitchen_dining",
+      "friendly_name": "Kitchen & Dining"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "collection.collection",
+    "fields": {
+      "name": "new_arrivals",
+      "friendly_name": "New Arrivals"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "collection.collection",
+    "fields": {
+      "name": "shirts",
+      "friendly_name": "Shirts"
+    }
+  }
+]
