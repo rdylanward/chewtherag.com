@@ -757,7 +757,7 @@ body {
         grid-template-columns: 2.5% 31.7% 31.6% 31.7% 2.5%;
     }
 
-    /* .navbar-brand-logo {
+    .navbar-brand-logo {
         height: 6rem;
         width: 6rem;
     }
@@ -765,13 +765,13 @@ body {
     .navbar-brand-title {
         font-size: 3.6rem;
         margin-left: 1.3rem;
-    } */
+    }
 
     /*************************/
     /****  Sticky Navbar  ****/
     /*************************/
 
-    /* .sticky-navbar-brand img {
+    .sticky-navbar-brand img {
         height: 3.8rem;
         width: 3.8rem;
     }
@@ -779,7 +779,7 @@ body {
     .sticky-navbar-brand .navbar-brand-title {
         font-size: 2.3rem !important;
         margin-left: 1.1rem !important;
-    } */
+    }
 
     /******************/
     /****  Footer  ****/
