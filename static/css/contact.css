@@ -21,7 +21,7 @@
 
 .contact-header {
     grid-area: ctc-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../media/payphone-on-brick-wall.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/payphone-on-brick-wall.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;

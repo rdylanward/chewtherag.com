@@ -19,7 +19,7 @@
 
 .community-header {
     grid-area: com-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../media/smiling-man-woman-pug.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/smiling-man-woman-pug.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;

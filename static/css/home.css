@@ -24,7 +24,7 @@
 
 .home-header {
     grid-area: hom-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("../media/green-door-with-open-sign.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/green-door-with-open-sign.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -127,7 +127,7 @@
 
 .home-collections {
     grid-area: hom-col;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../media/in-home-camera-set-up.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/media/in-home-camera-set-up.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
