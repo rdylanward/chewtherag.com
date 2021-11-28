@@ -112,7 +112,7 @@ body {
 }
 
 .btn-white:hover {
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.8);
     background: #fff;
     transition: all 0.3s;
 }
@@ -136,7 +136,6 @@ body {
     grid-template-rows: 8vh 4vh;
     grid-template-areas:
         ". brnd menu icon ."
-        /* ". srch srch srch ."; */
         ". msge msge msge .";
     background: transparent;
     width: 100%;
@@ -239,76 +238,14 @@ body {
     text-align: center;
     border-top: 0.1rem solid #fff;
     border-bottom: 0.1rem solid #fff;
+    margin: 0rem 31.7%;
 }
-
-/* .navbar-search {
-    grid-area: srch;
-    display: grid;
-    grid-template-columns: 33.75% 32.5% 33.75%;
-    grid-template-areas: 
-        ". srch-bar .";
-    grid-template-rows: 100%;
-    width: 100%;
-    align-self: center;
-    transition: all 0.5s;
-}
-
-.navbar-search-form {
-    grid-area: srch-bar;
-    display: grid;
-    grid-template-columns: 90% 10%;
-    grid-template-areas: 
-        "srch-txt srch-btn";
-    grid-template-rows: 100%;
-    width: 100%;
-    align-items: center;
-    justify-items: center;
-}
-
-.navbar-search-text {
-    grid-area: srch-txt;
-    background: transparent;
-    border: 0.2rem solid #fff;
-    border-radius: 0.6rem;
-    font-family: 'Amatic SC', cursive;
-    font-size: 1.8rem;
-    font-weight: 500;
-    height: 110%;
-    width: 100%;
-    padding-left: 1rem;
-}
-
-.navbar-search-text::placeholder {
-    color: rgba(255, 255, 255, 0.7) !important;
-    align-self: center;
-}
-
-.navbar-search-button {
-    grid-area: srch-btn;
-    background: transparent;
-    border: 0.2rem solid #fff;
-    border-radius: 0.6rem;
-    height: 110%;
-    width: 100%;
-}
-
-.navbar-search-button:hover {
-    background: #fff;
-    color: rgba(0, 0, 0, 0.7) !important;
-    transition: all 0.3s;
-}
-
-.navbar-search-button:active {
-    background: rgba(255, 255, 255, 0.6);
-    color: rgba(0, 0, 0, 0.3) !important;
-    transition: all 0.3s;
-} */
 
 .navbar-icons {
     grid-area: icon;
     font-family: 'Amatic SC', cursive;
     display: grid;
-    grid-template-columns: max-content 2% max-content;
+    grid-template-columns: max-content 5% max-content;
     grid-template-areas:
         "icon-logn . icon-cart"
         "logn-text . cart-text";
@@ -397,7 +334,6 @@ body {
     grid-template-columns: 2.5% 31.7% 31.6% 31.7% 2.5%;
     grid-template-areas:
         ". brnd menu icon ."
-        /* ". brnd srch icon ."; */
         ". brnd msge icon .";
     grid-template-rows: 3.5vh 3.5vh;
     background: rgba(0, 0, 0, 0.95) !important;
@@ -443,39 +379,6 @@ body {
     font-size: 1.5rem;
     margin: 0rem;
 }
-
-/* .sticky-navbar-search {
-    grid-template-columns: 100%;
-    grid-template-areas: 
-        "srch-bar";
-    align-self: flex-start;
-    padding-top: 0.2rem;
-    transition: all 0.5s;
-}
-
-.sticky-navbar-search .navbar-search-form {
-    width: 85%;
-    justify-self: center;
-}
-
-.sticky-navbar-search .navbar-search-text {
-    font-size: 1.5rem;
-    border: 0.1rem solid #fff;
-    border-radius: 0.4rem;
-    height: 91%;
-    align-self: flex-start;
-}
-
-.sticky-navbar-search .navbar-search-text::placeholder {
-    font-size: 1.5rem;
-}
-
-.sticky-navbar-search .navbar-search-button {
-    border: 0.1rem solid #fff;
-    border-radius: 0.4rem;
-    height: 91%;
-    align-self: flex-start;
-} */
 
 .sticky-navbar-icons {
     align-self: center;
