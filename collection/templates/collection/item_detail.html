@@ -6,5 +6,43 @@
 {% endblock %}
 
 {% block content %}
+<!--  GRID CONTAINER  -->
+
+<div class="container-item-detail white">
+
+    <!-- ITEM IMAGE -->
+    
+    <div class="item-detail-image">
+        {% if item.image %}
+            <a class="no-decoration" href="{{ item.image.url }}" target="_blank">
+                <img class="blue-shadow" src="{{ item.image.url }}" alt="{{ item.name }}">
+            </a>
+        {% else %}
+            <a class="no-decoration" href="">
+                <img class="blue-shadow" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+            </a>
+        {% endif %}
+    </div>
+
+    <!-- /ITEM IMAGE -->
+
+    <!-- ITEM DETAILS -->
+
+    <div class="item-details">
+        <p class="detail-name">{{ item.name }}</p>
+        <p class="detail-price">&euro;{{ item.price }}</p>
+        {% if item.rating %}
+            <p class="detail-rating"><i class="fas fa-star"></i>{{ item.rating }} / 5</p>
+        {% else %}
+            <p class="detail-rating">No Rating</p>
+        {% endif %}
+        <p class="detail-description">{{ item.description }}</p>
+    </div>
+
+    <!-- /ITEM DETAILS -->
+
+</div>
+
+<!--  /GRID CONTAINER  -->
 
 {% endblock %}

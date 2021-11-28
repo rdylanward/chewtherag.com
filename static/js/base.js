@@ -13,6 +13,9 @@ $(document).ready(function() {
             $(".navbar-message").addClass("sticky-navbar-message");
             $(".navbar-icons").addClass("sticky-navbar-icons");
             $(".navbar-mobile").addClass("sticky-navbar-mobile");
+            $(".container-item-detail").css("background", "rgba(29, 43, 81, 0.3)");
+            $(".container-item-detail").removeClass("white");
+            $(".container-item-detail").addClass("blue");
         } else {
             $(".container-navbar").removeClass("sticky-navbar");
             $(".navbar-brand").removeClass("sticky-navbar-brand");
@@ -20,6 +23,9 @@ $(document).ready(function() {
             $(".navbar-message").removeClass("sticky-navbar-message");
             $(".navbar-icons").removeClass("sticky-navbar-icons");
             $(".navbar-mobile").removeClass("sticky-navbar-mobile");
+            $(".container-item-detail").css("background", "rgba(29, 43, 81, 0.7)");
+            $(".container-item-detail").removeClass("blue");
+            $(".container-item-detail").addClass("white");
         }
     })
 

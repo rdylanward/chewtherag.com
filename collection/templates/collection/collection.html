@@ -48,11 +48,11 @@
 
                 <div class="item-card blue-shadow">
                     {% if item.image %}
-                        <a href="">
+                        <a href="{% url 'item_detail' item.id %}">
                             <img class="card-image" src="{{ item.image.url }}" alt="{{ item.name }}">
                         </a>
                     {% else %}
-                        <a href="">
+                        <a href="{% url 'item_detail' item.id %}">
                             <img class="card-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
                         </a>
                     {% endif %}
