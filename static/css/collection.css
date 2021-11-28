@@ -7,57 +7,26 @@
     font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100vh max-content;
+    grid-template-rows: 18vh max-content;
     grid-template-areas: 
         "col-hdr"
         "col-itm";
 }
 
 /**********************************************************************/
-/***              Colelction Header (collection.html)               ***/
+/***              Collection Header (collection.html)               ***/
 /**********************************-***********************************/
 
 
 .collection-header {
     grid-area: col-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/in-home-camera-set-up.jpg');
-    background-size: cover;
-    background-position: center;
+    background: rgba(0, 0, 0, 0.95);
     width: 100%;
-    height: 100vh;
-    background-attachment: fixed;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(4, 25vh);
-    grid-template-areas: 
-        ". ."
-        "col-hdr-txt ."
-        "col-hdr-qte ."
-        ". .";
-}
-
-.collection-header-title {
-    grid-area: col-hdr-txt;
-    align-self: flex-end;
-    margin: 2rem 7rem;
-}
-
-.collection-header-title span{
-    font-size: 5.7rem;
-    font-weight: 600;
-}
-
-.collection-header-text {
-    grid-area: col-hdr-qte;
-}
-
-.collection-text {
-    font-size: 1.6rem;
-    margin: 2.2rem 12rem 2.2rem 7.5rem;
+    height: 18vh;
 }
 
 /**********************************************************************/
-/***               Colelction Items (collection.html)               ***/
+/***               Collection Items (collection.html)               ***/
 /**********************************-***********************************/
 
 
@@ -203,15 +172,21 @@
 
 
 .container-item-detail {
-    background: rgba(29, 43, 81, 0.7);
     display: grid;
     grid-template-columns: 20% repeat(2, 30%) 20%;
-    grid-template-rows: 12vh 88vh;
+    grid-template-rows: 18vh 82vh;
     grid-template-areas:
-        ". . . ."
+        "det-hdr det-hdr det-hdr det-hdr"
         ". det-img det-sum .";
     place-self: center center;
     transition: all 0.5s;
+}
+
+.item-detail-header {
+    grid-area: det-hdr;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 18vh;
 }
 
 .item-detail-image {
