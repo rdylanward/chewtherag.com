@@ -30,13 +30,13 @@
 
     <!--  COLLECTION ITEMS  -->
 
-    <div class="collection-item">
+    <div class="collection-item" id="collection-item">
         <div class="item-title">
             <p class="blue">Collection Items</p>
         </div>
         <div class="item-search">
-            <form class="search-form">
-                <input class="search-text" type="search" placeholder="Search the collection..." aria-label="Search">
+            <form class="search-form" method="GET" action="{% url 'collection' %}">
+                <input class="search-text" type="search" name="q" placeholder="Search the collection..." aria-label="Search">
                 <button class="search-button btn-blue-white" type="submit"><i class="fas fa-search"></i></button>
             </form>
         </div>
