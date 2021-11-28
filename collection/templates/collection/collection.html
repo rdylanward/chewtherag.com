@@ -31,8 +31,17 @@
     <!--  COLLECTION ITEMS  -->
 
     <div class="collection-item">
+        <div class="item-title">
+            <p class="blue">Collection Items</p>
+        </div>
+        <div class="item-search">
+            <form class="search-form">
+                <input class="search-text" type="search" placeholder="Search the collection..." aria-label="Search">
+                <button class="search-button btn-blue-white" type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
         <div class="item-wrapper">
-            
+
             {% for item in items %}
 
                 <!-- ITEM CARD -->

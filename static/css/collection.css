@@ -63,6 +63,98 @@
 
 .collection-item {
     grid-area: col-itm;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: 
+        "itm-ttl"
+        "itm-src"
+        "itm-col";
+    margin: 6rem 0rem;
+}
+
+.item-title {
+    grid-area: itm-ttl;
+    font-size: 4rem;
+    font-weight: 600;
+    width: 100%;
+    justify-self: center;
+}
+
+.item-title p {
+    text-align: center;
+    margin: 0rem;
+}
+
+.item-search {
+    grid-area: itm-src;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    grid-template-areas: 
+        ". src-bar .";
+    grid-template-rows: 100%;
+    width: 100%;
+    justify-self: center;
+    align-self: center;
+    transition: all 0.5s;
+    margin-top: 3rem;
+}
+
+.search-form {
+    grid-area: src-bar;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-areas: 
+        "src-txt src-btn";
+    grid-template-rows: 100%;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.search-text {
+    grid-area: src-txt;
+    background: transparent;
+    border: 0.2rem solid #1d2b51;
+    border-radius: 0.6rem;
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.8rem;
+    font-weight: 900;
+    height: 125%;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.search-text::placeholder {
+    color: rgba(29, 43, 81, 0.9) !important;
+    font-size: 1.8rem;
+    font-weight: 900;
+    align-self: center;
+}
+
+.search-button {
+    grid-area: src-btn;
+    background: transparent;
+    border: 0.2rem solid #1d2b51;
+    border-radius: 0.6rem;
+    height: 125%;
+    width: 100%;
+}
+
+/* .search-button:hover {
+    background: #fff;
+    color: rgba(0, 0, 0, 0.7) !important;
+    transition: all 0.3s;
+}
+
+.search-button:active {
+    background: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s;
+} */
+
+.item-wrapper {
+    grid-area: itm-col;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -93,12 +185,12 @@
     font-size: 1.5rem;
     font-weight: 500;
     height: 6.3rem;
-    padding: 0rem 0.6rem;
+    padding: 0rem 0.7rem;
 }
 
 .card-footer {
     grid-area: itm-ftr;
-    padding: 0rem 0.6rem;
+    padding: 0rem 0.7rem;
 }
 
 .footer-price {
@@ -110,7 +202,7 @@
 .footer-rating {
     font-size: 1.4rem;
     font-weight: 500;
-    margin: 0.6rem 0rem;
+    margin: 0.6rem 0rem 0.8rem 0rem;
 }
 
 .footer-rating i {

@@ -10,14 +10,16 @@ $(document).ready(function() {
             $(".container-navbar").addClass("sticky-navbar");
             $(".navbar-brand").addClass("sticky-navbar-brand");
             $(".navbar-menu").addClass("sticky-navbar-menu");
-            $(".navbar-search").addClass("sticky-navbar-search");
+            /* $(".navbar-search").addClass("sticky-navbar-search"); */
+            $(".navbar-message").addClass("sticky-navbar-message");
             $(".navbar-icons").addClass("sticky-navbar-icons");
             $(".navbar-mobile").addClass("sticky-navbar-mobile");
         } else {
             $(".container-navbar").removeClass("sticky-navbar");
             $(".navbar-brand").removeClass("sticky-navbar-brand");
             $(".navbar-menu").removeClass("sticky-navbar-menu");
-            $(".navbar-search").removeClass("sticky-navbar-search");
+            /* $(".navbar-search").removeClass("sticky-navbar-search"); */
+            $(".navbar-message").removeClass("sticky-navbar-message");
             $(".navbar-icons").removeClass("sticky-navbar-icons");
             $(".navbar-mobile").removeClass("sticky-navbar-mobile");
         }
