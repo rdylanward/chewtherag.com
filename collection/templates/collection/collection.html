@@ -24,10 +24,31 @@
             <p class="blue">The Collection</p>
         </div>
         <div class="item-search">
+            <div class="item-count">
+                <p class="blue">
+                    {% if search_term or current_collections %}
+                        <span class="no-decoration"><a class="no-decoration blue" href="{% url 'collection' %}">Collection Home</a> | </span>
+                    {% endif %}
+                    {{ items|length }} Items{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
             <form class="search-form" method="GET" action="{% url 'collection' %}">
                 <input class="search-text" type="search" name="q" placeholder="Search the collection..." aria-label="Search">
                 <button class="search-button btn-blue-white" type="submit"><i class="fas fa-search"></i></button>
             </form>
+            <div class="item-sort blue">
+                <select class="sort-dropdown blue" name="" id="sort-dropdown">
+                    <option value="reset" selected>Sort by...</option>
+                    <option value="collection_asc">Collection (A-Z)</option>
+                    <option value="collection_desc">Collection (Z-A)</option>
+                    <option value="name_asc">Name (A-Z)</option>
+                    <option value="name_desc">Name (Z-A)</option>
+                    <option value="price_asc">Price (low to high)</option>
+                    <option value="price_desc">Price (high to low)</option>
+                    <option value="rating_asc">Rating (low to high)</option>
+                    <option value="rating_desc">Rating (high to low)</option>
+                </select>
+            </div>
         </div>
         <div class="item-wrapper">
 
@@ -50,6 +71,13 @@
                     </div>
                     <div class="card-footer">
                         <p class="footer-price blue">€{{ item.price }}</p>
+                        {% if item.collection %}
+                            <p class="footer-collection blue">
+                                <a class="no-decoration blue" href="{% url 'collection' %}?collection={{ item.collection.name }}">
+                                    <i class="fas fa-tag"></i>{{ item.collection.friendly_name}}
+                                </a>
+                            </p>
+                        {% endif %}
                         {% if item.rating %}
                             <p class="footer-rating blue"><i class="fas fa-star"></i>{{ item.rating }} / 5</p>
                         {% else %}

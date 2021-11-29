@@ -37,6 +37,13 @@
     <div class="item-details">
         <p class="detail-name">{{ item.name }}</p>
         <p class="detail-price">&euro;{{ item.price }}</p>
+        {% if item.collection %}
+            <p class="detail-collection blue">
+                <a class="no-decoration blue" href="{% url 'collection' %}?collection={{ item.collection.name }}">
+                    <i class="fas fa-tag"></i>{{ item.collection.friendly_name}}
+                </a>
+            </p>
+        {% endif %}
         {% if item.rating %}
             <p class="detail-rating"><i class="fas fa-star"></i>{{ item.rating }} / 5</p>
         {% else %}

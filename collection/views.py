@@ -11,8 +11,14 @@ def collection(request):
 
     items = Item.objects.all()
     query = None
+    collections = None
 
     if request.GET:
+        if 'collection' in request.GET:
+            collections = request.GET['collection'].split(',')
+            collection = collection.filter(collection__name__in=collections)
+            collections = Collection.objects.filter(name__in=collections)
+
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
@@ -25,6 +31,7 @@ def collection(request):
     context = {
         'items': items,
         'search_term': query,
+        'current_collections': collections,
     }
 
     return render(request, 'collection/collection.html', context)
