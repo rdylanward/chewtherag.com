@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Item
+from django.db.models.functions import Lower
+from .models import Item, Collection
 
 # Create your views here.
 
@@ -12,11 +13,27 @@ def collection(request):
     items = Item.objects.all()
     query = None
     collections = None
+    sort = None
+    direction = None
 
     if request.GET:
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                items = items.annotate(lower_name=Lower('name'))
+            if sortkey == 'collection':
+                sortkey = 'collection__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            items = items.order_by(sortkey)
+
         if 'collection' in request.GET:
             collections = request.GET['collection'].split(',')
-            collection = collection.filter(collection__name__in=collections)
+            items = items.filter(collection__name__in=collections)
             collections = Collection.objects.filter(name__in=collections)
 
         if 'q' in request.GET:

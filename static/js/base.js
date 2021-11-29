@@ -43,6 +43,29 @@ $(document).ready(function() {
     }).mouseout(function(){        
         $(".navbar-login-dropdown").css("display", "none");    
     })
+
+    /* This code was provided by Code Institute from their 'Boutique Ado' 
+       example project and repurposed for sorting items in the collection */
+    $(".sort-dropdown").change(function() {
+        let selector = $(this);
+        let current_url = new URL(window.location);
+
+        let selector_value = selector.val();
+        if(selector_value != "reset"){
+            let sort = selector_value.split("_")[0];
+            let direction = selector_value.split("_")[1];
+
+            current_url.searchParams.set("sort", sort);
+            current_url.searchParams.set("direction", direction);
+
+            window.location.replace(current_url);
+        } else {
+            current_url.searchParams.delete("sort");
+            current_url.searchParams.delete("direction");
+
+            window.location.replace(current_url);
+        }
+    })
 });
 
 /* This function was originally written by W3Schools (https://www.w3schools.com/howto/howto_js_mobile_navbar.asp) and
