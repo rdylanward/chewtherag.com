@@ -50,7 +50,7 @@
             <p class="detail-rating">No Rating</p>
         {% endif %}
         <p class="detail-description">{{ item.description }}</p>
-        <form class="blue" action="" method="POST">
+        <form class="blue" action="{% url 'add_to_cart' item.id %}" method="POST">
             {% csrf_token %}
             <div class="detail-quantity">
                 <p class="quantity-heading">Quantity:</p>
