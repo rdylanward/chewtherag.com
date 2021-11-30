@@ -8,14 +8,6 @@
     }
   },
   {
-    "pk": 2,
-    "model": "collection.collection",
-    "fields": {
-      "name": "bed_bath",
-      "friendly_name": "Bed & Bath"
-    }
-  },
-  {
     "pk": 3,
     "model": "collection.collection",
     "fields": {
@@ -45,14 +37,6 @@
     "fields": {
       "name": "jeans",
       "friendly_name": "Jeans"
-    }
-  },
-  {
-    "pk": 7,
-    "model": "collection.collection",
-    "fields": {
-      "name": "kitchen_dining",
-      "friendly_name": "Kitchen & Dining"
     }
   },
   {

@@ -1,5 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
+from django.shortcuts import get_object_or_404
+from collection.models import Item
 
 
 def cart_contents(request):
@@ -7,6 +9,17 @@ def cart_contents(request):
     cart_items = []
     total = 0
     items_reserved = 0
+    cart = request.session.get('cart', {})
+
+    for item_id, quantity in cart.items():
+        item = get_object_or_404(Item, pk=item_id)
+        total += quantity * item.price
+        items_reserved += quantity
+        cart_items.append({
+            'item_id': item_id,
+            'quantity': quantity,
+            'item': item,
+        })
 
     if total < settings.FREE_SHIPPING_GOAL:
         shipping = total * Decimal(settings.STANDARD_SHIPPING_CHARGE / 100)

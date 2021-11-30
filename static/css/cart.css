@@ -6,11 +6,12 @@
 .container-cart {
     font-family: 'Montserrat', sans-serif;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 18vh max-content;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 18vh repeat(2, max-content);
     grid-template-areas: 
-        "col-hdr"
-        "col-itm";
+        "crt-hdr crt-hdr crt-hdr"
+        ". crt-hdn ."
+        ". crt-itm .";
 }
 
 /**********************************************************************/
@@ -19,14 +20,101 @@
 
 
 .cart-header {
-    grid-area: col-hdr;
+    grid-area: crt-hdr;
     background: rgba(0, 0, 0, 0.95);
     width: 100%;
     height: 18vh;
 }
 
 /**********************************************************************/
+/***                    Cart Heading (cart.html)                    ***/
+/**********************************-***********************************/
+
+
+.cart-heading {
+    grid-area: crt-hdn;
+    font-size: 3.9rem;
+    font-weight: 600;
+    margin: 6rem 0rem 5rem 0rem;
+}
+
+.cart-heading p {
+    margin: 0rem;
+}
+
+.cart-heading p i {
+    margin-left: 1.8rem;
+}
+
+
+
+/**********************************************************************/
 /***                     Cart Items (cart.html)                     ***/
 /**********************************-***********************************/
 
 
+.cart-items {
+    grid-area: crt-itm;
+}
+
+.cart-table {
+    width: 100%;
+}
+
+.cart-table-items {
+    width: 100%;
+}
+
+.cart-item-image {
+    width: 15rem;
+    margin: 1.5rem;
+}
+
+.cart-item-name {
+    font-size: 1.7rem;
+}
+
+.cart-item-sku {
+    font-size: 1.5rem;
+}
+
+.cart-table-price {
+    text-align: center;
+}
+
+.cart-item-price {
+    font-size: 1.6rem;
+}
+
+.cart-table-quantity {
+    text-align: center;
+}
+
+.cart-item-quantity {
+    font-size: 1.6rem;
+}
+
+.cart-table-total {
+    text-align: center;
+}
+
+.cart-item-total {
+    font-size: 1.6rem;
+}
+
+.cart-table-tally {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.tally-cart-total {
+    font-size: 1.6rem;
+}
+
+.tally-shipping {
+    font-size: 1.6rem;
+}
+
+.tally-order-total {
+    font-size: 1.8rem;
+}

@@ -19,7 +19,7 @@
     <!--  CART HEADING  -->
 
     <div class="cart-heading">
-        <p class="uppercase blue">You Cart<i class="fas fa-shopping-cart"></i></p>
+        <p class="uppercase blue">Your Cart<i class="fas fa-shopping-cart"></i></p>
     </div>
 
     <!--  /CART HEADING  -->
@@ -27,25 +27,68 @@
     <!--  CART ITEMS  -->
 
     <div class="cart-items">
-        {% if items_reserved %}
-            <div class="cart-table"></div>
-        {% else %}
-            <div class="cart-empty">
-                <p>Your shopping cart is empty!</p>
-            </div>
-        {% endif %}
+        <div class="cart-table">
+            {% if cart_items %}
+                <table class="cart-table-items">
+                    <thead class="cart-table-header">
+                        <tr>
+                            <th scope="col">Detail</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    {% for item in cart_items %}
+                        <tr>
+                            <td class="cart-table-image">
+                                <img class="cart-item-image" src="{{ item.item.image.url }}">
+                            </td>
+                            <td class="cart-table-name">
+                                <p class="cart-item-name"><strong>{{ item.item.name }}</strong></p>
+                                <p class="cart-item-sku">SKU: {{ item.item.sku|upper }}</p>
+                            </td>
+                            <td class="cart-table-price">
+                                <p class="cart-item-price">&euro;{{ item.item.price }}</p>
+                            </td>
+                            <td class="cart-table-quantity">
+                                <p class="cart-item-quantity">{{ item.quantity }}</p>
+                            </td>
+                            <td class="cart-table-total">
+                                <p class="cart-item-total">&euro;{{ item.item.price }}</p>
+                            </td>
+                        </tr>
+                    {% endfor %}                    
+                    <tr>
+                        <td colspan="5" class="cart-table-tally">
+                            <h6 class="tally-cart-total"><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
+                            <h6 class="tally-shipping">Shipping: ${{ shipping|floatformat:2 }}</h6>
+                            <h4 class="tally-order-total"><strong>Order Total: ${{ order_total|floatformat:2 }}</strong></h4>
+                            {% if remaining_til_goal > 0 %}
+                                <p class="tally-free-shipping">
+                                    You could get free delivery by spending just <strong>&euro;{{ remaining_til_goal }}</strong> more!
+                                </p>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" class="cart-buttons">
+                            <button class="cart-keep-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}';">Keep Shopping</button>
+                            <button class="cart-checkout btn-blue-white uppercase">Checkout<i class="fas fa-lock"></i></button>
+                        </td>
+                    </tr>
+                </table>
+            {% else %}
+                <div class="cart-empty">
+                    <p>Your shopping cart is empty!</p>
+                </div>
+            {% endif %}
+        </div>
     </div>
 
     <!--  /CART ITEMS  -->
 
-    <!--  CART BUTTONS  -->
-
-    <div class="cart-buttons">
-        <button class="cart-keep-shopping btn-blue-white uppercase">Keep Shopping</button>
-        <button class="cart-checkout btn-blue-white uppercase">Checkout</button>
-    </div>
-
-    <!--  /CART BUTTONS  -->
+</div>
 
 <!--  /GRID CONTAINER  -->
 
