@@ -76,7 +76,7 @@
     <!-- NAVBAR MESSAGE -->
 
     <div class="navbar-message" id="navbar-message">
-        <p class="navbar-message-text uppercase white">Free delivery for all orders over &euro;60!</p>
+        <p class="navbar-message-text uppercase white">Free shipping for all orders over &euro;{{ free_shipping_goal }}!</p>
     </div>
 
     <!-- /NAVBAR MESSAGE -->
@@ -85,12 +85,12 @@
 
     <div class="navbar-icons">
         <div class="navbar-icons-cart">
-            <a href="{% url 'shopping_cart' %}" class="no-decoration white">
+            <a href="{% url 'cart' %}" class="no-decoration white">
                 <i class="fas fa-shopping-cart"></i>
             </a>
         </div>
         <div class="navbar-cart-text">
-            <a href="{% url 'shopping_cart' %}" class="no-decoration uppercase white">
+            <a href="{% url 'cart' %}" class="no-decoration uppercase white">
                 {% if items_reserved %}
                     {{ items_reserved }}
                 {% else %}
