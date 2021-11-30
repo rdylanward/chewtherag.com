@@ -276,13 +276,15 @@
     grid-area: det-sum;
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(5, max-content);
+    grid-template-rows: repeat(7, max-content);
     grid-template-areas:
         "detl-titl"
         "detl-pric"
         "detl-coll"
         "detl-ratg"
-        "detl-desc";
+        "detl-desc"
+        "detl-qnty"
+        "detl-actn";
     place-self: center center;
     margin: 0rem 8rem 0rem 3rem;
 }
@@ -327,7 +329,67 @@
     grid: detl-desc;
     font-size: 1.7rem;
     text-align: justify;
-    margin: 3rem 0rem;
+    margin: 2rem 0rem 3rem 0rem;
+}
+
+.detail-quantity {
+    grid-area: detl-qnty;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        "qty-lbl qty-box";
+    place-self: center start;
+    margin-bottom: 2.5rem;
+}
+
+.detail-quantity {
+    grid-area: detl-qnty;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        "qty-lbl qty-box";
+    place-self: center start;
+    margin-bottom: 4rem;
+}
+
+.quantity-heading {
+    grid-area: qty-lbl;
+    font-size: 1.6rem;
+    font-weight: 600;
+    place-self: end start;
+    margin: 0rem 1.6rem 0rem 0rem;
+}
+
+.quantity-input {
+    grid-area: qty-box;
+    font-size: 2.1rem;
+    font-weight: 600;
+    text-align: center;
+    place-self: end center;
+    width: 5rem;
+    border: 0.1rem transparent;
+    border-bottom: 0.1rem solid #1d2b51;
+}
+
+.detail-actions {
+    grid-area: detl-actn;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        "act-shp act-add";
+    place-self: center start;
+}
+
+.actions-keep-shopping {
+    grid-area: act-shp;
+    margin-right: 0.8rem;
+}
+
+.actions-add {
+    grid-area: act-add;
 }
 
 
