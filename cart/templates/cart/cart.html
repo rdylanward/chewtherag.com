@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+<!--  GRID CONTAINER  -->
+
+<div class="container-cart blue">
+
+    <!--  CART HEADER  -->
+
+    <div class="cart-header"></div>
+
+    <!--  /CART HEADER  -->
+
+    <!--  CART HEADING  -->
+
+    <div class="cart-heading">
+        <p class="uppercase blue">You Cart<i class="fas fa-shopping-cart"></i></p>
+    </div>
+
+    <!--  /CART HEADING  -->
+
+    <!--  CART ITEMS  -->
+
+    <div class="cart-items">
+        {% if items_reserved %}
+            <div class="cart-table"></div>
+        {% else %}
+            <div class="cart-empty">
+                <p>Your shopping cart is empty!</p>
+            </div>
+        {% endif %}
+    </div>
+
+    <!--  /CART ITEMS  -->
+
+    <!--  CART BUTTONS  -->
+
+    <div class="cart-buttons">
+        <button class="cart-keep-shopping btn-blue-white uppercase">Keep Shopping</button>
+        <button class="cart-checkout btn-blue-white uppercase">Checkout</button>
+    </div>
+
+    <!--  /CART BUTTONS  -->
+
+<!--  /GRID CONTAINER  -->
+
+{% endblock %}

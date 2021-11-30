@@ -41,7 +41,7 @@ $(document).ready(function() {
     $(".navbar-login-dropdown").mouseover(function(){
         $(".navbar-login-dropdown").css("display", "block");
     }).mouseout(function(){        
-        $(".navbar-login-dropdown").css("display", "none");    
+        $(".navbar-login-dropdown").css("display", "none");   
     })
 
     /* This code was provided by Code Institute from their 'Boutique Ado' 

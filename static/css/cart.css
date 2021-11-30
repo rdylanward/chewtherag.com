@@ -1,0 +1,32 @@
+/**********************************************************************/
+/***             Collection Container (collection.html)             ***/
+/**********************************-***********************************/
+
+
+.container-cart {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 18vh max-content;
+    grid-template-areas: 
+        "col-hdr"
+        "col-itm";
+}
+
+/**********************************************************************/
+/***              Collection Header (collection.html)               ***/
+/**********************************-***********************************/
+
+
+.cart-header {
+    grid-area: col-hdr;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 18vh;
+}
+
+/**********************************************************************/
+/***               Collection Items (collection.html)               ***/
+/**********************************-***********************************/
+
+

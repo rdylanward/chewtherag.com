@@ -36,9 +36,9 @@
             </li>
             <li class="navbar-menu-item navbar-login-text">
                 {% if request.user.is_authenticated %}
-                    <span>My Account</span>
+                    <span class="navbar-menu-link uppercase white">My Account</span>
                 {% else %}
-                    <span>Login / Register</span>
+                    <span class="navbar-menu-link uppercase white">Login / Register</span>
                 {% endif %}
             </li>
             <li class="navbar-menu-item hidden">
@@ -85,12 +85,18 @@
 
     <div class="navbar-icons">
         <div class="navbar-icons-cart">
-            <a href="#" class="navbar-icons-icon no-decoration white">
+            <a href="{% url 'shopping_cart' %}" class="no-decoration white">
                 <i class="fas fa-shopping-cart"></i>
             </a>
         </div>
-        <div class="navbar-cart-text navbar-icons-text">
-            No Items
+        <div class="navbar-cart-text">
+            <a href="{% url 'shopping_cart' %}" class="no-decoration uppercase white">
+                {% if items_reserved %}
+                    {{ items_reserved }}
+                {% else %}
+                    No
+                {% endif %} Item(s)
+            </a>
         </div>
     </div>
     
