@@ -52,15 +52,30 @@
         <p class="detail-description">{{ item.description }}</p>
         <form class="blue" action="{% url 'add_to_cart' item.id %}" method="POST">
             {% csrf_token %}
-            <div class="detail-quantity">
-                <p class="quantity-heading">Quantity:</p>
-                <input class="quantity-input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ item.id }}" id="id_qty_{{ item.id }}">
-            </div>
-            <div class="detail-actions">
-                <button class="actions-keep-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}';">Keep Shopping</button>
-                <button class="actions-add btn-blue-white uppercase" type="submit">Add to Cart</button>
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            </div>
+            {% with item.has_sizes as sizes %}
+                {% if sizes %}
+                    <div class="detail-size">
+                        <p class="size-heading">Size:</p>
+                        <select class="size-dropdown blue" id="size-dropdown">
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m" selected>M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                            <option value="xxl">XXL</option>
+                        </select>
+                    </div>
+                {% endif %}
+                <div class="detail-quantity">
+                    <p class="quantity-heading">Quantity:</p>
+                    <input class="quantity-input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ item.id }}" id="id_qty_{{ item.id }}">
+                </div>
+                <div class="detail-actions">
+                    <button class="actions-keep-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}';">Keep Shopping</button>
+                    <button class="actions-add btn-blue-white uppercase" type="submit">Add to Cart</button>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                </div>
+            {% endwith %}
         </form>
     </div>
 

@@ -70,26 +70,31 @@
 .cart-items-header {
     grid-area: itm-hdr;
     display: grid;
-    grid-template-columns: 20% 10% auto repeat(3, 10%);
+    grid-template-columns: 20% 10% auto 6% 8% 5% 10%;
     grid-template-rows: max-content;
     grid-template-areas: 
-        "itm-lbl-dtl itm-lbl-sku itm-lbl-dsc itm-lbl-prc itm-lbl-qty itm-lbl-sub";
+        "itm-lbl-dtl itm-lbl-sku itm-lbl-dsc itm-lbl-siz itm-lbl-prc itm-lbl-qty itm-lbl-sub";
     border-bottom: 0.2rem solid #1d2b51;
     width: 100%;
 }
 
 .label-detail {
     grid-area: itm-lbl-dtl;
-    background: rgba(29, 43, 81, 0.15);
+    background: rgba(29, 43, 81, 0.25);
 }
 
 .label-sku {
     grid-area: itm-lbl-sku;
-    background: rgba(29, 43, 81, 0.25);
+    background: rgba(29, 43, 81, 0.15);
 }
 
 .label-descritption {
     grid-area: itm-lbl-dsc;
+    background: rgba(29, 43, 81, 0.25);
+}
+
+.label-size {
+    grid-area: itm-lbl-siz;
     background: rgba(29, 43, 81, 0.15);
 }
 
@@ -131,7 +136,7 @@
 .list-items-ordered {
     grid-area: itm-lst-ord;
     display: grid;
-    grid-template-columns: 20% 10% auto repeat(3, 10%);
+    grid-template-columns: 20% 10% auto 6% 8% 5% 10%;
     width: 100%;
     justify-self: center;
 }
@@ -141,27 +146,31 @@
 }
 
 .list-items-ordered > span:nth-child(6n+1) {
-    background: rgba(29, 43, 81, 0.05);
+    background: rgba(29, 43, 81, 0.1);
     padding: 2rem 0.8rem;
 }
 
 .list-items-ordered > span:nth-child(6n+2) {
-    background: rgba(29, 43, 81, 0.1);
+    background: rgba(29, 43, 81, 0.05);
 }
 
 .list-items-ordered > span:nth-child(6n+3) {
-    background: rgba(29, 43, 81, 0.05);
-}
-
-.list-items-ordered > span:nth-child(6n+4) {
     background: rgba(29, 43, 81, 0.1);
 }
 
-.list-items-ordered > span:nth-child(6n+5) {
+.list-items-ordered > span:nth-child(6n+4) {
     background: rgba(29, 43, 81, 0.05);
 }
 
+.list-items-ordered > span:nth-child(6n+5) {
+    background: rgba(29, 43, 81, 0.1);
+}
+
 .list-items-ordered > span:nth-child(6n+6) {
+    background: rgba(29, 43, 81, 0.05);
+}
+
+.list-items-ordered > span:nth-child(6n+7) {
     background: rgba(29, 43, 81, 0.1);
 }
 
@@ -175,6 +184,12 @@
 }
 
 .ordered-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.ordered-size {
     font-size: 1.4rem;
     font-weight: 600;
     text-align: left;
@@ -202,6 +217,7 @@
 
 .list-items-tally {
     grid-area: itm-lst-tly;
+    border-top: 0.2rem solid #1d2b51;
 }
 
 .cart-actions {
@@ -255,6 +271,10 @@
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 1rem;
+}
+
+.tally-free-shipping {
+    font-size: 1.3rem;
 }
 
 .cart-actions {
