@@ -76,6 +76,10 @@ body {
     box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
 }
 
+.cart-img-shadow {
+    box-shadow: 0.45rem 0.45rem 0.9rem rgba(29, 43, 81, 0.5);
+}
+
 .btn-blue-white {
     color: #1d2b51;
     font-size: 1.5rem;
@@ -122,6 +126,17 @@ body {
     background: rgba(255, 255, 255, 0.6);
     border: 0.1rem solid rgba(255, 255, 255, 0.6);
     transition: all 0.3s;
+}
+
+.btn-greyed-out {
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    background: transparent;
+    border: 0.25rem solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.6rem;
+    height: 4rem;
 }
 
 

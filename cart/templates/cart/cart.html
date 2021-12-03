@@ -19,7 +19,7 @@
     <!--  CART HEADING  -->
 
     <div class="cart-heading">
-        <p class="uppercase blue">Your Cart<i class="fas fa-shopping-cart"></i></p>
+        <p class="uppercase blue">Reserved Items<i class="fas fa-shopping-cart"></i></p>
     </div>
 
     <!--  /CART HEADING  -->
@@ -27,60 +27,50 @@
     <!--  CART ITEMS  -->
 
     <div class="cart-items">
-        <div class="cart-table">
+        <div class="cart-items-header">
+                <span class="label-detail items-header-label">Detail</span>
+                <span class="label-sku items-header-label">SKU</span>
+                <span class="label-descritption items-header-label">Description</span>
+                <span class="label-price items-header-label">Price</span>
+                <span class="label-quantity items-header-label">Qty.</span>
+                <span class="label-subtotal items-header-label">Subtotal</span>
+        </div>
+        <div class="cart-items-list">
             {% if cart_items %}
-                <table class="cart-table-items">
-                    <thead class="cart-table-header">
-                        <tr>
-                            <th scope="col">Detail</th>
-                            <th scope="col">Description</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Qty</th>
-                            <th scope="col">Subtotal</th>
-                        </tr>
-                    </thead>
-                    {% for item in cart_items %}
-                        <tr>
-                            <td class="cart-table-image">
-                                <img class="cart-item-image" src="{{ item.item.image.url }}">
-                            </td>
-                            <td class="cart-table-name">
-                                <p class="cart-item-name"><strong>{{ item.item.name }}</strong></p>
-                                <p class="cart-item-sku">SKU: {{ item.item.sku|upper }}</p>
-                            </td>
-                            <td class="cart-table-price">
-                                <p class="cart-item-price">&euro;{{ item.item.price }}</p>
-                            </td>
-                            <td class="cart-table-quantity">
-                                <p class="cart-item-quantity">{{ item.quantity }}</p>
-                            </td>
-                            <td class="cart-table-total">
-                                <p class="cart-item-total">&euro;{{ item.item.price }}</p>
-                            </td>
-                        </tr>
-                    {% endfor %}                    
-                    <tr>
-                        <td colspan="5" class="cart-table-tally">
-                            <h6 class="tally-cart-total"><strong>Cart Total: ${{ total|floatformat:2 }}</strong></h6>
-                            <h6 class="tally-shipping">Shipping: ${{ shipping|floatformat:2 }}</h6>
-                            <h4 class="tally-order-total"><strong>Order Total: ${{ order_total|floatformat:2 }}</strong></h4>
-                            {% if remaining_til_goal > 0 %}
-                                <p class="tally-free-shipping">
-                                    You could get free delivery by spending just <strong>&euro;{{ remaining_til_goal }}</strong> more!
-                                </p>
-                            {% endif %}
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="5" class="cart-buttons">
-                            <button class="cart-keep-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}';">Keep Shopping</button>
-                            <button class="cart-checkout btn-blue-white uppercase">Checkout<i class="fas fa-lock"></i></button>
-                        </td>
-                    </tr>
-                </table>
+                <div class="list-items-ordered">
+                {% for item in cart_items %}
+                    <span><img class="ordered-image cart-img-shadow" src="{{ item.item.image.url }}"></span>
+                    <span><p class="ordered-sku">{{ item.item.sku|upper }}</p></span>
+                    <span><p class="ordered-name"><strong>{{ item.item.name }}</strong></p></span>
+                    <span><p class="ordered-price">&euro;{{ item.item.price }}</p></span>
+                    <span><p class="ordered-quantity">{{ item.quantity }}</p></span>
+                    <span><p class="ordered-total">&euro;{{ item.subtotal }}</p></span>
+                {% endfor %}
+                </div>
+                <div class="list-items-tally">
+                    <span class="tally-cart-label tally-label"><strong>Item(s) Total:&nbsp;</strong></span>
+                    <span class="tally-cart-total tally-number"><strong>&euro;{{ total|floatformat:2 }}</strong></span>
+                    <span class="tally-shipping-label tally-label"><strong>Shipping:&nbsp;</strong></span>
+                    <span class="tally-shipping tally-number"><strong>&euro;{{ shipping|floatformat:2 }}</strong></span>
+                    <span class="tally-order-label tally-label"><strong>Cart Total:&nbsp;</strong></span>
+                    <span class="tally-order-total tally-number"><strong>&euro;{{ cart_total|floatformat:2 }}</strong></span>
+                    {% if remaining_til_goal > 0 %}
+                        <p class="tally-free-shipping">
+                            You could get free delivery by spending just <strong>&euro;{{ remaining_til_goal }}</strong> more!
+                        </p>
+                    {% endif %}
+                </div>
+                <div class="cart-actions">
+                    <button class="cart-actions-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}';">Keep Shopping</button>
+                    <button class="cart-actions-checkout btn-blue-white uppercase">Checkout<i class="fas fa-lock"></i></button>
+                </div>
             {% else %}
                 <div class="cart-empty">
-                    <p>Your shopping cart is empty!</p>
+                    <p class="empty-statement">Your shopping cart is empty!</p>
+                    <div class="empty-buttons">
+                        <button class="cart-empty-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}';">Keep Shopping</button>
+                        <button class="cart-empty-checkout btn-greyed-out uppercase">Checkout<i class="fas fa-lock"></i></button>
+                    </div>
                 </div>
             {% endif %}
         </div>
