@@ -11,17 +11,31 @@ def cart_contents(request):
     items_reserved = 0
     cart = request.session.get('cart', {})
 
-    for item_id, quantity in cart.items():
-        item = get_object_or_404(Item, pk=item_id)
-        subtotal = quantity * item.price
-        total += quantity * item.price
-        items_reserved += quantity
-        cart_items.append({
-            'item_id': item_id,
-            'quantity': quantity,
-            'item': item,
-            'subtotal': subtotal,
-        })
+    for item_id, item_data in cart.items():
+        if isinstance(item_data, int):
+            item = get_object_or_404(Item, pk=item_id)
+            subtotal = item_data * item.price
+            total += item_data * item.price
+            items_reserved += item_data
+            cart_items.append({
+                'item_id': item_id,
+                'quantity': item_data[1],
+                'item': item,
+                'subtotal': subtotal,
+            })
+        else:
+            item = get_object_or_404(Item, pk=item_id)
+            for size, quantity in item_data['items_by_size'].items():
+                subtotal = quantity * item.price
+                total += quantity * item.price
+                items_reserved += quantity
+                cart_items.append({
+                    'item_id': item_id,
+                    'quantity': quantity,
+                    'item': item,
+                    'subtotal': subtotal,
+                    'size': size,
+                })
 
     if total < settings.FREE_SHIPPING_GOAL:
         shipping = total * Decimal(settings.STANDARD_SHIPPING_CHARGE / 100)

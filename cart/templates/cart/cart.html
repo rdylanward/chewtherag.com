@@ -43,7 +43,7 @@
                     <span><img class="ordered-image cart-img-shadow" src="{{ item.item.image.url }}"></span>
                     <span><p class="ordered-sku">{{ item.item.sku|upper }}</p></span>
                     <span><p class="ordered-name"><strong>{{ item.item.name }}</strong></p></span>
-                    <span><p class="ordered-size"><strong>{% if item.item.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</strong></p></span>
+                    <span><p class="ordered-size">{% if item.item.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p></span>
                     <span><p class="ordered-price">&euro;{{ item.item.price }}</p></span>
                     <span><p class="ordered-quantity">{{ item.quantity }}</p></span>
                     <span><p class="ordered-total">&euro;{{ item.subtotal }}</p></span>

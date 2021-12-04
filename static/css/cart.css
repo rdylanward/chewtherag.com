@@ -145,32 +145,31 @@
     padding: 2rem 1rem;
 }
 
-.list-items-ordered > span:nth-child(6n+1) {
-    background: rgba(29, 43, 81, 0.1);
-    padding: 2rem 0.8rem;
-}
-
-.list-items-ordered > span:nth-child(6n+2) {
-    background: rgba(29, 43, 81, 0.05);
-}
-
-.list-items-ordered > span:nth-child(6n+3) {
+.list-items-ordered > span:nth-child(7n+1) {
     background: rgba(29, 43, 81, 0.1);
 }
 
-.list-items-ordered > span:nth-child(6n+4) {
+.list-items-ordered > span:nth-child(7n+2) {
     background: rgba(29, 43, 81, 0.05);
 }
 
-.list-items-ordered > span:nth-child(6n+5) {
+.list-items-ordered > span:nth-child(7n+3) {
     background: rgba(29, 43, 81, 0.1);
 }
 
-.list-items-ordered > span:nth-child(6n+6) {
+.list-items-ordered > span:nth-child(7n+4) {
     background: rgba(29, 43, 81, 0.05);
 }
 
-.list-items-ordered > span:nth-child(6n+7) {
+.list-items-ordered > span:nth-child(7n+5) {
+    background: rgba(29, 43, 81, 0.1);
+}
+
+.list-items-ordered > span:nth-child(7n+6) {
+    background: rgba(29, 43, 81, 0.05);
+}
+
+.list-items-ordered > span:nth-child(7n+7) {
     background: rgba(29, 43, 81, 0.1);
 }
 
@@ -192,7 +191,7 @@
 .ordered-size {
     font-size: 1.4rem;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
 }
 
 .ordered-sku {
