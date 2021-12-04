@@ -66,6 +66,52 @@ $(document).ready(function() {
             window.location.replace(current_url);
         }
     })
+
+    /* This code was provided by Code Institute from their 'Boutique Ado' 
+       example project and repurposed for incrementing and decrementing
+       the quantiy in the item detail */
+
+    // Disable +/- buttons outside 1-999 range
+    function changeInputStatus(itemId) {
+        let quantityValue = parseInt($(`#id_qty_${itemId}`).val());
+        let minusDisabled = quantityValue < 2;
+        let plusDisabled = quantityValue > 999;
+        $(`#decrement-qty_${itemId}`).prop('disabled', minusDisabled);
+        $(`#increment-qty_${itemId}`).prop('disabled', plusDisabled);
+    }
+
+    // Ensure proper enabling/disabling of all inputs on page load
+    let allQtyInputs = $('.quantity-input');
+    for(let i = 0; i < allQtyInputs.length; i++){
+        let itemId = $(allQtyInputs[i]).data('item_id');
+        changeInputStatus(itemId);
+    }
+
+    // Check enable/disable every time the input is changed
+    $('.quantity-input').change(function() {
+        let itemId = $(this).data('item_id');
+        changeInputStatus(itemId);
+    })
+
+    // Increment quantity
+    $('.quantity-input-increment').click(function(e) {
+       e.preventDefault();
+       let closestInput = $(this).closest('.detail-quantity').find('.quantity-input')[0];
+       let quantityValue = parseInt($(closestInput).val());
+       $(closestInput).val(quantityValue + 1);
+       let itemId = $(this).data('item_id');
+       changeInputStatus(itemId);
+    })
+
+    // Decrement quantity
+    $('.quantity-input-decrement').click(function(e) {
+       e.preventDefault();
+       let closestInput = $(this).closest('.detail-quantity').find('.quantity-input')[0];
+       let quantityValue = parseInt($(closestInput).val());
+       $(closestInput).val(quantityValue - 1);
+       let itemId = $(this).data('item_id');
+       changeInputStatus(itemId);
+    })
 });
 
 /* This function was originally written by W3Schools (https://www.w3schools.com/howto/howto_js_mobile_navbar.asp) and

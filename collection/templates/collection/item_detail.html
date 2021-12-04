@@ -68,10 +68,16 @@
                 {% endif %}
                 <div class="detail-quantity">
                     <p class="quantity-heading">Quantity:</p>
+                    <button class="quantity-input-decrement quantity-control blue" data-item_id="{{ item.id }}" id="decrement_qty_{{ item.id }}">
+                        <i class="fas fa-minus"></i>
+                    </button>
                     <input class="quantity-input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ item.id }}" id="id_qty_{{ item.id }}">
+                    <button class="quantity-input-increment quantity-control blue" data-item_id="{{ item.id }}" id="increment_qty_{{ item.id }}">
+                        <i class="fas fa-plus"></i>
+                    </button>
                 </div>
                 <div class="detail-actions">
-                    <button class="actions-keep-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}';">Keep Shopping</button>
+                    <button class="actions-keep-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}?collection={{ item.collection.name }}';">Keep Shopping</button>
                     <button class="actions-add btn-blue-white uppercase" type="submit">Add to Cart</button>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>

@@ -147,6 +147,7 @@
 
 .list-items-ordered > span:nth-child(7n+1) {
     background: rgba(29, 43, 81, 0.1);
+    padding: 2rem 0.9rem;
 }
 
 .list-items-ordered > span:nth-child(7n+2) {

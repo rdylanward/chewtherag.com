@@ -388,10 +388,10 @@
 .detail-quantity {
     grid-area: detl-qnty;
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: repeat(4, max-content);
     grid-template-rows: max-content;
     grid-template-areas: 
-        "qty-lbl qty-box";
+        "qty-lbl qty-dec qty-box qty-inc";
     place-self: center start;
     margin-bottom: 4rem;
 }
@@ -404,15 +404,45 @@
     margin: 0rem 1.6rem 0rem 0rem;
 }
 
+.quantity-input-decrement {
+    grid-area: qty-dec;
+    place-self: center center;
+}
+
+/*  The code for the removal of the input spin button was provided by w3schools 
+    (https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) and
+    repurposed for the increment and decrement of quantity */
+
 .quantity-input {
     grid-area: qty-box;
     font-size: 1.6rem;
     font-weight: 600;
     text-align: center;
     place-self: end center;
-    width: 5rem;
+    width: 4rem;
     border: 0.1rem transparent;
     border-bottom: 0.1rem solid #1d2b51;
+    margin: 0rem 0.2rem;
+    -moz-appearance: textfield;  /* Firefox */
+}
+
+/* Chrome, Safari, Edge, Opera */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input-increment {
+    grid-area: qty-inc;
+    place-self: center center;
+}
+
+.quantity-control {
+    background: transparent;
+    border: transparent;
+    width: 2rem;
+    padding: 0.3rem;
 }
 
 .detail-actions {
@@ -427,7 +457,7 @@
 
 .actions-keep-shopping {
     grid-area: act-shp;
-    margin-right: 0.8rem;
+    margin-right: 0.2rem;
 }
 
 .actions-add {
