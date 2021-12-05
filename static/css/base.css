@@ -164,7 +164,7 @@ body {
     padding: 0rem;
     margin: 0rem;
     align-items: center;
-    transition: all 0.5s;
+    transition: all 0.3s;
     z-index: 15;
 }
 
@@ -177,7 +177,7 @@ body {
         "brnd-logo brnd-ttle";
     grid-template-rows: 100%;
     place-self: center start;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-brand-icon {
@@ -188,7 +188,7 @@ body {
 .navbar-brand-logo {
     height: 6rem;
     width: 6rem;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-brand-title {
@@ -198,14 +198,14 @@ body {
     font-size: 3.6rem;
     place-self: center start;
     margin-left: 1.3rem;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-menu {
     grid-area: menu;
     place-self: center end;
     margin-right: 2rem;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-menu-list {
@@ -215,7 +215,7 @@ body {
     display: inline-flex;
     padding: 0rem;
     margin: 0rem;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-menu-item {
@@ -247,7 +247,7 @@ body {
     grid-template-rows: 100%;
     width: 100%;
     align-self: center;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-message-text {
@@ -259,7 +259,7 @@ body {
     border-top: 0.1rem solid #fff;
     border-bottom: 0.1rem solid #fff;
     margin: 0rem;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-icons {
@@ -273,7 +273,7 @@ body {
     grid-template-rows: 50% 50%;
     height: 100%;
     align-self: center;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-login-dropdown {
@@ -284,7 +284,7 @@ body {
     height: auto;
     overflow: auto;
     margin-top: 0rem;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-dropdown-list {
@@ -298,19 +298,19 @@ body {
     font-weight: 600;
     padding: 0.7rem 1.6rem;
     display: block;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-dropdown-link:hover {
     background: #fff !important;
     color: #1d2b51 !important;
-    transition: all 0.5s !important;
+    transition: all 0.3s !important;
 }
 
 .navbar-dropdown-link:active {
     background: rgba(255, 255, 255, 0.6) !important;
     color: rgba(29, 43, 81, 0.6) !important;
-    transition: all 0.5s !important;
+    transition: all 0.3s !important;
 }
 
 .navbar-icons-cart {
@@ -321,12 +321,12 @@ body {
 .navbar-icons-cart a {
     font-size: 2.1rem;
     cursor: default;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .navbar-cart-text {
     grid-area: cart-text;
-    transition: all 0.5s;
+    transition: all 0.3s;
     place-self: start center;
 }
 
@@ -350,12 +350,12 @@ body {
         ". brnd menu icon .";
     grid-template-rows: 3.5vh 3.5vh;
     background: rgba(0, 0, 0, 0.95) !important;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .sticky-navbar-brand {
     height: 100%;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .sticky-navbar-brand img {
@@ -371,7 +371,7 @@ body {
 
 .sticky-navbar-menu {
     align-self: center;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .sticky-navbar-menu .navbar-menu-list  {
@@ -380,7 +380,7 @@ body {
 
 .sticky-navbar-message {
     display: none;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .sticky-navbar-message .navbar-message-text {
@@ -390,7 +390,7 @@ body {
 
 .sticky-navbar-icons {
     align-self: center;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .sticky-navbar-icons .navbar-icons-cart a {

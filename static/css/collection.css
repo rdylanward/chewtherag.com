@@ -20,9 +20,12 @@
 
 .collection-header {
     grid-area: col-hdr;
-    background: rgba(0, 0, 0, 0.95);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/interestingly-designed-store.jpg');
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 18vh;
+    background-attachment: fixed;
 }
 
 /**********************************************************************/
@@ -54,20 +57,6 @@
     text-align: center;
     margin: 0rem;
 }
-
-/* .item-search {
-    grid-area: itm-src;
-    display: grid;
-    grid-template-columns: 33% 34% 33%;
-    grid-template-areas: 
-        ". src-bar .";
-    grid-template-rows: 100%;
-    width: 100%;
-    justify-self: center;
-    align-self: center;
-    transition: all 0.5s;
-    margin-top: 3rem;
-} */
 
 .item-search {
     grid-area: itm-src;
@@ -261,9 +250,12 @@
 
 .item-detail-header {
     grid-area: det-hdr;
-    background: rgba(0, 0, 0, 0.95);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/interestingly-designed-store.jpg');
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 18vh;
+    background-attachment: fixed;
 }
 
 .item-detail-image {
