@@ -77,8 +77,13 @@
                     </button>
                 </div>
                 <div class="detail-actions">
-                    <button class="actions-keep-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}?collection={{ item.collection.name }}';">Keep Shopping</button>
-                    <button class="actions-add btn-blue-white uppercase" type="submit">Add to Cart</button>
+                    <!-- <button class="actions-keep-shopping btn-blue-white uppercase" onclick="location.href='{% url 'collection' %}?collection={{ item.collection.name }}'">Keep Shopping</button> -->
+                    <a class="actions-keep-shopping btn-blue-white no-decoration uppercase" href="{% url 'collection' %}">
+                        Keep Shopping
+                    </a>
+                    <button class="actions-add btn-blue-white uppercase" type="submit">
+                        Add to Cart
+                    </button>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </div>
             {% endwith %}
