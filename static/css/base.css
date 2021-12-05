@@ -64,6 +64,10 @@ body {
     text-transform: uppercase !important;
 }
 
+.disable {
+    color: rgba(0, 0, 0, 0.4);
+}
+
 .white {
     color: #fff !important;
 }
