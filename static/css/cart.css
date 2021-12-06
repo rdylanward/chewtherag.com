@@ -22,9 +22,12 @@
 
 .cart-header {
     grid-area: crt-hdr;
-    background: rgba(0, 0, 0, 0.95);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/interestingly-designed-store.jpg');
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 18vh;
+    background-attachment: fixed;
 }
 
 /**********************************************************************/
@@ -70,7 +73,7 @@
 .cart-items-header {
     grid-area: itm-hdr;
     display: grid;
-    grid-template-columns: 20% 10% auto 6% 8% 5% 10%;
+    grid-template-columns: 15.7% 9.5% auto 4% 7% 7.5% 8%;
     grid-template-rows: max-content;
     grid-template-areas: 
         "itm-lbl-dtl itm-lbl-sku itm-lbl-dsc itm-lbl-siz itm-lbl-prc itm-lbl-qty itm-lbl-sub";
@@ -129,14 +132,13 @@
         "itm-lst-ord"
         "itm-lst-tly"
         "itm-lst-btn";
-    /* padding: 2rem 0rem; */
     padding: 0rem;
 }
 
 .list-items-ordered {
     grid-area: itm-lst-ord;
     display: grid;
-    grid-template-columns: 20% 10% auto 6% 8% 5% 10%;
+    grid-template-columns: 15.7% 9.5% auto 5% 4% 7% 7.5% 8%;
     width: 100%;
     justify-self: center;
 }
@@ -145,32 +147,39 @@
     padding: 2rem 1rem;
 }
 
-.list-items-ordered > span:nth-child(7n+1) {
+.list-items-ordered > span:nth-child(8n+1) {
     background: rgba(29, 43, 81, 0.1);
+    padding: 2rem 0.8rem;
+}
+
+.list-items-ordered > span:nth-child(8n+2) {
+    background: rgba(29, 43, 81, 0.05);
     padding: 2rem 0.9rem;
 }
 
-.list-items-ordered > span:nth-child(7n+2) {
-    background: rgba(29, 43, 81, 0.05);
-}
-
-.list-items-ordered > span:nth-child(7n+3) {
+.list-items-ordered > span:nth-child(8n+3) {
     background: rgba(29, 43, 81, 0.1);
 }
 
-.list-items-ordered > span:nth-child(7n+4) {
+.list-items-ordered > span:nth-child(8n+4) {
+    background: rgba(29, 43, 81, 0.1);
+    padding: 3rem 1rem;
+}
+
+.list-items-ordered > span:nth-child(8n+5) {
     background: rgba(29, 43, 81, 0.05);
 }
 
-.list-items-ordered > span:nth-child(7n+5) {
+.list-items-ordered > span:nth-child(8n+6) {
     background: rgba(29, 43, 81, 0.1);
 }
 
-.list-items-ordered > span:nth-child(7n+6) {
+.list-items-ordered > span:nth-child(8n+7) {
     background: rgba(29, 43, 81, 0.05);
+    padding: 3rem 0.7rem 0rem 0.6rem;
 }
 
-.list-items-ordered > span:nth-child(7n+7) {
+.list-items-ordered > span:nth-child(8n+8) {
     background: rgba(29, 43, 81, 0.1);
 }
 
@@ -179,7 +188,7 @@
 }
 
 .ordered-image {
-    width: 21rem;
+    width: 16rem;
     justify-self: flex-start;
 }
 
@@ -189,8 +198,19 @@
     text-align: left;
 }
 
-.ordered-size {
+.update-item {
+    color: forestgreen;
     font-size: 1.4rem;
+    margin-right: 0.4rem;
+}
+
+.remove-item {
+    color: firebrick;
+    font-size: 1.4rem;
+}
+
+.ordered-size {
+    font-size: 1.3rem;
     font-weight: 600;
     text-align: center;
 }
@@ -201,17 +221,70 @@
 }
 
 .ordered-price {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-align: right;
 }
 
 .ordered-quantity {
-    font-size: 1.4rem;
-    text-align: right;
+    font-size: 1.3rem;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        "ord-dec ord-box ord-inc";
+    width: auto;
+    height: calc(100% - 3rem);
+    place-self: start center;
+}
+
+.quantity-input-decrement {
+    grid-area: ord-dec;
+    font-size: 0.9rem;
+    place-self: center center;
+    padding: 3rem 0rem;
+}
+
+/*  The code for the removal of the input spin button was provided by w3schools 
+    (https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) and
+    repurposed for the increment and decrement of quantity  */
+
+.quantity-input {
+    grid-area: ord-box;
+    background: transparent;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    place-self: end center;
+    width: 2.9rem;
+    border: 0.1rem transparent;
+    border-bottom: 0.1rem solid #1d2b51;
+    margin: 0rem;
+    -moz-appearance: textfield;  /* Firefox */
+}
+
+/* Chrome, Safari, Edge, Opera */
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input-increment {
+    grid-area: ord-inc;
+    font-size: 0.9rem;
+    place-self: center center;
+    padding: 3rem 0rem;
+}
+
+.quantity-control {
+    background: transparent;
+    border: transparent;
+    width: 2rem;
+    padding: 0.1rem;
 }
 
 .ordered-total {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-align: right;
 }
 
@@ -268,7 +341,7 @@
 }
 
 .tally-number {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }

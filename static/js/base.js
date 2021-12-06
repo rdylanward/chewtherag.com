@@ -71,7 +71,7 @@ $(document).ready(function() {
        example project and repurposed for incrementing and decrementing
        the quantiy in the item detail */
 
-    // Disable +/- buttons outside 1-999 range
+    /* Disable +/- buttons outside 1-999 range */
     function changeInputStatus(itemId) {
         let quantityValue = parseInt($(`#id_qty_${itemId}`).val());
 
@@ -89,18 +89,18 @@ $(document).ready(function() {
         }
     }
 
-    // Ensure proper enabling/disabling of all inputs on page load
+    /* Ensure proper enabling/disabling of all inputs on page load */
     let allQtyInputs = $('.quantity-input');
     let itemId = $(allQtyInputs).data('item_id');
     changeInputStatus(itemId);
 
-    // Check enable/disable every time the input is changed
+    /* Check enable/disable every time the input is changed */
     $('.quantity-input').change(function() {
         let itemId = $(this).data('item_id');
         changeInputStatus(itemId);
     })
 
-    // Increment quantity
+    /* Increment quantity */
     $('.quantity-input-increment').click(function(e) {
         e.preventDefault();
         let closestInput = $(this).closest('.detail-quantity').find('.quantity-input')[0];
@@ -110,7 +110,7 @@ $(document).ready(function() {
         changeInputStatus(itemId);
     })
 
-    // Decrement quantity
+    /* Decrement quantity */
     $('.quantity-input-decrement').click(function(e) {
         e.preventDefault();
         let closestInput = $(this).closest('.detail-quantity').find('.quantity-input')[0];
@@ -118,6 +118,26 @@ $(document).ready(function() {
         $(closestInput).val(quantityValue - 1);
         let itemId = $(this).data('item_id');
         changeInputStatus(itemId);
+    })
+
+    /* Update quantity on shopping cart item */
+    $('.update-item').click(function(e) {
+        let form = $(this).prev('.ordered-quantity-form');
+        form.submit();
+    })
+
+    /* Remove item from shopping cart */
+    $('.remove-item').click(function(e) {
+        let csrfToken = "{{ csrf_token }}";
+        let itemId = $(this).attr('id').split('remove_')[1];
+        let size = $(this).data('size');
+        let url = `/cart/remove/${itemId}`;
+        let data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
     })
 });
 

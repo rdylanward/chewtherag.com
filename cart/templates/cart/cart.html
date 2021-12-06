@@ -43,9 +43,27 @@
                     <span><img class="ordered-image cart-img-shadow" src="{{ item.item.image.url }}"></span>
                     <span><p class="ordered-sku">{{ item.item.sku|upper }}</p></span>
                     <span><p class="ordered-name"><strong>{{ item.item.name }}</strong></p></span>
+                    <span>
+                        <a class="update-item update-remove no-decoration"><i class="fas fa-sync-alt"></i></a>
+                        <a class="remove-item update-remove no-decoration" id="remove_{{ item.item_id }}" data-size="{{ item.size }}"><i class="fas fa-trash"></i></a>
+                    </span>
                     <span><p class="ordered-size">{% if item.item.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p></span>
                     <span><p class="ordered-price">&euro;{{ item.item.price }}</p></span>
-                    <span><p class="ordered-quantity">{{ item.quantity }}</p></span>
+                    <span class="ordered-quantity">
+                        <form class="ordered-quantity-form" action="" method="POST">
+                            {% csrf_token %}
+                            <button class="quantity-input-decrement quantity-control blue" data-item_id="{{ item.item_id }}" id="decrement_qty_{{ item.item_id }}">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                            <input class="quantity-input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="99" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                            <button class="quantity-input-increment quantity-control blue" data-item_id="{{ item.item_id }}" id="increment_qty_{{ item.item_id }}">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                            {% if item.item.has_sizes %}
+                                <input type="hidden" name="item_size" value="{{ item.size }}">
+                            {% endif %}
+                        </form>
+                    </span>
                     <span><p class="ordered-total">&euro;{{ item.subtotal }}</p></span>
                 {% endfor %}
                 </div>
