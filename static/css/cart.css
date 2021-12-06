@@ -199,14 +199,17 @@
 }
 
 .update-item {
-    color: forestgreen;
-    font-size: 1.4rem;
+    color: rgba(34, 139, 34, 0.75);
     margin-right: 0.4rem;
 }
 
 .remove-item {
-    color: firebrick;
+    color: rgba(178, 34, 34, 0.75);
+}
+
+.update-remove {
     font-size: 1.4rem;
+    cursor: pointer;
 }
 
 .ordered-size {
@@ -279,6 +282,7 @@
 .quantity-control {
     background: transparent;
     border: transparent;
+    cursor: pointer;
     width: 2rem;
     padding: 0.1rem;
 }

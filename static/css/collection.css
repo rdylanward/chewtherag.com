@@ -433,6 +433,7 @@
 .quantity-control {
     background: transparent;
     border: transparent;
+    cursor: pointer;
     width: 2rem;
     padding: 0.3rem;
 }
