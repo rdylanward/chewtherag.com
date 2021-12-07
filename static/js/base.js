@@ -119,26 +119,6 @@ $(document).ready(function() {
         let itemId = $(this).data('item_id');
         changeInputStatus(itemId);
     })
-
-    /* Update quantity on shopping cart item */
-    $('.update-item').click(function(e) {
-        let form = $(this).prev('.ordered-quantity-form');
-        form.submit();
-    })
-
-    /* Remove item from shopping cart */
-    $('.remove-item').click(function(e) {
-        let csrfToken = "{{ csrf_token }}";
-        let itemId = $(this).attr('id').split('remove_')[1];
-        let size = $(this).data('size');
-        let url = `/cart/remove/${itemId}`;
-        let data = {'csrfmiddlewaretoken': csrfToken, 'size': size};
-
-        $.post(url, data)
-         .done(function() {
-             location.reload();
-         });
-    })
 });
 
 /* This function was originally written by W3Schools (https://www.w3schools.com/howto/howto_js_mobile_navbar.asp) and
