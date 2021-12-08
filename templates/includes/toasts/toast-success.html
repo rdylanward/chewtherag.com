@@ -1,14 +1,10 @@
-<div class="toast-wrapper">
-    <div class="toast-icon">
-        <span><i class="fas fa-check-circle"></i></span>
-    </div>
-    <div class="toast-banner">
-        <p class="toast-heading">{{ message.extra_tags }}</p>
-        <button class="toast-close">
-            <i class="fas fa-times"></i>
-        </button>
-    </div>
-    <div class="toast-message">
-        <span>{{ message }}</span>
-    </div>
+<div class="toast-banner">
+    <i class="fas fa-check-circle toast-icon white"></i>
+    <p class="toast-heading uppercase white">{{ message.extra_tags }}</p>
+    <button class="toast-close" aria-label="Close">
+        <span class="white">&times;</span>
+    </button>
+</div>
+<div class="toast-message white">
+    <p>{{ message }}</p>
 </div>

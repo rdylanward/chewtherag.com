@@ -44,21 +44,24 @@
     <!-- This code was provided by Code Institute from their 'Boutique Ado' 
          example project and repurposed for creating and executing messages -->
     {% if messages %}
-      <div class="message-container">
-        {% for message in messages %}
-          {% with message.level as level %}
-            {% if level == 40 %}
-              {% include 'includes/toasts/toast_error.html' %}
-            {% elif level == 30 %}
-              {% include 'includes/toasts/toast_warning.html' %}
-            {% elif level == 25 %}
-              {% include 'includes/toasts/toast_success.html' %}
-            {% else %}
-              {% include 'includes/toasts/toast_info.html' %}
-            {% endif %}
-          {% endwith %}
-        {% endfor %}
-      </div>
+      {% for message in messages %}
+        {% with message.level as level %}
+          {% if level == 40 %}
+            <div class="toast-wrapper error">
+            {% include 'includes/toasts/toast-error.html' %}
+          {% elif level == 30 %}
+            <div class="toast-wrapper warning">
+            {% include 'includes/toasts/toast-warning.html' %}
+          {% elif level == 25 %}
+            <div class="toast-wrapper success">
+            {% include 'includes/toasts/toast-success.html' %}
+          {% else %}
+            <div class="toast-wrapper info">
+            {% include 'includes/toasts/toast-info.html' %}
+          {% endif %}
+        {% endwith %}
+        </div>
+      {% endfor %}
     {% endif %}
     
     {% include 'includes/navbar.html' %}

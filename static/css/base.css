@@ -145,6 +145,111 @@ body {
 
 
 /**********************************************************************/
+/***                   Toast Reusable Components                    ***/
+/**********************************-***********************************/
+
+.toast-wrapper {
+    position: fixed;
+    font-family: 'Montserrat', sans-serif;
+    width: 40rem;
+    height: auto;
+    top: calc(0vh + 3vh);
+    left: calc(100vw - 45rem);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
+        "tst-bnr"
+        "tst-msg";
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+    place-self: center center;
+    z-index: 9000;
+}
+
+.toast-banner {
+    grid-area: tst-bnr;
+    width: 100%;
+    display: grid;
+    grid-template-columns: max-content auto 10%;
+    grid-template-rows: max-content;
+    grid-template-areas:
+        "tst-icn tst-hdr tst-cls";
+}
+
+.toast-icon {
+    grid-area: tst-icn;
+    font-size: 3.5rem;
+    font-weight: 600;
+    place-self: center center;
+    margin: 0.8rem 0.8rem 0.8rem 1rem;
+}
+
+.toast-heading {
+    grid-area: tst-hdr;
+    font-size: 1.4rem;
+    font-weight: 600;
+    place-self: center start;
+    margin-left: 0.8rem;
+}
+
+.toast-close {
+    grid-area: tst-cls;
+    background: transparent;
+    cursor: pointer;
+    border: transparent;
+    place-self: center center;
+    padding: 0rem 0.8rem;
+}
+
+.toast-close span {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.toast-message {
+    grid-area: tst-msg;
+    height: auto;
+    word-wrap: normal;
+    white-space: normal;
+    place-self: center start;
+    margin-left: 0.5rem;
+}
+
+.toast-message p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 1.2rem;
+}
+
+.info {
+    background: rgba(47, 150, 180, 0.95);
+}
+
+.success {
+    background: rgba(34, 139, 34, 0.97);
+}
+
+.warning {
+    background: rgba(248, 148, 6, 0.95);
+}
+
+.error {
+    background: rgba(189, 54, 47, 0.95);
+}
+
+
+/**********************************************************************/
+/***              Toast Success (toast-success.html)                ***/
+/**********************************-***********************************/
+
+
+.toast-wrapper {
+    background: rgba(34, 139, 34, 0.97) !important;
+}
+
+
+/**********************************************************************/
 /***                      Navbar (base.html)                        ***/
 /**********************************-***********************************/
 

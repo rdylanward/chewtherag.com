@@ -119,6 +119,16 @@ $(document).ready(function() {
         let itemId = $(this).data('item_id');
         changeInputStatus(itemId);
     })
+
+    /* Auto-close toast */
+    $(".toast-wrapper").change(function() {
+        $(".toast-wraper").delay(2500).fadeOut("slow");
+    })
+
+    /* Close the toast by clicking the button */
+    $(".toast-close").click(function() {
+        $(".toast-wrapper").fadeOut("slow");
+    })
 });
 
 /* This function was originally written by W3Schools (https://www.w3schools.com/howto/howto_js_mobile_navbar.asp) and
