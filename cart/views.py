@@ -48,8 +48,13 @@ def add_to_cart(request, item_id):
 def update_cart(request, item_id):
     """ Update the quantity of cart item """
 
+    item = get_object_or_404(Item, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
+
+    print(quantity)
+    print(size)
+    
     if 'item_size' in request.POST:
         size = request.POST['item_size']
     cart = request.session.get('cart', {})
@@ -69,6 +74,7 @@ def remove_from_cart(request, item_id):
     """ Update the quantity of cart item """
 
     try:
+        item = get_object_or_404(Item, pk=item_id)
         size = None
         if 'item_size' in request.POST:
             size = request.POST['item_size']
@@ -81,11 +87,11 @@ def remove_from_cart(request, item_id):
             messages.success(request, f'Removed {item.name}, size {size.upper()}, from your cart.', extra_tags='Removed Item')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {item.name} from your bag.', extra_tags='Removed Item')
+            messages.success(request, f'Removed {item.name} from your cart.', extra_tags='Removed Item')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)
 
     except Exception as e:
-        messages.error(request, f'Error removing item: {e}', extra_tags='Error Removing Item')
+        messages.error(request, f'Error removing item: {e}')
         return HttpResponse(status=500)

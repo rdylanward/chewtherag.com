@@ -162,7 +162,6 @@ body {
         "tst-bnr"
         "tst-msg";
     border-radius: 1rem;
-    box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
     place-self: center center;
     z-index: 9000;
 }
