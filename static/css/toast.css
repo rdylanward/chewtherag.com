@@ -1,0 +1,83 @@
+/**********************************************************************/
+/***                   Toast Reusable Components                    ***/
+/**********************************-***********************************/
+
+.toast-wrapper {
+    position: fixed;
+    font-family: 'Montserrat', sans-serif;
+    width: 20rem;
+    min-height: 9rem;
+    top: calc(0vh + 3vh);
+    right: calc(100vw - 3vw);
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
+        "tst-icn tst-bnr"
+        "tst-icn tst-msg";
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+    place-self: center center;
+    z-index: 1000;
+}
+
+.toast-icon {
+    grid-area: tst-icn;
+    place-self: center center;
+}
+
+.toast-icon span {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
+.toast-banner {
+    grid-area: tst-bnr;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    grid-template-rows: max-content;
+    grid-template-areas:
+        "tst-hdr tst-cls";
+}
+
+.toast-heading {
+    grid-area: tst-hdr;
+    font-size: 1.6rem;
+    font-weight: 600;
+    place-self: center start;
+}
+
+.toast-close {
+    grid-area: tst-cls;
+    font-size: 1.5rem;
+    font-weight: 600;
+    place-self: center center;
+}
+
+.toast-message {
+    grid-area: tst-msg;
+    place-self: center start;
+}
+
+.toast-message span {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+/**********************************************************************/
+/***              Toast Success (toast-success.html)                ***/
+/**********************************-***********************************/
+
+
+.toast-wrapper {
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(34, 139, 34, 0.7);
+}
+
+.toast-icon span {
+    color: rgba(34, 139, 34, 0.7);
+}
+
+.toast-close i {
+    color: rgba(34, 139, 34, 0.7);
+}
