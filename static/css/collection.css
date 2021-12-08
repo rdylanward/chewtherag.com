@@ -353,6 +353,7 @@
     height: 2.4rem;
     border: 0rem transparent;
     border-bottom: 0.1rem solid #1d2b51;
+    cursor: pointer;
 }
 
 .size-dropdown > option {

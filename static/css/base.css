@@ -93,6 +93,7 @@ body {
     border: 0.25rem solid #1d2b51;
     border-radius: 0.6rem;
     height: 4rem;
+    cursor: pointer;
     transition: all 0.3s;
 }
 
@@ -117,6 +118,7 @@ body {
     border: 0.25rem solid #fff;
     border-radius: 0.6rem;
     height: 4rem;
+    cursor: pointer;
     transition: all 0.3s;
 }
 
@@ -239,16 +241,6 @@ body {
 
 
 /**********************************************************************/
-/***              Toast Success (toast-success.html)                ***/
-/**********************************-***********************************/
-
-
-.toast-wrapper {
-    background: rgba(34, 139, 34, 0.97) !important;
-}
-
-
-/**********************************************************************/
 /***                      Navbar (base.html)                        ***/
 /**********************************-***********************************/
 
@@ -334,6 +326,10 @@ body {
 .navbar-menu-link:active {
     color: rgba(229, 178, 124, 0.6) !important;
     transition: color 0.3s;
+}
+
+.navbar-login-text span {
+    cursor: pointer;
 }
 
 .navbar-toggler {
@@ -424,7 +420,6 @@ body {
 
 .navbar-icons-cart a {
     font-size: 2.1rem;
-    cursor: default;
     transition: all 0.3s;
 }
 
@@ -437,7 +432,6 @@ body {
 .navbar-cart-text > a {
     font-size: 2.1rem;
     font-weight: 600;
-    cursor: default;
     margin: 0rem;
 }
 
