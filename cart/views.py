@@ -51,10 +51,6 @@ def update_cart(request, item_id):
     item = get_object_or_404(Item, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
-
-    print(quantity)
-    print(size)
-    
     if 'item_size' in request.POST:
         size = request.POST['item_size']
     cart = request.session.get('cart', {})

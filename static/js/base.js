@@ -121,13 +121,13 @@ $(document).ready(function() {
     })
 
     /* Auto-close toast */
-    $(".toast-wrapper").change(function() {
-        $(".toast-wraper").delay(2500).fadeOut("slow");
-    })
+    $(".toast-wrapper").ready(function() {
+        $(".toast-wrapper").delay(2000).fadeOut("slow", "swing");
 
-    /* Close the toast by clicking the button */
-    $(".toast-close").click(function() {
-        $(".toast-wrapper").fadeOut("slow");
+        /* Close the toast by clicking the button */
+        $(".toast-close").click(function() {
+            $(".toast-wrapper").fadeOut("slow");
+        })
     })
 });
 
