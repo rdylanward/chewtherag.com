@@ -80,7 +80,8 @@ body {
     box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
 }
 
-.cart-img-shadow {
+.cart-img-shadow,
+.checkout-img-shadow {
     box-shadow: 0.45rem 0.45rem 0.9rem rgba(29, 43, 81, 0.5);
 }
 

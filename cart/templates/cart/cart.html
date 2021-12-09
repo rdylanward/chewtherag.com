@@ -84,7 +84,9 @@
                     <a class="cart-actions-shopping btn-blue-white no-decoration uppercase" href="{% url 'collection' %}">
                         Keep Shopping
                     </a>
-                    <button class="cart-actions-checkout btn-blue-white uppercase">Secure Checkout<i class="fas fa-lock"></i></button>
+                    <a class="cart-actions-checkout btn-blue-white no-decoration uppercase" href="{% url 'checkout' %}">
+                        Secure Checkout<i class="fas fa-lock"></i>
+                    </a>
                 </div>
             {% else %}
                 <div class="cart-empty">
@@ -93,7 +95,9 @@
                         <a class="cart-empty-shopping btn-blue-white no-decoration uppercase" href="{% url 'collection' %}">
                             Keep Shopping
                         </a>
-                        <button class="cart-empty-checkout btn-greyed-out uppercase">Secure Checkout<i class="fas fa-lock"></i></button>
+                        <a class="cart-actions-checkout btn-greyed-out no-decoration uppercase" href="javascript:void(0);">
+                            Secure Checkout<i class="fas fa-lock"></i>
+                        </a>
                     </div>
                 </div>
             {% endif %}

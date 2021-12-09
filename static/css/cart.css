@@ -309,10 +309,6 @@
     border-top: 0.2rem solid #1d2b51;
 }
 
-.cart-actions {
-    grid-area: itm-lst-btn;
-}
-
 .list-items-tally {
     grid-area: itm-lst-tly;
     background: rgba(29, 43, 81, 0.25);
@@ -380,7 +376,9 @@
 }
 
 .cart-actions-checkout {
-    width: 20rem;
+    width: 24rem;
+    height: 4rem;
+    padding: 0.75rem 1rem 0.76rem 1rem;
 }
 
 .cart-actions-checkout i {
@@ -416,7 +414,9 @@
 }
 
 .cart-empty-checkout {
-    width: 20rem;
+    width: 24rem;
+    height: 4rem;
+    padding: 0.75rem 1rem 0.76rem 1rem;
 }
 
 .cart-empty-checkout i {
