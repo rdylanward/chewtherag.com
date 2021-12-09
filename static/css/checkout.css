@@ -1,0 +1,334 @@
+/**********************************************************************/
+/***               Checkout Container (checkout.html)               ***/
+/**********************************-***********************************/
+
+
+.container-checkout {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 82vh;
+    display: grid;
+    grid-template-columns: 15% repeat(2, 35%) 15%;
+    grid-template-rows: 18vh repeat(3, max-content);
+    grid-template-areas: 
+        "chk-hdr chk-hdr chk-hdr chk-hdr"
+        ". chk-hdn chk-hdn ."
+        ". chk-frm chk-sum .";
+    margin-bottom: 6rem;
+}
+
+/**********************************************************************/
+/***                Checkout Header (checkout.html)                 ***/
+/**********************************-***********************************/
+
+
+.checkout-header {
+    grid-area: chk-hdr;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/interestingly-designed-store.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 18vh;
+    background-attachment: fixed;
+}
+
+
+/**********************************************************************/
+/***                Checkout Heading (checkout.html)                ***/
+/**********************************-***********************************/
+
+
+.checkout-heading {
+    grid-area: chk-hdn;
+    margin: 6rem 0rem 3rem 0rem;
+}
+
+.checkout-heading p {
+    font-size: 3.9rem;
+    font-weight: 600;
+    margin: 0rem;
+}
+
+.checkout-heading p i {
+    margin-left: 1.8rem;
+}
+
+
+/**********************************************************************/
+/***                  Checkout Form (checkout.html)                 ***/
+/**********************************-***********************************/
+
+
+.checkout-form {
+    grid-area: chk-frm;
+    margin-right: 3rem;
+}
+
+.checkout-form p {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.checkout-instructions {
+    font-size: 1.6rem !important;
+    text-align: justify;
+    margin: 0.5rem 0rem 2.5rem 0rem;
+}
+
+.info-details,
+.info-shipping,
+.info-payment {
+    color: #1d2b51;
+    border: transparent;
+    margin-bottom: 1.5rem;
+}
+
+.info-details legend,
+.info-shipping legend,
+.info-payment legend {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0rem 0.8rem;
+}
+
+.info-details input,
+.info-shipping input,
+.payment-card-element {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    width: 97%;
+    height: 3.5rem;
+    border: 0.2rem solid #1d2b51;
+    border-radius: 0.6rem;
+    margin: 0.5rem;
+}
+
+.info-details input::placeholder,
+.info-shipping input::placeholder,
+.payment-card-element::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 0rem 0.4rem;
+}
+
+.info-save {
+    font-size: 1.3rem;
+    margin: 0.8rem 0.6rem;
+}
+
+.order-submit {
+    margin-top: 2.5rem;
+}
+
+.submit-update {
+    width: 15rem;
+    padding: 0.75rem 1rem 0.76rem 1rem;
+    margin: 0rem 0.2rem 0rem 1.2rem;
+}
+
+.submit-complete {
+    font-family: 'Montserrat', sans-serif;
+    width: 20rem;
+    padding: 0.75rem 1rem 0.76rem 1rem;
+}
+
+.submit-complete i {
+    margin-left: 0.6rem;
+}
+
+.order-submit-disclaimer {
+    margin: 2rem 0rem 0rem 1.2rem;
+}
+
+
+/**********************************************************************/
+/***                Checkout Summary (checkout.html)                ***/
+/**********************************-***********************************/
+
+
+.checkout-summary {
+    grid-area: chk-sum;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas:
+        "chk-sum-hdr"
+        "chk-sum-lbl"
+        "chk-sum-lst"
+        "chk-sum-tot";
+    padding: 0rem;
+    margin-left: 3rem;
+}
+
+.summary-heading {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin: 0rem 0rem 4.6rem;
+}
+
+.summary-heading span {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.summary-heading {
+    grid-area: chk-sum-hdr;
+}
+
+.summary-labels {
+    grid-area: chk-sum-lbl;
+    display: grid;
+    grid-template-columns: 28% auto 17%;
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        "sum-lbl-dtl sum-lbl-itm sum-lbl-sub";
+    border-bottom: 0.2rem solid #1d2b51;
+    width: 100%;
+}
+
+.labels-detail {
+    grid-area: sum-lbl-dtl;
+    background: rgba(29, 43, 81, 0.1);
+}
+
+.labels-item {
+    grid-area: sum-lbl-itm;
+    background: rgba(29, 43, 81, 0.05);
+}
+
+.labels-subtotal {
+    grid-area: sum-lbl-sub;
+    background: rgba(29, 43, 81, 0.1);
+}
+
+.label-wrapper {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+}
+
+.summary-order-list {
+    grid-area: chk-sum-lst;
+    display: grid;
+    grid-template-columns: 28% auto 17%;
+    width: 100%;
+    height: 100%;
+    justify-self: center;
+}
+
+.summary-order-list > div:nth-child(3n+1) {
+    padding: 2rem 0.8rem;
+}
+
+.summary-order-list > div:nth-child(3n+2) {
+    padding: 2rem 0.8rem;
+}
+
+.summary-order-list > div:nth-child(3n+3) {
+    padding: 0.6rem 0.8rem;
+}
+
+.summary-order-totals {
+    grid-area: chk-sum-tot;
+}
+
+.checkout-image {
+    width: 16rem;
+}
+
+.summary-identifiers {
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+        "idn-nam"
+        "idn-siz"
+        "idn-qty";
+    place-self: start start;
+}
+
+.identifiers-name {
+    grid-area: idn-nam;
+    font-weight: 600;
+}
+
+.identifiers-size {
+    grid-area: idn-siz;
+    font-weight: 500;
+}
+
+.identifiers-quantity {
+    grid-area: idn-qty;
+    font-weight: 500;
+}
+
+.summary-identifiers p {
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 0rem 0rem 1rem;
+    margin: 0rem;
+}
+
+.summary-subtotal {
+    font-size: 1.3rem;
+    text-align: right;
+}
+
+.summary-order-totals {
+    grid-area: chk-sum-tot;
+    border-top: 0.2rem solid #1d2b51;
+    background: rgba(29, 43, 81, 0.1);
+    display: grid;
+    grid-template-columns: 84% 17%;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: 
+        "tot-lbl-tot tot-val-tot"
+        "tot-lbl-shp tot-val-shp"
+        "tot-lbl-grd tot-val-grd";
+    place-items: center end;
+    padding: 1rem 0.8rem;
+}
+
+.labels-total {
+    grid-area: tot-lbl-tot;
+}
+
+.labels-shipping {
+    grid-area: tot-lbl-shp;
+}
+
+.labels-grand-total {
+    grid-area: tot-lbl-grd;
+}
+
+.values-total {
+    grid-area: tot-val-tot;
+}
+
+.values-shipping {
+    grid-area: tot-val-shp;
+}
+
+.values-grand-total {
+    grid-area: tot-val-grd;
+}
+
+.totals-label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.totals-value {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 0.8rem;
+    margin-bottom: 1rem;
+}

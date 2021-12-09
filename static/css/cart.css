@@ -30,6 +30,7 @@
     background-attachment: fixed;
 }
 
+
 /**********************************************************************/
 /***                    Cart Heading (cart.html)                    ***/
 /**********************************-***********************************/
@@ -49,7 +50,6 @@
 .cart-heading p i {
     margin-left: 1.8rem;
 }
-
 
 
 /**********************************************************************/
@@ -307,10 +307,6 @@
 .list-items-tally {
     grid-area: itm-lst-tly;
     border-top: 0.2rem solid #1d2b51;
-}
-
-.list-items-tally {
-    grid-area: itm-lst-tly;
     background: rgba(29, 43, 81, 0.25);
     display: grid;
     grid-template-columns: 90% 10%;
