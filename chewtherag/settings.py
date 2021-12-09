@@ -64,7 +64,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'chewtherag.urls'
 
-CRISPY_TEMPLATE_PACK = 'uni-form'
+CRISPY_ALLOWED_TEMPLATE_PACKS = 'uni_form'
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 TEMPLATES = [
     {
