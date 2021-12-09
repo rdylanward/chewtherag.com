@@ -9,16 +9,16 @@ let elements = stripe.elements();
 let style = {
     base: {
         color: '#000',
-        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontFamily: '"Montserrat", sans-serif',
         fontSmoothing: 'antialiased',
-        fontSize: '16px',
+        fontSize: '1.6rem',
         '::placeholder': {
             color: '#aab7c4'
         }
     },
     invalid: {
-        color: '#dc3545',
-        iconColor: '#dc3545'
+        color: '#bd362f',
+        iconColor: '#bd362f'
     }
 };
 let card = elements.create('card', {style: style});

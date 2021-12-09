@@ -145,6 +145,39 @@
 
 
 /**********************************************************************/
+/***                  Stripe Payment (checkout.html)                ***/
+/**********************************-***********************************/
+
+
+.StripeElement,
+.stripe-style-input {
+  box-sizing: border-box;
+  height: 4rem;
+  padding: 1rem 1.2rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0rem;
+  background-color: white;
+  box-shadow: 0rem 0.1rem 0.3rem 0rem #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus,
+.stripe-style-input:focus,
+.stripe-style-input:active {
+  box-shadow: 0rem 0.1rem 0.3rem 0rem #cfd7df;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.stripe-style-input::placeholder {
+    color: #aab7c4;
+}
+
+
+/**********************************************************************/
 /***                Checkout Summary (checkout.html)                ***/
 /**********************************-***********************************/
 
