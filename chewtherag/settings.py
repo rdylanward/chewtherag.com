@@ -180,8 +180,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FREE_SHIPPING_GOAL = 60
 STANDARD_SHIPPING_CHARGE = 10
 STRIPE_CURRENCY = 'eur'
-STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
-STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+#STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_PUBLIC_KEY = 'pk_test_51K4tdHJbjb93hMAMxArqBlEium5PALPJSrfHQRvsxAhD8MBZGOfNy31SWKC39CIpYh31J3tAvg8odQYXA7GMfzbq00YYZOrRNf'
+#STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_SECRET_KEY = 'sk_test_51K4tdHJbjb93hMAMt6vScjVUOPfximE0crf90n9unOvOinFwPoWk1pcLCHjuk4SwTZpvOphDS8BA1Kj198tRy5D600bsSAMUcq'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
