@@ -16,11 +16,6 @@ To facilitate the client, I am using the Django Framework to create a site that 
     <h2 align="center"><img src="https://github.com/rdylanward/HeatSink/blob/master/static/img/screenshots/iPhone_6-7-8_heaters.html.png"></h2>
     <h2 align="center"><img src="https://github.com/rdylanward/HeatSink/blob/master/static/img/screenshots/iPhone_6-7-8_sidenav.png"></h2>
 
-    -   #### iPhone X (375 x 812)
-
-    <h2 align="center"><img src="https://github.com/rdylanward/HeatSink/blob/master/static/img/screenshots/iPhone_X_heaters.html.png"></h2>
-    <h2 align="center"><img src="https://github.com/rdylanward/HeatSink/blob/master/static/img/screenshots/iPhone_X_settings.html.png"></h2>
-
     -   #### iPad (768 x 1024)
 
     <h2 align="center"><img src="https://github.com/rdylanward/HeatSink/blob/master/static/img/screenshots/iPad_heaters.html.png"></h2>
@@ -59,9 +54,9 @@ To facilitate the client, I am using the Django Framework to create a site that 
 
 -   ### Design
     -   #### Colour Scheme
-        -   I chose red, green and grey accents for the heaters to indicate off, on and disabled states. Off-white was chosen for the background of the heater cards and the sidenav menu.
+        -   I chose oranges, blacks and blues to give the site a modern, warm, country shop feel when combined with the imagery chosen.
     -   #### Typography
-        -   Montserrat was chosen for its clean design and easy to read style. Sans Serif was chosen as the back-up in the event the main font does not load. Future changes to typography possible.
+        -   Montserrat was chosen for its clean design and easy to read style. Sans Serif was chosen as the back-up in the event the main font does not load. the logo/brand incorporates Amatic SC (with cursive for backup). Amatic SC is used for the navigation 
     -   #### Imagery
         -   Implemented a fixed image related to the type of application this is. A dark filter is layered over the image to allow for the elements to stand out.
 
