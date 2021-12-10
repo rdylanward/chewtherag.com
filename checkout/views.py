@@ -1,14 +1,16 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.conf import settings
-from .forms import OrderForm
-from cart.contexts import cart_contents
 import stripe
+from cart.contexts import cart_contents
+from .forms import OrderForm
 
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+
+    print(stripe_secret_key)
 
     cart = request.session.get('cart', {})
     if not cart:
@@ -27,13 +29,14 @@ def checkout(request):
     order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?', extra_tags='No Public Key')
+        messages.warning(request, 'Stripe public key is missing. Did you forget \
+            to set it in your environment?', extra_tags='No Public Key')
 
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
-        'client_secret': stripe_secret_key,
+        'client_secret': intent.client_secret,
 
     }
 

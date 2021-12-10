@@ -22,11 +22,11 @@ let style = {
     }
 };
 let card = elements.create('card', {style: style});
-card.mount('#card-element');
+card.mount('#payment-card-element');
 
 /* Handle realtime validation errors on the card element */
 card.addEventListener('change', function (event) {
-    let errorDiv = document.getElementById('card-errors');
+    let errorDiv = document.getElementById('payment-card-errors');
     if (event.error) {
         let html = `
             <span class="icon" role="alert">
@@ -41,19 +41,19 @@ card.addEventListener('change', function (event) {
 });
 
 /* Handle form submit */
-let form = document.getElementById('payment-form');
+let form = document.getElementById('checkout-info');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
-    $('#submit-button').attr('disabled', true);
+    $('#submit-complete').attr('disabled', true);
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
         }
     }).then(function(result) {
         if (result.error) {
-            let errorDiv = document.getElementById('card-errors');
+            let errorDiv = document.getElementById('payment-card-errors');
             let html = `
                 <span class="icon" role="alert">
                 <i class="fas fa-times"></i>
@@ -61,7 +61,7 @@ form.addEventListener('submit', function(ev) {
                 <span>${result.error.message}</span>`;
             $(errorDiv).html(html);
             card.update({ 'disabled': false});
-            $('#submit-button').attr('disabled', false);
+            $('#submit-complete').attr('disabled', false);
         } else {
             if (result.paymentIntent.status === 'succeeded') {
                 form.submit();
