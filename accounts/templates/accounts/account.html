@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/profile.css' %}" type="text/css">
+{% endblock %}
+
+{% block content %}
+<!--  GRID CONTAINER  -->
+
+<div class="container-accounts blue">
+
+    <!--  ACCOUNTS HEADER  -->
+
+    <div class="accounts-header"></div>
+
+    <!--  /ACCOUNTS HEADER  -->
+
+    <!--  ACCOUNTS HEADING  -->
+
+    <div class="accounts-heading">
+        <p class="uppercase blue">My Account<i class="fas fa-users"></i></p>
+    </div>
+
+    <!--  /ACCOUNTS HEADING  -->
+
+</div>
+
+<!--  /GRID CONTAINER  -->
+
+{% endblock %}
