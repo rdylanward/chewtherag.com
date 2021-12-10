@@ -9,7 +9,7 @@ class AccountProfile(models.Model):
     """ An account profile model for maintaining default
         delivery information and order history """
     
-    account = models.OneToOneField(Account, on_delete=models.CASCADE)
+    account = models.OneToOneField(User, on_delete=models.CASCADE)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country *', null=True, blank=True)
     default_postcode = models.CharField(max_length=20, null=True, blank=True)
@@ -22,7 +22,7 @@ class AccountProfile(models.Model):
         return self.account.accountname
 
 
-@receiver(post_save, sender=Account)
+@receiver(post_save, sender=User)
 def create_or_update_account_profile(sender, instance, created, **kwargs):
     """ Create or update the account profile """
     
