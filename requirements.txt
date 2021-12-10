@@ -41,9 +41,6 @@ jedi==0.18.0
 jeepney==0.7.1
 Jinja2==3.0.1
 jsonschema==3.2.0
-jupyter-client==7.0.2
-jupyter-core==4.7.1
-jupyterlab-pygments==0.1.2
 keyring==23.2.1
 lazy-object-proxy==1.6.0
 MarkupSafe==2.0.1
