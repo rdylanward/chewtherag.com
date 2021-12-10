@@ -7,12 +7,11 @@
     font-family: 'Montserrat', sans-serif;
     min-height: 82vh;
     display: grid;
-    grid-template-columns: 15% repeat(2, 35%) 15%;
-    grid-template-rows: 18vh repeat(3, max-content);
+    grid-template-columns: 20% repeat(2, 30%) 20%;
+    grid-template-rows: 18vh 82vh;
     grid-template-areas: 
         "act-hdr act-hdr act-hdr act-hdr"
-        ". act-hdn act-hdn ."
-        ". act-frm act-sum .";
+        ". act-hdn act-hdn .";
     margin-bottom: 6rem;
 }
 
@@ -23,7 +22,7 @@
 
 .accounts-header {
     grid-area: act-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/interestingly-designed-store.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/department_store.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
