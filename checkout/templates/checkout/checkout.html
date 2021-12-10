@@ -47,12 +47,12 @@
             <fieldset class="info-shipping blue">
                 <legend class="blue">Shipping</legend>
                 {{ order_form.phone_number | as_crispy_field }}
-                {{ order_form.country | as_crispy_field }}
-                {{ order_form.postcode | as_crispy_field }}
-                {{ order_form.town_or_city | as_crispy_field }}
                 {{ order_form.street_address1 | as_crispy_field }}
                 {{ order_form.street_address2 | as_crispy_field }}
+                {{ order_form.town_or_city | as_crispy_field }}
                 {{ order_form.county | as_crispy_field }}
+                {{ order_form.postcode | as_crispy_field }}
+                {{ order_form.country | as_crispy_field }}
                 <div class="info-save blue">
                     {% if user.is_authenticated %}
                         <label class="info-save-label blue" for="info-save-info">Save information to my profile</label>

@@ -94,6 +94,7 @@
 
 .info-details input,
 .info-shipping input,
+select,
 .payment-card-element {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
@@ -105,8 +106,18 @@
     margin: 0.5rem;
 }
 
+select option {
+    color: #1d2b51 !important;
+}
+
+select:invalid,
+select option[value=""] {
+    color: rgba(29, 43, 81, 0.6) !important;
+}
+
 .info-details input::placeholder,
 .info-shipping input::placeholder,
+select option,
 .payment-card-element::placeholder {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
@@ -154,12 +165,7 @@
   box-sizing: border-box;
   height: 4rem;
   padding: 1rem 1.2rem;
-  /* border: 0.2rem solid #1d2b51;
-  border-radius: 0.6rem; */
   background-color: white;
-  /* box-shadow: 0rem 0.1rem 0.3rem 0rem #e6ebf1;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease; */
 }
 
 .StripeElement--focus,
