@@ -1,1 +1,1 @@
-web: gunicorn chewtherag.com.wsgi:application
+web: gunicorn chewtherag.wsgi:application
