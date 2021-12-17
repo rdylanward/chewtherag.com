@@ -1,5 +1,142 @@
 {% load static %}
 
-<!--  MOBILE NAVBAR  -->
+<!--
+    NAVBAR MOBILE
+-->
 
-<!--  /MOBILE NAVBAR  -->
+<nav class="container-mobile show-menu">
+
+    <!--
+        SLIDING BRAND
+    -->
+    <div class="sliding-brand">
+        <a href="{% url 'home' %}" class="sliding-brand-icon no-decoration">
+            <img class="sliding-brand-logo" src="/media/CTR_LOGO.png" alt="Chew the Rag Clothing Co. Logo" />
+        </a>
+        <a href="{% url 'home' %}" class="sliding-brand-title no-decoration">
+            Chew the Rag Clothing Co.
+        </a>
+    </div>
+    <!--
+        /SLIDING BRAND
+    -->
+
+    <!--
+        HAMBURGER MENU
+    -->
+    <div class="hamburger-menu">
+        <div class="hamburger"></div>
+    </div>
+    <!--
+        /HAMBURGER MENU
+    -->
+
+    <!--
+        SLIDING NAVBAR
+    -->
+        <!--
+            Sliding menu code courtesy of Romain Chemartin
+            (https://codepen.io/rchemartin/pen/EXXzLp) and
+            repurposed for the mobile menu
+        -->
+    <div class="sliding-navbar">
+        <p class="sliding-header">
+            <img class="sliding-brand-logo" src="/media/CTR_LOGO.png" alt="Chew the Rag Clothing Co. Logo" />
+        </p>
+        <ul class="sliding-menu-list no-list-style">
+            <li class="sliding-menu-item">
+                <a href="{% url 'home' %}" class="sliding-menu-link no-decoration uppercase">
+                    Welcome
+                </a>
+            </li>
+            <li class="sliding-menu-item">
+                <a href="javascript:void(0);" class="sliding-menu-link no-decoration uppercase">
+                    Journey
+                </a>
+            </li>
+            <li class="sliding-menu-item">
+                <a href="javascript:void(0);" class="sliding-menu-link no-decoration uppercase">
+                    Collections
+                </a>
+            </li>
+            <li class="sliding-menu-item">
+                <a href="javascript:void(0);" class="sliding-menu-link no-decoration uppercase">
+                    Community
+                </a>
+            </li>
+            <li class="sliding-menu-item">
+                <a href="javascript:void(0);" class="sliding-menu-link no-decoration uppercase">
+                    Contact
+                </a>
+            </li>
+            <li class="sliding-menu-item">
+                <div class="sliding-login-register">
+                    {% if request.user.is_authenticated %}
+                        <span class="sliding-menu-link uppercase sliding-login-link">
+                            My Account
+                        </span>
+                    {% else %}
+                        <span class="sliding-menu-link uppercase sliding-login-link">
+                            Login / Register
+                        </span>
+                    {% endif %}
+                </div>
+                <div class="sliding-login-dropdown hide-menu">
+                    <ul class="sliding-dropdown-list no-list-style">
+                        {% if request.user.is_authenticated %}
+                            {% if request.user.is_authenticated %}
+                                <li class="sliding-dropdown-item">
+                                    <a href="{% url 'account_logout' %}" class="sliding-dropdown-link no-decoration uppercase">
+                                        Admin
+                                    </a>
+                                </li>
+                            {% endif %}
+                            <li class="sliding-dropdown-item">
+                                <a href="" class="sliding-dropdown-link no-decoration uppercase">
+                                    My Profile
+                                </a>
+                            </li>
+                            <li class="sliding-dropdown-item">
+                                <a href="{% url 'account_logout' %}" class="sliding-dropdown-link no-decoration uppercase">
+                                    Logout
+                                </a>
+                            </li>
+                        {% else %}
+                            <li class="sliding-dropdown-item">
+                                <a href="{% url 'account_signup' %}" class="sliding-dropdown-link no-decoration uppercase">
+                                    Register
+                                </a>
+                            </li>
+                            <li class="sliding-dropdown-item">
+                                <a href="{% url 'account_login' %}" class="sliding-dropdown-link no-decoration uppercase">
+                                    Login
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </li>
+            <li class="sliding-cart">
+                <div class="sliding-icons">
+                    <a href="javascript:void(0);" class="no-decoration">
+                            <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="no-decoration uppercase">
+                        {% if items_reserved %}
+                            {{ items_reserved }}
+                        {% else %}
+                            No
+                        {% endif %} Item(s)
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--
+        /SLIDING NAVBAR
+    -->
+
+</nav>
+<!--
+    /NAVBAR MOBILE
+-->

@@ -49,19 +49,22 @@
         {% with message.level as level %}
           {% if level == 40 %}
             <div class="toast-wrapper error">
-            {% include 'includes/toasts/toast-error.html' %}
+                {% include 'includes/toasts/toast-error.html' %}
+            </div>
           {% elif level == 30 %}
             <div class="toast-wrapper warning">
-            {% include 'includes/toasts/toast-warning.html' %}
+                {% include 'includes/toasts/toast-warning.html' %}
+            </div>
           {% elif level == 25 %}
             <div class="toast-wrapper success">
-            {% include 'includes/toasts/toast-success.html' %}
+                {% include 'includes/toasts/toast-success.html' %}
+            </div>
           {% else %}
             <div class="toast-wrapper info">
-            {% include 'includes/toasts/toast-info.html' %}
+                {% include 'includes/toasts/toast-info.html' %}
+            </div>
           {% endif %}
         {% endwith %}
-        </div>
       {% endfor %}
     {% endif %}
     

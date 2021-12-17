@@ -3,6 +3,14 @@
 /**********************************-***********************************/
 
 
+:root {
+    --almost__white: #fefdfc;
+    --footer__orange: #e5b27c;
+    --std__blue: #1d2b51;
+    /* --almost__black: #020306; */
+    --almost__black: #070a12;
+}
+
 html {
     font-size: 62.5%;
     height: 100%;
@@ -12,6 +20,7 @@ html {
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
+    background: var(--almost__white);
     padding: 0rem;
     margin: 0rem;
 }
@@ -45,7 +54,11 @@ body {
 }
 
 .hide-menu {
-    display: none;
+    display: none !important;
+}
+
+.show-menu {
+    display: grid !important;
 }
 
 .show-dropdown {
@@ -68,14 +81,6 @@ body {
     color: rgba(0, 0, 0, 0.4);
 }
 
-.white {
-    color: #fff !important;
-}
-
-.blue {
-    color: #1d2b51;
-}
-
 .blue-shadow {
     box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
 }
@@ -93,7 +98,7 @@ body {
     background: transparent;
     border: 0.25rem solid #1d2b51;
     border-radius: 0.6rem;
-    height: 4rem;
+    height: 2rem;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -118,7 +123,7 @@ body {
     background: transparent;
     border: 0.25rem solid #fff;
     border-radius: 0.6rem;
-    height: 4rem;
+    height: 2rem;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -143,13 +148,14 @@ body {
     background: transparent;
     border: 0.25rem solid rgba(0, 0, 0, 0.3);
     border-radius: 0.6rem;
-    height: 4rem;
+    height: 2rem;
 }
 
 
 /**********************************************************************/
 /***                   Toast Reusable Components                    ***/
 /**********************************-***********************************/
+
 
 .toast-wrapper {
     position: fixed;
@@ -238,6 +244,223 @@ body {
 
 .error {
     background: rgba(189, 54, 47, 0.95);
+}
+
+
+/**********************************************************************/
+/***                   Mobile Navbar (base.html)                    ***/
+/**********************************-***********************************/
+
+
+.container-mobile {
+    position: fixed;
+    background: transparent;
+    width: 100%;
+    top: 0rem;
+    left: 0rem;
+    transition: all 0.3s;
+    grid-template-columns: auto minmax(3rem, 5rem);
+    grid-template-rows: 8vh;
+    grid-template-areas:
+        "slid-brnd slid-hamb";
+    padding: 1rem 0rem;
+    margin: 0rem;
+    z-index: 20;
+}
+
+.sliding-brand {
+    grid-area: slid-brnd;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: max-content;
+    grid-template-areas:
+        "slid-logo slid-ttle";
+    place-self: center start;
+    padding-left: 1rem;
+    transition: all 0.3s;
+}
+
+.sliding-brand-icon {
+    grid-area: slid-logo;
+    place-self: center start;
+}
+
+.sliding-brand-logo {
+    height: 5rem;
+    width: 5rem;
+    color: var(--almost__white);
+    transition: all 0.3s;
+}
+
+.sliding-brand-title {
+    grid-area: slid-ttle;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 900;
+    font-size: 3.2rem;
+    color: var(--almost__white);
+    place-self: center start;
+    margin-left: 0.7rem;
+    transition: all 0.3s;
+}
+
+.hamburger-menu {
+    grid-area: slid-hamb;
+    width: 3rem;
+    height: 2rem;
+    cursor: pointer;
+    place-self: center end;
+    padding-bottom: 0.3rem;
+    padding-right: 1.2rem;
+    z-index: 999;
+}
+
+.hamburger {
+    position: relative;
+    transform: translateY(1rem);
+    background: var(--almost__white);
+    transition: all 0ms 300ms;
+}
+
+.hamburger,
+.hamburger:after,
+.hamburger:before {
+    width: 3rem;
+    height: 0.3rem;
+}
+
+.hamburger:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1rem;
+    background: var(--almost__white);
+    transition: bottom 0.3s ease-in-out;
+}
+
+.hamburger:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    background: var(--almost__white);
+    transition: top 0.3s ease-in-out;
+}
+
+.sliding-navbar{
+    position: absolute;
+    top:0;
+    left:-35rem;
+    height: 100vh;
+    width: 32rem;
+    background: rgba(7, 10, 18, 0.97);
+    transition: left 0.5s ease-in-out;
+    z-index: 300;
+    display: grid;
+    grid-template-columns: minmax(20rem, 1fr);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
+        "sld-nav-hdr"
+        "sld-nav-mnu";
+    place-items: start center;
+}
+
+.sliding-navbar--open{
+    left: 0rem;
+}
+
+.sliding-header {
+    grid-area: sld-nav-hdr;
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--almost__white);
+    justify-self: center;
+    margin: 2.3rem 0rem;
+}
+
+.sliding-menu-list {
+    grid-area: sld-nav-mnu;
+    justify-self: start;
+    padding: 0rem 3rem;
+    margin-top: 1rem;
+}
+
+.sliding-menu-item {
+    padding-bottom: 1.5rem;
+}
+
+.sliding-menu-link {
+    font-size: 1.4rem;
+    color: var(--almost__white);
+}
+
+.sliding-menu-link:hover {
+    color: var(--footer__orange);
+}
+
+.sliding-login-register {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content;
+    grid-template-areas:
+        "sld-log-drp";
+    place-content: start end;
+    padding-bottom: 1.2rem;
+}
+
+.sliding-login-dropdown {
+    grid-area: sld-log-drp;
+    /* display: none; */
+    justify-content: end;
+}
+
+.sliding-dropdown-item {
+    padding-bottom: 1.2rem;
+}
+
+.sliding-dropdown-item:last-child {
+    padding-bottom: 0rem;
+}
+
+.sliding-dropdown-link {
+    font-size: 1.4rem;
+    color: var(--almost__white);
+}
+
+.sliding-icons a {
+    font-size: 1.4rem;
+    color: var(--almost__white);
+}
+
+.sliding-icons a i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.mask{
+    position:absolute;
+    top: 0rem;
+    left:0rem;
+    height: 100vh;
+    width:100%;
+    background: rgba(2, 3, 6, 0.09);
+    opacity:0.8;
+    z-index: -100;
+}
+
+.show-mask{
+    z-index: 200;
+}
+
+.menu-opened:before {
+    bottom: 0.3rem;
+    transition: bottom 0.3s ease-in-out;
+}
+
+.menu-opened:after {
+    top: 0.3rem;
+    transition: top 0.3s ease-in-out;
 }
 
 
@@ -442,6 +665,10 @@ body {
 /**********************************-***********************************/
 
 
+.sticky-container-mobile {
+    background: rgba(7, 10, 18, 0.97);
+}
+
 .sticky-navbar {
     grid-template-columns: 2.5% 31.7% 31.6% 31.7% 2.5%;
     grid-template-areas:
@@ -508,14 +735,18 @@ body {
 
 .container-footer {
     font-family: 'Montserrat', sans-serif;
-    background: #e5b27c;
+    background: #c37727;
+    color: var(--std__blue);
     display: grid;
-    grid-template-columns: 17% 18% 30% 18% 17%;
-    grid-template-rows: 23.5rem 5.3rem 4.8rem;
+    grid-template-columns: repeat(2, 50vw);;
+    grid-template-rows: repeat(5, max-content);
     grid-template-areas:
-        ". men mid pol ."
-        ". pay pay pay ."
-        ". cop cop cop .";
+        "men pol"
+        "mid mid"
+        "soc soc"
+        "pay pay"
+        "cop cop";
+    padding: 3rem 0rem 1rem;
 }
 
 .footer-menu {
@@ -523,8 +754,7 @@ body {
     font-size: 1.3rem;
     font-weight: 600;
     line-height: 1.9rem;
-    align-self: center;
-    justify-self: center;
+    place-self: center center;
 }
 
 .footer-menu-list {
@@ -533,6 +763,7 @@ body {
 }
 
 .footer-menu-link {
+    color: var(--std__blue);
     transition: all 0.3s;
 }
 
@@ -547,12 +778,41 @@ body {
     transition: all 0.3s;
 }
 
+.footer-policies {
+    grid-area: pol;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.9rem;
+    place-self: center center;
+}
+
+.footer-policies-list {
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.footer-policies-link {
+    color: var(--std__blue);
+    transition: all 0.3s;
+}
+
+.footer-policies-link:hover {
+    color: rgba(29, 43, 81, 0.7);
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.footer-policies-link:active {
+    color: rgba(29, 43, 81, 0.3);
+    transition: all 0.3s;
+}
+
 .footer-middle {
     grid-area: mid;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 77% 23%;
-    grid-template-areas: 
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
         "com"
         "soc";
 }
@@ -560,14 +820,15 @@ body {
 .footer-community {
     grid-area: com;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 20% 60% 20%;
-    grid-template-areas: 
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
         "com-hdr"
         "com-txt"
         "com-eml";
-    padding: 0rem 7rem;
     align-self: center;
+    padding: 0rem 2.5rem;
+    margin: 2rem 0rem;
 }
 
 .footer-community-header {
@@ -587,9 +848,9 @@ body {
 .footer-community-form {
     grid-area: com-eml;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: auto minmax(7rem, 9rem);
     grid-template-rows: 100%;
-    grid-template-areas: 
+    grid-template-areas:
         "com-frm-eml com-frm-btn";
     width: 100%;
     align-self: center;
@@ -643,8 +904,8 @@ body {
 
 .footer-social {
     grid-area: soc;
-    align-self: center;
-    justify-self: center;
+    place-self: center center;
+    margin: 0rem 0rem 2rem;
 }
 
 .footer-social-list {
@@ -659,6 +920,7 @@ body {
 
 .footer-social-icon {
     font-size: 2rem;
+    color: var(--std__blue);
     transition: all 0.3s;
 }
 
@@ -692,45 +954,17 @@ body {
     transition: all 0.3s;
 }
 
-.footer-policies {
-    grid-area: pol;
-    font-size: 1.3rem;
-    font-weight: 600;
-    line-height: 1.9rem;
-    align-self: center;
-    justify-self: center;
-}
-
-.footer-policies-list {
-    padding: 0rem;
-    margin: 0rem;
-}
-
-.footer-policies-link {
-    transition: all 0.3s;
-}
-
-.footer-policies-link:hover {
-    color: rgba(29, 43, 81, 0.7);
-    font-weight: 700;
-    transition: all 0.3s;
-}
-
-.footer-policies-link:active {
-    color: rgba(29, 43, 81, 0.3);
-    transition: all 0.3s;
-}
-
 .footer-pay {
     grid-area: pay;
-    align-self: center;
-    justify-self: center;
+    place-self: center center;
+    margin: 0rem 0rem 1rem;
 }
 
 .footer-copyright {
     grid-area: cop;
     font-size: 1.2rem;
     font-weight: 500;
+    text-align: center;
     justify-self: center;
 }
 
