@@ -6,7 +6,7 @@
 .container-about {
     font-family: 'Montserrat', sans-serif;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 100vw;
     grid-template-rows: 100vh max-content;
     grid-template-areas: 
         "hdr"
@@ -24,55 +24,111 @@
     background-image: linear-gradient(rgba(7, 10, 18, 0.55), rgba(7, 10, 18, 0.55)), url('/media/team-in-modern-office-meeting-room.jpg');
     background-size: cover;
     background-position: center;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-attachment: fixed;
+    color: var(--almost__white);
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(4, 25vh);
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(7rem, 9rem) max-content;
     grid-template-areas: 
-        ". ."
-        "hdr-txt ."
-        "hdr-qte ."
-        ". .";
+        "hdr-txt"
+        "hdr-qte";
+    place-content: center start;
+    padding: 0rem 2.5rem;
 }
 
 .about-header-title {
     grid-area: hdr-txt;
-    align-self: flex-end;
-    margin: 2rem 7rem;
-}
-
-.about-header-title span{
-    font-size: 5.7rem;
+    font-size: 2.6rem;
     font-weight: 600;
+    place-self: end start;
+    margin: 0rem 0rem 2rem;
 }
 
 .about-header-dictionary {
     grid-area: hdr-qte;
-    align-self: flex-start;
-    margin: 0rem 7rem;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas:
+        "hdr-dct-ttl"
+        "hdr-dct-cat"
+        "hdr-dct-dsc"
+        "hdr-dct-qte";
+    align-self: start;
+    place-content: center start;
+    margin: 0rem;
 }
 
 .header-dictionary-title {
-    font-size: 1.9rem;
+    grid-area: hdr-dct-ttl;
+    font-size: 1.8rem;
+    margin: 0rem 0rem 1.5rem;
 }
 
 .header-dictionary-category {
-    font-size: 1.9rem;
+    grid-area: hdr-dct-cat;
+    font-size: 1.8rem;
+    margin: 0rem 0rem 1.5rem;
 }
 
 .header-dictionary-description {
-    font-size: 1.6rem;
+    grid-area: hdr-dct-dsc;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: max-content;
+    grid-template-areas:
+        "dct-dsc-num dct-dsc-txt";
+    place-content: center start;
+    margin-bottom: 1.5rem;
+}
+
+.dictionary-description-number {
+    grid-area: dct-dsc-num;
+    margin: 0rem;
+}
+
+.dictionary-description-text {
+    grid-area: dct-dsc-txt;
+    padding: 0rem 0.7rem;
+    margin: 0rem;
 }
 
 .header-dictionary-quote {
-    font-size: 1.6rem;
-    margin: 2.2rem 0rem;
+    grid-area: hdr-dct-qte;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: max-content;
+    grid-template-areas:
+        "dct-qte-lqt dct-qte-txt dct-qte-rqt";
+    justify-content: start;
+    margin: 0rem;
 }
 
-.dictionary-quote-text span {
-    font-size: 2.4rem;
+.dictionary-left-quote {
+    grid-area: dct-qte-lqt;
+    font-size: 1.1rem;
+    font-weight: 500;
+    place-self: start center;
+    margin: 0rem;
+}
+
+.dictionary-quote-text {
+    grid-area: dct-qte-txt;
+    font-size: 1.5rem;
+    padding: 0rem 0.7rem;
+    margin: 0rem;
+}
+
+.dictionary-right-quote {
+    grid-area: dct-qte-rqt;
+    font-size: 1.1rem;
+    font-weight: 500;
+    place-self: end center;
+    margin: 0rem;
 }
 
 
