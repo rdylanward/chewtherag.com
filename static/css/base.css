@@ -481,9 +481,9 @@ body {
     width: 100%;
     top: 0rem;
     left: 0rem;
+    align-items: center;
     padding: 0rem;
     margin: 0rem;
-    align-items: center;
     transition: all 0.3s;
     z-index: 15;
 }
@@ -738,7 +738,7 @@ body {
     background: #c37727;
     color: var(--std__blue);
     display: grid;
-    grid-template-columns: repeat(2, 50vw);;
+    grid-template-columns: repeat(2, 50vw);
     grid-template-rows: repeat(5, max-content);
     grid-template-areas:
         "men pol"
