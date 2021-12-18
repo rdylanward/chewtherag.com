@@ -111,7 +111,7 @@
 .dictionary-left-quote {
     grid-area: dct-qte-lqt;
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 300;
     place-self: start center;
     margin: 0rem;
 }
@@ -140,21 +140,21 @@
 .about-story {
     grid-area: txt;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: min-content max-content;
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(3, max-content);
     grid-template-areas: 
-        "story-img story-qte"
-        "story-txt story-txt";
-    margin: 6rem 25%;
+        "story-img"
+        "story-qte"
+        "story-txt";
+    margin: 6rem 0rem;
 }
 
 .story-image {
     grid-area: story-img;
-    width: 42.5rem;
-    height: 28.48rem;
-    box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
-    align-self: center;
-    margin: 2rem 0rem;
+    width: 33rem;
+    box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
+    place-self: center center;
+    margin: 0rem 0rem 3rem;
 }
 
 .story-quote {
