@@ -24,7 +24,7 @@
 
 .home-header {
     grid-area: hom-hdr;
-    background-image: linear-gradient(rgba(2, 3, 6, 0.7), rgba(2, 3, 6, 0.7)), url('/media/green-door-with-open-sign.jpg');
+    background-image: linear-gradient(rgba(7, 10, 18, 0.7), rgba(7, 10, 18, 0.7)), url('/media/green-door-with-open-sign.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -92,7 +92,7 @@
     grid-area: hom-wel;
     color: var(--std__blue);
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100vw;
     grid-template-rows: repeat(2, max-content);
     grid-template-areas:
         "wel-img"
@@ -102,7 +102,7 @@
 
 .welcome-image {
     grid-area: wel-img;
-    width: 34.5rem;
+    width: 33rem;
     box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
     place-self: center center;
     margin-bottom: 2rem;
@@ -118,7 +118,7 @@
         "blb-txt"
         "blb-btn";
     place-content: center center;
-    margin: 2rem 2rem 0rem;
+    margin: 2rem 2.5rem 0rem;
 }
 
 .welcome-title {
@@ -152,7 +152,7 @@
 
 .home-collections {
     grid-area: hom-col;
-    background-image: linear-gradient(rgba(2, 3, 6, 0.6), rgba(2, 3, 6, 0.6)), url('/media/in-home-camera-set-up.jpg');
+    background-image: linear-gradient(rgba(7, 10, 18, 0.6), rgba(7, 10, 18, 0.6)), url('/media/in-home-camera-set-up.jpg');
     background-size: cover;
     background-position: center;
     height: 90vh;
@@ -214,7 +214,7 @@
 
 .home-testimonials {
     grid-area: hom-tst;
-    background: rgba(29, 43, 81, 0.3);
+    background: rgba(7, 10, 18, 0.3);
     color: var(--std__blue);
     display: grid;
     grid-template-columns: 100vw;
