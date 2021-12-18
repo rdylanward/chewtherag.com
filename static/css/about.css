@@ -41,7 +41,7 @@
     font-size: 2.6rem;
     font-weight: 600;
     place-self: end start;
-    padding-bottom: 2rem;
+    padding: 0rem 2.5rem 2rem;
     margin: 0rem;
 }
 
@@ -63,14 +63,14 @@
 .header-dictionary-title {
     grid-area: hdr-dct-ttl;
     font-size: 1.8rem;
-    padding-bottom: 1.5rem;
+    padding: 0rem 2.5rem 1.5rem;
     margin: 0rem;
 }
 
 .header-dictionary-category {
     grid-area: hdr-dct-cat;
     font-size: 1.8rem;
-    padding-bottom: 1.5rem;
+    padding: 0rem 2.5rem 1.5rem;
     margin: 0rem;
 }
 
@@ -83,11 +83,13 @@
     grid-template-areas:
         "dct-dsc-num dct-dsc-txt";
     place-content: center start;
-    padding-bottom: 1.5rem;
+    padding: 0rem 2.5rem 2rem;
 }
 
 .dictionary-description-number {
     grid-area: dct-dsc-num;
+    font-size: 1.5rem;
+    place-self: start start;
     margin: 0rem;
 }
 
@@ -101,6 +103,12 @@
     grid-area: hdr-dct-qte;
     font-size: 1.5rem;
     justify-content: start;
+    padding: 0rem 3rem;
+    margin: 0rem;
+}
+
+.header-dictionary-quote  p {
+    text-align: justify;
     margin: 0rem;
 }
 
