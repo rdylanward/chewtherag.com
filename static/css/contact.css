@@ -6,7 +6,7 @@
 .container-contact {
     font-family: 'Montserrat', sans-serif;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 100vw;
     grid-template-rows: 100vh repeat(2, max-content);
     grid-template-areas: 
         "ctc-hdr"
@@ -21,41 +21,39 @@
 
 .contact-header {
     grid-area: ctc-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/payphone-on-brick-wall.jpg');
+    background-image: linear-gradient(rgba(7, 10, 18, 0.7), rgba(7, 10, 18, 0.7)), url('/media/payphone-on-brick-wall.jpg');
     background-size: cover;
     background-position: center;
-    width: 100%;
     height: 100vh;
     background-attachment: fixed;
+    color: var(--almost__white);
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(4, 25vh);
-    grid-template-areas: 
-        ". ."
-        "ctc-hdr-txt ."
-        "ctc-hdr-qte ."
-        ". .";
+    grid-template-columns: auto;
+    grid-template-rows: minmax(7rem, 9rem) max-content;
+    grid-template-areas:
+        "ctc-hdr-txt"
+        "ctc-hdr-qte";
+    place-content: center start;
 }
 
 .contact-header-title {
     grid-area: ctc-hdr-txt;
-    align-self: flex-end;
-    margin: 2rem 7rem;
-}
-
-.contact-header-title span{
-    font-size: 5.7rem;
+    font-size: 2.6rem;
     font-weight: 600;
+    place-self: end start;
+    padding: 0rem 3rem 2rem;
+    margin: 0rem;
 }
 
 .contact-header-text {
     grid-area: ctc-hdr-qte;
+    font-size: 1.6rem;
+    text-align: justify;
+    place-self: start start;
+    padding: 0rem 3rem;
+    margin: 0rem;
 }
 
-.contact-text {
-    font-size: 1.6rem;
-    margin: 2.2rem 12rem 2.2rem 7.5rem;
-}
 
 /**********************************************************************/
 /***                          Contact Form                          ***/

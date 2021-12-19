@@ -29,8 +29,8 @@
     grid-template-columns: auto;
     grid-template-rows: minmax(7rem, 9rem) max-content;
     grid-template-areas:
-        "com-hdr-ttl ."
-        "com-hdr-txt .";
+        "com-hdr-ttl"
+        "com-hdr-txt";
     place-content: center start;
 }
 
@@ -38,7 +38,7 @@
     grid-area: com-hdr-ttl;
     font-size: 2.6rem;
     font-weight: 600;
-    align-self: flex-end;
+    place-self: end start;
     padding: 0rem 3.5rem 2rem;
     margin: 0rem;
 }
