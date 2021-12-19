@@ -63,36 +63,45 @@
 .contact-form {
     grid-area: ctc-frm;
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: auto;
     grid-template-rows: repeat(3, max-content);
     grid-template-areas: 
-        ". ctc-frm-hdr ."
-        ". ctc-frm-dsc ."
-        ". ctc-frm-frm .";
-    padding: 6rem 0rem;
+        "ctc-frm-hdr"
+        "ctc-frm-dsc"
+        "ctc-frm-frm";
+    margin: 6rem 0rem;
 }
 
 .contact-form-header {
     grid-area: ctc-frm-hdr;
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 600;
+    padding: 0rem 2.5rem 2rem;
+    margin: 0rem;
 }
 
 .contact-form-description {
     grid-area: ctc-frm-dsc;
     font-size: 1.5rem;
+    text-align: justify;
+    padding: 0rem 2.5rem 2rem;
+    margin: 0rem;
 }
 
 .contact-form-container {
     grid-area: ctc-frm-frm;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(4, max-content);
+    grid-gap: 0.2rem;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, max-content);
     grid-template-areas: 
-        "ctc-frm-fst ctc-frm-lst"
-        "ctc-frm-phn ctc-frm-eml"
-        "ctc-frm-msg ctc-frm-msg"
-        "ctc-frm-btn ctc-frm-btn";
+        "ctc-frm-fst"
+        "ctc-frm-lst"
+        "ctc-frm-phn"
+        "ctc-frm-eml"
+        "ctc-frm-msg"
+        "ctc-frm-btn";
+    padding: 0rem 2.5rem;
 }
 
 .contact-form-container input {
@@ -116,22 +125,18 @@
 
 .contact-form-first {
     grid-area: ctc-frm-fst;
-    margin-right: 0.4rem !important;
 }
 
 .contact-form-last {
     grid-area: ctc-frm-lst;
-    margin-left: 0.4rem !important;
 }
 
 .contact-form-phone {
     grid-area: ctc-frm-phn;
-    margin-right: 0.4rem !important;
 }
 
 .contact-form-email {
     grid-area: ctc-frm-eml;
-    margin-left: 0.4rem !important;
 }
 
 .contact-form-message {
@@ -162,9 +167,10 @@
     border: 0.15rem solid #1d2b51;
     border-radius: 0.4rem;
     width: 9rem;
+    height: 4rem;
     place-self: center center;
     transition: all 0.3s;
-    margin: 0.4rem 0rem;
+    margin: 0.5rem 0rem 0rem;
 }
 
 /**********************************************************************/
@@ -176,11 +182,12 @@
     background: rgba(29, 43, 81, 0.15);
     grid-area: ctc-dtl;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
+    grid-template-columns: auto;
     grid-template-rows: repeat(2, max-content);
     grid-template-areas: 
-        ". dtl-hdr dtl-hdr ."
-        ". dtl-com dtl-map .";
+        "dtl-map"
+        "dtl-hdr"
+        "dtl-com";
     padding: 6rem 0rem;
 }
 
@@ -188,7 +195,7 @@
     grid-area: dtl-hdr;
     font-size: 4rem;
     font-weight: 600;
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 }
 
 .details-company {
@@ -219,87 +226,14 @@
 }
 
 .map-image {
-    width: 40rem;
-    height: 40rem;
-    box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
+    width: 33rem;
+    box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
+    place-self: center center;
+    margin: 0rem 0rem 3rem;
 }
 
 
 /**********************************************************************/
 /***                         Media Queries                          ***/
 /**********************************-***********************************/
-
-
-/****  /screen and (min-width: 1400px)  ****/
-
-@media screen and (min-width: 1400px) {
-
-    /******************/
-    /****  Header  ****/
-    /******************/
-
-    .contact-header-title {
-        margin: 2rem 7rem 2rem 4rem;
-    }
-
-    .contact-text {
-        margin: 2.2rem 8rem 2.2rem 5rem;
-    }
-
-    /*******************/
-    /****  Contact  ****/
-    /*******************/
-
-    .contact-form {
-        grid-template-columns: 20% 60% 20%;
-    }
-
-    /*******************/
-    /****  Details  ****/
-    /*******************/
-
-    .contact-details {
-        grid-template-columns: 20% repeat(4, 30%) 20%;
-    }
-
-}
-
-/****  /screen and (min-width: 1400px)  ****/
-
-
-/****  screen and (min-width: 1920px)  ****/
-
-@media only screen and (min-width: 1920px) {
-
-    /******************/
-    /****  Header  ****/
-    /******************/
-
-    .contact-header-title {
-        margin: 2rem 7rem;
-    }
-
-    .contact-text {
-        margin: 2.2rem 12rem 2.2rem 7.5rem;
-    }
-
-    /*******************/
-    /****  Contact  ****/
-    /*******************/
-
-    .contact-form {
-        grid-template-columns: 25% 50% 25%;
-    }
-
-    /*******************/
-    /****  Details  ****/
-    /*******************/
-
-    .contact-details {
-        grid-template-columns: repeat(4, 25%);
-    }
-
-}
-
-/****  /screen and (min-width: 1920px)  ****/
 
