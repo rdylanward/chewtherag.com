@@ -21,7 +21,7 @@
 
 .about-header {
     grid-area: abt-hdr;
-    background-image: linear-gradient(rgba(7, 10, 18, 0.55), rgba(7, 10, 18, 0.55)), url('/media/team-in-modern-office-meeting-room.jpg');
+    background-image: linear-gradient(rgba(7, 10, 18, 0.7), rgba(7, 10, 18, 0.7)), url('/media/team-in-modern-office-meeting-room.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -137,7 +137,7 @@
         "story-img"
         "story-qte"
         "story-txt";
-    margin: 6rem 0rem;
+    margin: 6rem 0rem 4.4rem;
 }
 
 .story-image {
@@ -163,6 +163,10 @@
 
 .story-quote sub {
     font-size: 1.2rem;
+}
+
+.story-quote footer {
+    font-size: 1.5rem;
 }
 
 .story-text {
