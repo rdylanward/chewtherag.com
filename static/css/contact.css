@@ -185,53 +185,61 @@
     color:  var(--std__blue);
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: repeat(2, max-content);
+    grid-template-rows: repeat(4, max-content);
     grid-template-areas: 
         "dtl-map"
         "dtl-hdr"
-        "dtl-com";
-    padding: 6rem 3rem;
+        "dtl-adr"
+        "dtl-cnt";
+    padding: 6rem 0rem;
 }
 
 .details-map {
     grid-area: dtl-map;
-    justify-self: center;
-    margin: 0rem;
+    width: 33rem;
+    box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
+    place-self: center center;
+    margin: 0rem 0rem 3rem;
 }
 
 .details-header {
     grid-area: dtl-hdr;
-    font-size: 4rem;
+    font-size: 2.6rem;
     font-weight: 600;
-    margin-bottom: 0rem;
-}
-
-.details-company {
-    grid-area: dtl-com;
-    font-size: 1.7rem;
     place-self: center start;
+    padding: 0rem 2rem 2rem;
+    margin: 0rem;
 }
 
-.details-company p{
+.details-address {
+    grid-area: dtl-adr;
+    place-self: center start;
+    padding: 0rem 0rem 2rem 2rem;
+}
+
+.details-address p {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin: 0rem;
+}
+
+.details-contact {
+    grid-area: dtl-cnt;
+    font-size: 1.4rem;
+    place-self: center start;
+    padding: 0rem 2rem;
+}
+
+.details-contact p {
+    font-size: 1.4rem;
     line-height: 3rem;
     margin: 0rem;
 }
 
 .contact-span {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
     padding-right: 1rem;
-}
-
-.details-phone {
-    margin-top: 3rem !important;
-}
-
-.map-image {
-    width: 33rem;
-    box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
-    place-self: center center;
-    margin: 0rem 0rem 3rem;
 }
 
 
