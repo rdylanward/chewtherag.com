@@ -6,7 +6,7 @@
 .container-community {
     font-family: 'Montserrat', sans-serif;
     display: grid;
-    grid-template-columns: 100%;
+    grid-template-columns: 100vw;
     grid-template-rows: 100vh;
     grid-template-areas: 
         "com-hdr";
@@ -19,40 +19,36 @@
 
 .community-header {
     grid-area: com-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/smiling-man-woman-pug.jpg');
+    background-image: linear-gradient(rgba(7, 10, 18, 0.7), rgba(7, 10, 18, 0.7)), url('/media/smiling-man-woman-pug.jpg');
     background-size: cover;
     background-position: center;
-    width: 100%;
     height: 100vh;
     background-attachment: fixed;
+    color: var(--almost__white);
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(4, 25vh);
-    grid-template-areas: 
-        ". ."
-        "com-hdr-txt ."
-        "com-hdr-qte ."
-        ". .";
+    grid-template-columns: auto;
+    grid-template-rows: minmax(7rem, 9rem) max-content;
+    grid-template-areas:
+        "com-hdr-ttl ."
+        "com-hdr-txt .";
+    place-content: center start;
 }
 
 .community-header-title {
-    grid-area: com-hdr-txt;
-    align-self: flex-end;
-    margin: 2rem 7rem;
-}
-
-.community-header-title span{
-    font-size: 5.7rem;
+    grid-area: com-hdr-ttl;
+    font-size: 2.6rem;
     font-weight: 600;
+    align-self: flex-end;
+    padding: 0rem 3.5rem 2rem;
+    margin: 0rem;
 }
 
 .community-header-text {
-    grid-area: com-hdr-qte;
-}
-
-.community-text {
-    font-size: 1.6rem;
-    margin: 2.2rem 12rem 2.2rem 7.5rem;
+    grid-area: com-hdr-txt;
+    font-size: 1.5rem;
+    text-align: justify;
+    padding: 0rem 3.5rem;
+    margin: 0rem;
 }
 
 
@@ -60,44 +56,3 @@
 /***                         Media Queries                          ***/
 /**********************************-***********************************/
 
-
-/****  /screen and (min-width: 1400px)  ****/
-
-@media screen and (min-width: 1400px) {
-
-    /******************/
-    /****  Header  ****/
-    /******************/
-
-    .community-header-title {
-        margin: 2rem 7rem 2rem 4rem;
-    }
-
-    .community-text {
-        margin: 2.2rem 8rem 2.2rem 5rem;
-    }
-
-}
-
-/****  /screen and (min-width: 1400px)  ****/
-
-
-/****  screen and (min-width: 1920px)  ****/
-
-@media only screen and (min-width: 1920px) {
-
-    /******************/
-    /****  Header  ****/
-    /******************/
-
-    .community-header-title {
-        margin: 2rem 7rem;
-    }
-
-    .community-text {
-        margin: 2.2rem 12rem 2.2rem 7.5rem;
-    }
-
-}
-
-/****  /screen and (min-width: 1920px)  ****/
