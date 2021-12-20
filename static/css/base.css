@@ -5,9 +5,9 @@
 
 :root {
     --almost__white: #fefdfc;
-    --footer__orange: #e5b27c;
+    --std__orange: #e5b27c;
+    --footer__orange: #c37727;
     --std__blue: #1d2b51;
-    /* --almost__black: #020306; */
     --almost__black: #070a12;
 }
 

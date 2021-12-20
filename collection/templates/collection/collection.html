@@ -7,37 +7,50 @@
 
 {% block content %}
 
-<!--  COLLECTIONS GRID CONTAINER  -->
-
+<!--
+    COLLECTIONS GRID CONTAINER
+-->
 <div class="container-collection">
 
-    <!--  COLLECTION HEADER  -->
-
+    <!--
+        COLLECTION HEADER
+    -->
     <div class="collection-header"></div>
+    <!--
+        /COLLECTION HEADER
+    -->
 
-    <!--  /COLLECTION HEADER  -->
+    <!--
+        COLLECTION SEARCH
+    -->
+    <div class="collection-search">
 
-    <!--  COLLECTION ITEMS  -->
+        <!--
+            COLLECTION HEADER
+        -->
+        <p class="item-title">
+            The Collection
+        </p>
+        <!--
+            /COLLECTION HEADER
+        -->
 
-    <div class="collection-item" id="collection-item">
-        <div class="item-title">
-            <p class="blue">The Collection</p>
-        </div>
+        <!--
+            SEARCH ITEMS
+        -->
         <div class="item-search">
-            <div class="item-count">
-                <p class="blue">
-                    {% if search_term or current_collections or current_sorting != 'None_None' %}
-                        <span class="no-decoration"><a class="no-decoration blue" href="{% url 'collection' %}">Collection Home</a> | </span>
-                    {% endif %}
-                    {{ items|length }} Item(s){% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                </p>
-            </div>
             <form class="search-form" method="GET" action="{% url 'collection' %}">
                 <input class="search-text" type="search" name="q" placeholder="Search the collection..." aria-label="Search">
                 <button class="search-button btn-blue-white" type="submit"><i class="fas fa-search"></i></button>
             </form>
-            <div class="item-sort blue">
-                <select class="sort-dropdown blue" id="sort-dropdown">
+            <p class="item-count">
+                {% if search_term or current_collections or current_sorting != 'None_None' %}
+                    <span class="count-home"><a class="no-decoration" href="{% url 'collection' %}">Collection Home</a>&nbsp;|&nbsp;</span>
+                {% endif %}
+                <span class="count-results">{{ items|length }} Item(s){% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}</span>
+            </p>
+            <div class="item-sort">
+                <select class="sort-dropdown" id="sort-dropdown">
                     <option value="reset" selected>Sort by...</option>
                     <option value="collection_asc">Collection (A-Z)</option>
                     <option value="collection_desc">Collection (Z-A)</option>
@@ -50,13 +63,30 @@
                 </select>
             </div>
         </div>
+        <!--
+            /SEARCH ITEMS
+        -->
+
+    </div>
+    <!--
+        /COLLECTION SEARCH
+    -->
+
+    <!--
+        COLLECTION ITEMS
+    -->
+    <div class="collection-item">
+
+        <!--
+            COLLECTION ITEM
+        -->
         <div class="item-wrapper">
 
+            <!--
+                ITEM CARD
+            -->
             {% for item in items %}
-
-                <!-- ITEM CARD -->
-
-                <div class="item-card blue-shadow">
+                <div class="item-card">
                     {% if item.image %}
                         <a href="{% url 'item_detail' item.id %}">
                             <img class="card-image" src="{{ item.image.url }}" alt="{{ item.name }}">
@@ -85,19 +115,24 @@
                         {% endif %}
                     </div>
                 </div>
-
-                <!-- ITEM CARD -->
-
             {% endfor %}
+            <!--
+                ITEM CARD
+            -->
 
         </div>
+        <!--
+            /COLLECTION ITEM
+        -->
 
     </div>
-
-    <!--  /COLLECTION ITEMS-->
+    <!--
+        /COLLECTION ITEMS
+    -->
 
 </div>
-
-<!--  /COLLECTIONS GRID CONTAINER  -->
+<!--
+    /COLLECTIONS GRID CONTAINER
+-->
 
 {% endblock %}
