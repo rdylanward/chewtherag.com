@@ -204,7 +204,7 @@
     box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
     border-radius: 0.6rem;
     justify-self: center;
-    padding-top: 2.2rem;
+    /* padding-top: 2.2rem; */
     margin: 2rem;
 }
 
@@ -263,47 +263,52 @@
 
 .container-item-detail {
     display: grid;
-    grid-template-columns: 20% repeat(2, 30%) 20%;
-    grid-template-rows: 18vh 82vh;
+    grid-template-columns: 100vw;
+    grid-template-rows: 18vh repeat(2, max-content);
     grid-template-areas:
-        "det-hdr det-hdr det-hdr det-hdr"
-        ". det-img det-sum .";
+        "det-hdr"
+        "det-img"
+        "det-sum";
     place-self: center center;
     transition: all 0.5s;
 }
 
 .item-detail-header {
     grid-area: det-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/interestingly-designed-store.jpg');
+    background-image: linear-gradient(rgba(7, 10, 18, 0.35), rgba(7, 10, 18, 0.35)), url('/media/interestingly-designed-store.jpg');
     background-size: cover;
     background-position: center;
-    width: 100%;
+    width: 100vw;
     height: 18vh;
     background-attachment: fixed;
 }
 
 .item-detail-image {
     grid-area: det-img;
-    width: 40rem;
     place-self: center center;
+    padding: 6rem 0rem 2rem;
+}
+
+.item-detail-image img {
+    width: 33rem;
+    box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
 }
 
 .item-details {
     grid-area: det-sum;
+    color: var(--std__blue);
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(8, max-content);
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, max-content);
     grid-template-areas:
         "detl-titl"
         "detl-pric"
         "detl-coll"
         "detl-ratg"
         "detl-desc"
-        "detl-size"
-        "detl-qnty"
-        "detl-actn";
+        "detl-form";
     place-self: center center;
-    margin: 0rem 8rem 0rem 3rem;
+    margin: 0rem 2rem 6rem;
 }
 
 .detail-name {
@@ -316,12 +321,12 @@
     grid-area: detl-pric;
     font-size: 2.4rem;
     font-weight: 600;
-    margin: 0rem 0rem 1.5rem 0rem;
+    margin: 0rem 0rem 1.5rem;
 }
 
 .detail-collection {
     font-size: 1.4rem;
-    margin: 0rem 0rem 1rem 0rem;
+    margin: 0rem 0rem 1rem;
 }
 
 .detail-collection p {
@@ -335,7 +340,7 @@
 .detail-rating {
     grid-area: detl-ratg;
     font-size: 1.4rem;
-    margin: 0rem 0rem 1rem 0rem;
+    margin: 0rem 0rem 1rem;
 }
 
 .detail-rating i {
@@ -343,10 +348,20 @@
 }
 
 .detail-description {
-    grid: detl-desc;
-    font-size: 1.7rem;
+    grid-area: detl-desc;
+    font-size: 1.6rem;
     text-align: justify;
-    margin: 2rem 0rem 3rem 0rem;
+    margin: 2rem 0rem 3rem;
+}
+
+.detail-form {
+    grid-area: detl-form;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+        "detl-size"
+        "detl-qnty"
+        "detl-actn";
 }
 
 .detail-size {
@@ -373,6 +388,7 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
+    background: transparent;
     width: 5.5rem;
     height: 2.4rem;
     border: 0rem transparent;
@@ -466,24 +482,27 @@
 .detail-actions {
     grid-area: detl-actn;
     display: grid;
-    grid-template-columns: repeat(2, max-content);
+    grid-template-columns: auto;
     grid-template-rows: max-content;
     grid-template-areas: 
-        "act-shp act-add";
-    place-self: center start;
+        "act-shp"
+        "act-add";
+    place-content: center center;
 }
 
 .actions-keep-shopping {
     grid-area: act-shp;
-    width: 15rem;
-    height: 2.8rem;
-    padding: 0.75rem 0rem 0rem 0rem;
-    margin-right: 0.2rem;
+    width: 14rem;
+    padding: 1rem 1.4rem 1.1rem;
+    margin-bottom: 0.4rem;
 }
 
 .actions-add {
     grid-area: act-add;
-    width: 13rem;
+    font-family: 'Montserrat', sans-serif;
+    width: 17.3rem;
+    height: 4.5rem;
+    padding: 1rem 1.4rem 1.1rem;
 }
 
 

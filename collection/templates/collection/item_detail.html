@@ -6,57 +6,73 @@
 {% endblock %}
 
 {% block content %}
-<!--  GRID CONTAINER  -->
 
-<div class="container-item-detail blue">
+<!--
+    GRID CONTAINER
+-->
+<div class="container-item-detail">
 
-    <!--  ITEM HEADER  -->
-
+    <!--
+        ITEM HEADER
+    -->
     <div class="item-detail-header"></div>
+    <!--
+        /ITEM HEADER
+    -->
 
-    <!--  /ITEM HEADER  -->
+    <!--
+        ITEM IMAGE
+    -->
+    {% if item.image %}
+        <a class="item-detail-image no-decoration" href="{{ item.image.url }}" target="_blank">
+            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+        </a>
+    {% else %}
+        <a class="item-detail-image no-decoration" href="">
+            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+        </a>
+    {% endif %}
+    <!--
+        /ITEM IMAGE
+    -->
 
-    <!-- ITEM IMAGE -->
-    
-    <div class="item-detail-image">
-        {% if item.image %}
-            <a class="no-decoration" href="{{ item.image.url }}" target="_blank">
-                <img class="blue-shadow" src="{{ item.image.url }}" alt="{{ item.name }}">
-            </a>
-        {% else %}
-            <a class="no-decoration" href="">
-                <img class="blue-shadow" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
-            </a>
-        {% endif %}
-    </div>
-
-    <!-- /ITEM IMAGE -->
-
-    <!-- ITEM DETAILS -->
-
+    <!--
+        ITEM DETAILS
+    -->
     <div class="item-details">
-        <p class="detail-name">{{ item.name }}</p>
-        <p class="detail-price">&euro;{{ item.price }}</p>
+        <p class="detail-name">
+            {{ item.name }}
+        </p>
+        <p class="detail-price">
+            &euro;{{ item.price }}
+        </p>
         {% if item.collection %}
-            <p class="detail-collection blue">
-                <a class="no-decoration blue" href="{% url 'collection' %}?collection={{ item.collection.name }}">
-                    <i class="fas fa-tag"></i>{{ item.collection.friendly_name}}
-                </a>
-            </p>
+            <a class="detail-collection no-decoration" href="{% url 'collection' %}?collection={{ item.collection.name }}">
+                <i class="fas fa-tag"></i>{{ item.collection.friendly_name}}
+            </a>
         {% endif %}
         {% if item.rating %}
-            <p class="detail-rating"><i class="fas fa-star"></i>{{ item.rating }} / 5</p>
+            <p class="detail-rating">
+                <i class="fas fa-star"></i>
+                {{ item.rating }} / 5
+            </p>
         {% else %}
-            <p class="detail-rating">No Rating</p>
+            <p class="detail-rating">
+                No Rating
+            </p>
         {% endif %}
-        <p class="detail-description">{{ item.description }}</p>
-        <form class="blue" action="{% url 'add_to_cart' item.id %}" method="POST">
+        <p class="detail-description">
+            {{ item.description }}
+        </p>
+        <form class="detail-form" action="{% url 'add_to_cart' item.id %}" method="POST">
             {% csrf_token %}
             {% with item.has_sizes as sizes %}
                 {% if sizes %}
                     <div class="detail-size">
-                        <p class="size-heading">Size:</p>
-                        <select class="size-dropdown blue" name="item_size" id="size-dropdown">
+                        <p class="size-heading">
+                            Size:
+                        </p>
+                        <select class="size-dropdown" name="item_size" id="size-dropdown">
                             <option value="xs">XS</option>
                             <option value="s">S</option>
                             <option value="m" selected>M</option>
@@ -67,7 +83,9 @@
                     </div>
                 {% endif %}
                 <div class="detail-quantity">
-                    <p class="quantity-heading">Quantity:</p>
+                    <p class="quantity-heading">
+                        Quantity:
+                    </p>
                     <button class="quantity-input-decrement quantity-control blue" data-item_id="{{ item.id }}" id="decrement_qty_{{ item.id }}">
                         <i class="fas fa-minus"></i>
                     </button>
@@ -88,11 +106,13 @@
             {% endwith %}
         </form>
     </div>
-
-    <!-- /ITEM DETAILS -->
+    <!--
+        /ITEM DETAILS
+    -->
 
 </div>
-
-<!--  /GRID CONTAINER  -->
+<!--
+    /GRID CONTAINER
+-->
 
 {% endblock %}
