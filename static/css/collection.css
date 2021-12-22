@@ -211,6 +211,7 @@
 .card-image {
     grid-area: itm-img;
     width: 33rem;
+    border-radius: 0.6rem;
 }
 
 .card-body {
@@ -292,6 +293,7 @@
 .item-detail-image img {
     width: 33rem;
     box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
+    border-radius: 0.6rem;
 }
 
 .item-details {
