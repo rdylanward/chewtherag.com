@@ -260,10 +260,9 @@ body {
     left: 0rem;
     transition: all 0.3s;
     grid-template-columns: auto minmax(3rem, 5rem);
-    grid-template-rows: 8vh;
+    grid-template-rows: 8rem;
     grid-template-areas:
         "slid-brnd slid-hamb";
-    padding: 1rem 0rem;
     margin: 0rem;
     z-index: 20;
 }
@@ -276,7 +275,7 @@ body {
     grid-template-rows: max-content;
     grid-template-areas:
         "slid-logo slid-ttle";
-    place-self: center start;
+    place-content: center start;
     padding-left: 1rem;
     transition: all 0.3s;
 }
@@ -297,7 +296,7 @@ body {
     grid-area: slid-ttle;
     font-family: 'Amatic SC', cursive;
     font-weight: 900;
-    font-size: 3.2rem;
+    font-size: 3rem;
     color: var(--almost__white);
     place-self: center start;
     margin-left: 0.7rem;
@@ -311,7 +310,7 @@ body {
     cursor: pointer;
     place-self: center end;
     padding-bottom: 0.3rem;
-    padding-right: 1.2rem;
+    padding-right: 1.3rem;
     z-index: 999;
 }
 

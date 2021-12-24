@@ -1,14 +1,10 @@
 $(document).ready(function() {
 
-    /* Enable/Disable the sticky menu */
-    let navbar_height = $(".container-navbar").height();
-    let navbar_offset = $(".container-navbar").offset();
-    let mobile_height = $(".container-mobile").height();
-    let mobile_offset = $(".container-mobile").offset();
-    let sticky = navbar_offset.top + navbar_height;
-    let mobile_sticky = mobile_offset.top + mobile_height;
+    /* Enabel/Disable sticky menu */
+    let stickyMenu = function() {
+        let sticky = 120; /* navbar_offset.top + navbar_height; */
+        let mobile_sticky = 80; /* mobile_offset.top + mobile_height; */
 
-    $(window).scroll(function(){
         if ($(".container-navbar.hide-menu") && $(window).scrollTop() >= mobile_sticky) {
             $(".container-mobile").addClass("sticky-container-mobile");
         } else if ($(".container-navbar.hide-menu") && $(window).scrollTop() <= mobile_sticky) {
@@ -28,7 +24,13 @@ $(document).ready(function() {
             $(".navbar-icons").removeClass("sticky-navbar-icons");
             $(".navbar-mobile").removeClass("sticky-navbar-mobile");
         }
-    })
+    }
+
+    /* Check sticky menu on page refresh */
+    $(document).on('readystatechange', stickyMenu);
+
+    /* On window scroll */
+    $(window).scroll(stickyMenu);
 
     /* Sliding Navbar/Hamburger action */
     $(".hamburger-menu").click(function() {
