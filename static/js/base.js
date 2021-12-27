@@ -1,9 +1,24 @@
 $(document).ready(function() {
 
+    /* Enabel/Disable mobile menu */
+    $(window).resize(function () {
+        var winWidth = $(window).innerWidth();
+
+        console.log("winWidth: " + winWidth)
+
+        if (winWidth > 1024) {
+            $(".container-mobile").addClass("hide-menu");
+            $(".container-navbar").removeClass("hide-menu");
+        } else if (winWidth < 1024) {
+            $(".container-mobile").removeClass("hide-menu");
+            $(".container-navbar").addClass("hide-menu");
+        };
+    })
+
     /* Enabel/Disable sticky menu */
-    let stickyMenu = function() {
-        let sticky = 120; /* navbar_offset.top + navbar_height; */
-        let mobile_sticky = 80; /* mobile_offset.top + mobile_height; */
+    function stickyMenu() {
+        var sticky = 120;
+        var mobile_sticky = 80;
 
         if ($(".container-navbar.hide-menu") && $(window).scrollTop() >= mobile_sticky) {
             $(".container-mobile").addClass("sticky-container-mobile");
@@ -23,14 +38,14 @@ $(document).ready(function() {
             $(".navbar-message").removeClass("sticky-navbar-message");
             $(".navbar-icons").removeClass("sticky-navbar-icons");
             $(".navbar-mobile").removeClass("sticky-navbar-mobile");
-        }
-    }
-
-    /* Check sticky menu on page refresh */
-    $(document).on('readystatechange', stickyMenu);
+        };
+    };
 
     /* On window scroll */
     $(window).scroll(stickyMenu);
+
+    /* Check sticky menu on page refresh */
+    $(document).on('readystatechange', stickyMenu);
 
     /* Sliding Navbar/Hamburger action */
     $(".hamburger-menu").click(function() {
@@ -45,10 +60,10 @@ $(document).ready(function() {
 
     /* Enable/Disable the login dropdown menu */
     $(".navbar-login-text").mouseover(function(){
-        let login_pos = $(".navbar-login-text").position();
-        let login_height = $(".navbar-login-text").outerHeight(true)
-        let login_left = login_pos.left;
-        let login_top = login_pos.top + login_height;
+        var login_pos = $(".navbar-login-text").position();
+        var login_height = $(".navbar-login-text").outerHeight(true)
+        var login_left = login_pos.left;
+        var login_top = login_pos.top + login_height;
     
         $(".navbar-login-dropdown").css("left", login_left);
         $(".navbar-login-dropdown").css("top", login_top);
@@ -67,13 +82,13 @@ $(document).ready(function() {
     /* This code was provided by Code Institute from their 'Boutique Ado' 
        example project and repurposed for sorting items in the collection */
     $(".sort-dropdown").change(function() {
-        let selector = $(this);
-        let current_url = new URL(window.location);
+        var selector = $(this);
+        var current_url = new URL(window.location);
 
-        let selector_value = selector.val();
+        var selector_value = selector.val();
         if (selector_value != "reset") {
-            let sort = selector_value.split("_")[0];
-            let direction = selector_value.split("_")[1];
+            var sort = selector_value.split("_")[0];
+            var direction = selector_value.split("_")[1];
 
             current_url.searchParams.set("sort", sort);
             current_url.searchParams.set("direction", direction);
@@ -93,7 +108,7 @@ $(document).ready(function() {
 
     /* Disable +/- buttons outside 1-999 range */
     function changeInputStatus(itemId) {
-        let quantityValue = parseInt($(`#id_qty_${itemId}`).val());
+        var quantityValue = parseInt($(`#id_qty_${itemId}`).val());
 
         if (quantityValue < 2) {
             $(".quantity-input-decrement").attr('disabled', true);
@@ -110,33 +125,33 @@ $(document).ready(function() {
     }
 
     /* Ensure proper enabling/disabling of all inputs on page load */
-    let allQtyInputs = $('.quantity-input');
-    let itemId = $(allQtyInputs).data('item_id');
+    var allQtyInputs = $('.quantity-input');
+    var itemId = $(allQtyInputs).data('item_id');
     changeInputStatus(itemId);
 
     /* Check enable/disable every time the input is changed */
     $('.quantity-input').change(function() {
-        let itemId = $(this).data('item_id');
+        var itemId = $(this).data('item_id');
         changeInputStatus(itemId);
     })
 
     /* Increment quantity */
     $('.quantity-input-increment').click(function(e) {
         e.preventDefault();
-        let closestInput = $(this).closest('.detail-quantity').find('.quantity-input')[0];
-        let quantityValue = parseInt($(closestInput).val());
+        var closestInput = $(this).closest('.detail-quantity').find('.quantity-input')[0];
+        var quantityValue = parseInt($(closestInput).val());
         $(closestInput).val(quantityValue + 1);
-        let itemId = $(this).data('item_id');
+        var itemId = $(this).data('item_id');
         changeInputStatus(itemId);
     })
 
     /* Decrement quantity */
     $('.quantity-input-decrement').click(function(e) {
         e.preventDefault();
-        let closestInput = $(this).closest('.detail-quantity').find('.quantity-input')[0];
-        let quantityValue = parseInt($(closestInput).val());
+        var closestInput = $(this).closest('.detail-quantity').find('.quantity-input')[0];
+        var quantityValue = parseInt($(closestInput).val());
         $(closestInput).val(quantityValue - 1);
-        let itemId = $(this).data('item_id');
+        var itemId = $(this).data('item_id');
         changeInputStatus(itemId);
     })
 
@@ -150,13 +165,3 @@ $(document).ready(function() {
         })
     })
 });
-
-/* This function was originally written by W3Schools (https://www.w3schools.com/howto/howto_js_mobile_navbar.asp) and
-   repurposed to aid in the function of the mobile menu */
-function mobileMenu() {
-    if (navbarMobile.style.display === "none") {
-        navbarMobile.style.display = "grid";
-    } else {
-        navbarMobile.style.display = "none";
-    }
-}

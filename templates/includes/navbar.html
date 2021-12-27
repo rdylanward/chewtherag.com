@@ -4,12 +4,12 @@
     NAVBAR
 -->
 
-<nav class="container-navbar hide-menu" id="navbar">
+<nav class="container-navbar hide-menu">
 
     <!--
         NAVBAR BRAND
     -->
-    <div class="navbar-brand" id="navbar-brand">
+    <div class="navbar-brand">
         <a href="{% url 'home' %}" class="navbar-brand-icon no-decoration">
             <img class="navbar-brand-logo" src="/media/CTR_LOGO.png" alt="Chew the Rag Clothing Co. Logo" />
         </a>
@@ -24,7 +24,7 @@
     <!--
         NAVBAR MENU
     -->
-    <div class="navbar-menu" id="navbar-menu">
+    <div class="navbar-menu">
         <ul class="navbar-menu-list no-list-style">
             <li class="navbar-menu-item">
                 <a href="{% url 'home' %}" class="navbar-menu-link no-decoration uppercase white">
@@ -62,11 +62,6 @@
                     </span>
                 {% endif %}
             </li>
-            <li class="navbar-menu-item hidden">
-                <a class="navbar-toggler navbar-menu-link hidden no-decoration white" href="javascript:void(0);" onclick="mobileMenu()">
-                    <i class="fas fa-bars"></i>
-                </a>
-            </li>
         </ul>
     </div>
     <!--
@@ -76,7 +71,7 @@
     <!--
         NAVBAR DROPDOWN
     -->
-    <div class="navbar-login-dropdown" id="navbar-login-dropdown">
+    <div class="navbar-login-dropdown">
         <ul class="navbar-dropdown-list no-list-style">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_authenticated %}
@@ -117,7 +112,7 @@
     <!--
         NAVBAR MESSAGE
     -->
-    <div class="navbar-message" id="navbar-message">
+    <div class="navbar-message">
         <p class="navbar-message-text uppercase white">
             Free shipping for all orders over &euro;{{ free_shipping_goal }}!
         </p>

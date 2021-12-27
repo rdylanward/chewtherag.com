@@ -57,10 +57,6 @@ body {
     display: none !important;
 }
 
-.show-menu {
-    display: grid !important;
-}
-
 .show-dropdown {
     display: block !important;
 }
@@ -259,6 +255,7 @@ body {
     top: 0rem;
     left: 0rem;
     transition: all 0.3s;
+    display: grid;
     grid-template-columns: auto minmax(3rem, 5rem);
     grid-template-rows: 8rem;
     grid-template-areas:
@@ -437,7 +434,7 @@ body {
     margin-right: 0.5rem;
 }
 
-.mask{
+/* .mask{
     position:absolute;
     top: 0rem;
     left:0rem;
@@ -450,7 +447,7 @@ body {
 
 .show-mask{
     z-index: 200;
-}
+} */
 
 .menu-opened:before {
     bottom: 0.3rem;
