@@ -768,29 +768,6 @@
         margin: 0rem;
     }
 
-    .gift-heading {
-        grid-area: wrp-grp-hdr;
-        font-size: 2.5rem;
-        font-weight: 600;
-        place-self: end center;
-        margin: 0rem;
-    }
-
-    .gift-summary {
-        grid-area: wrp-grp-sum;
-        font-size: 1.5rem;
-        font-weight: 500;
-        place-self: center center;
-        margin: 2rem 0rem;
-    }
-
-    .gift-button {
-        grid-area: wrp-grp-btn;
-        width: 12rem;
-        padding: 1rem 1.4rem 1.1rem;
-        place-self: center center;
-    }
-
     .extras-custom {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;

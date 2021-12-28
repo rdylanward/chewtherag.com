@@ -975,6 +975,105 @@ body {
 /**********************************-***********************************/
 
 
+/****  screen and (min-width: 767px)  ****/
+
+@media screen and (min-width: 767px) {
+
+    /******************/
+    /****  Footer  ****/
+    /******************/
+
+    .footer-community {
+        grid-area: com;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, max-content);
+        grid-template-areas:
+            "com-hdr"
+            "com-txt"
+            "com-eml";
+        align-self: center;
+        padding: 0rem 15rem;
+        margin: 2rem 0rem;
+    }
+
+    .footer-community-header {
+        grid-area: com-hdr;
+        text-align: center;
+        font-size: 2.2rem;
+        margin: 0rem;
+    }
+
+    .footer-community-text {
+        grid-area: com-txt;
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 1.5rem 0rem;
+    }
+
+    .footer-community-form {
+        grid-area: com-eml;
+        display: grid;
+        grid-template-columns: auto minmax(7rem, 9rem);
+        grid-template-rows: 100%;
+        grid-template-areas:
+            "com-frm-eml com-frm-btn";
+        width: 100%;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .community-form-email {
+        grid-area: com-frm-eml;
+        font-size: 1.2rem;
+        font-weight: 600;
+        background: transparent;
+        border: 0.1rem solid #1d2b51;
+        border-radius: 0.4rem;
+        width: auto;
+        padding: 0.56rem 0.6rem;
+    }
+
+    .community-form-email::placeholder {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: rgba(29, 43, 81, 0.95);
+        padding: 0rem 0.3rem;
+    }
+
+    .community-form-button {
+        grid-area: com-frm-btn;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--std__blue);
+        background: transparent;
+        border: 0.1rem solid #1d2b51;
+        border-radius: 0.4rem;
+        width: auto;
+        padding: 0.5rem 0.6rem;
+        transition: all 0.3s;
+    }
+
+    .community-form-button:hover {
+        color: #e5b27c;
+        background: #1d2b51;
+        transition: all 0.3s;
+    }
+
+    .community-form-button:active {
+        color: #e5b27c;
+        background: rgba(29, 43, 81, 0.6);
+        border: 0.1rem solid rgba(29, 43, 81, 0.6);
+        transition: all 0.3s;
+    }
+
+}
+
+/****  /screen and (min-width: 767px)  ****/
+
+
 /****  /screen and (min-width: 1200px)  ****/
 
 @media screen and (min-width: 1200px) {
