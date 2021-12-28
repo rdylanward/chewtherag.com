@@ -492,9 +492,33 @@
 /**********************************-***********************************/
 
 
-/****  screen and (max-width: 380px)  ****/
+/****  screen and (min-width: 380px)  ****/
 
 @media screen and (min-width: 380px) {
+
+    /****************/
+    /***  Header  ***/
+    /****************/
+
+    .home-header-title {
+        margin: 0rem 3rem;
+    }
+
+    .home-header-text {
+        margin: 0rem 3rem 1rem;
+    }
+
+    .home-header-button {
+        margin: 1rem 3rem 0rem;
+    }
+
+    /*****************/
+    /***  Welcome  ***/
+    /*****************/
+
+    .welcome-blurb {
+        margin: 2rem 3rem 0rem;
+    }
 
     /*********************/
     /***  Collections  ***/
@@ -512,7 +536,283 @@
         margin: 0rem 3.5rem;
     }
 
+    /****************/
+    /***  Extras  ***/
+    /****************/
+
+    .specials-heading {
+        text-align: center;
+        padding: 0rem 3rem;
+    }
+
+    .specials-summary {
+        padding: 0rem 3rem;
+    }
+
 }
 
-/****  /screen and (max-width: 380px)  ****/
+/****  /screen and (min-width: 380px)  ****/
+
+
+/****  screen and (min-width: 427px)  ****/
+
+@media screen and (min-width: 427px) {
+
+    /****************/
+    /***  Header  ***/
+    /****************/
+
+    .home-header-title {
+        margin: 0rem 3.5rem;
+    }
+
+    .home-header-text {
+        margin: 0rem 3.5rem 1rem;
+    }
+
+    .home-header-button {
+        margin: 1rem 3.5rem 0rem;
+    }
+
+    /*****************/
+    /***  Welcome  ***/
+    /*****************/
+
+    .welcome-blurb {
+        margin: 2rem 4rem 0rem;
+    }
+
+    /*********************/
+    /***  Collections  ***/
+    /*********************/
+
+    .home-collections-title {
+        margin: 0rem 4rem 3rem;
+    }
+
+    .home-collections-summary {
+        margin: 0rem 4rem 3rem;
+    }
+
+    .home-collections-link {
+        margin: 0rem 4rem;
+    }
+
+    /****************/
+    /***  Extras  ***/
+    /****************/
+
+    .specials-heading {
+        text-align: center;
+        padding: 0rem 3.5rem;
+    }
+
+    .specials-summary {
+        padding: 0rem 3.5rem;
+    }
+
+}
+
+/****  /screen and (min-width: 427px)  ****/
+
+
+/****  screen and (min-width: 767px)  ****/
+
+@media screen and (min-width: 767px) {
+
+    /****************/
+    /***  Header  ***/
+    /****************/
+
+    .home-header-title {
+        place-self: center start;
+        margin: 0rem 6rem;
+    }
+
+    .home-header-summary {
+        grid-template-rows: repeat(2, max-content);
+        place-content: start center;
+    }
+
+    .home-header-text {
+        place-self: start start;
+        margin: 0rem 6rem 1rem;
+    }
+
+    .home-header-button {
+        margin: 1rem 6rem 0rem;
+    }
+
+    /*****************/
+    /***  Welcome  ***/
+    /*****************/
+
+    .home-welcome {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: max-content;
+        grid-template-areas:
+            "wel-img wel-blb";
+        place-content: center center;
+        margin: 6rem 0rem;
+    }
+
+    .welcome-image {
+        grid-area: wel-img;
+        width: 33rem;
+        box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
+        place-self: center center;
+        margin: 0rem 3rem 0rem;
+    }
+
+    .welcome-blurb {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, max-content);
+        grid-template-areas:
+            "blb-ttl"
+            "blb-txt"
+            "blb-btn";
+        place-content: center start;
+        margin: 3rem;
+    }
+
+    /*********************/
+    /***  Collections  ***/
+    /*********************/
+
+    .home-collections-title {
+        margin: 0rem 6rem 3rem;
+    }
+
+    .home-collections-summary {
+        margin: 0rem 9rem 3rem 6rem;
+    }
+
+    .home-collections-link {
+        margin: 0rem 6rem;
+    }
+
+    /**********************/
+    /***  Testimonials  ***/
+    /**********************/
+
+    .testimonial-heading {
+        margin: 1.8rem 6rem;
+    }
+
+    .testimonial-quote {
+        margin: 1.8rem 6rem;
+    }
+
+    .testimonial-quote i {
+        font-size: 1.1rem;
+    }
+
+    /****************/
+    /***  Extras  ***/
+    /****************/
+
+    .extras-specials {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas:
+            "spc-img spc-hdg"
+            "spc-img spc-sum";
+        place-content: center center;
+        margin-bottom: 6rem;
+    }
+
+    .specials-image {
+        place-self: center center;
+        margin: 0rem 3rem;
+    }
+
+    .specials-heading {
+        padding: 0rem;
+        margin: 0rem 3rem 2rem;
+    }
+
+    .specials-summary {
+        padding: 0rem 3rem;
+        margin: 0rem;
+    }
+
+    .extras-gift {
+        grid-area: ext-gft;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+        grid-template-areas:
+            "gft-wrp";
+        margin: 6rem 0rem;
+        place-self: center center;
+    }
+
+    .gift-wrapper {
+        width: 54rem;
+        height: 26rem;
+        grid-template-columns: repeat(2, minmax(25rem, 27rem));
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "gft-wrp-img gft-wrp-grp";
+        place-content: center center;
+    }
+
+    .gift-image {
+        place-self: center center;
+        margin-right: 8rem;
+        margin-bottom: 0rem;
+    }
+
+    .gift-group {
+        place-content: center center;
+        margin: 0rem;
+    }
+
+    .gift-heading {
+        grid-area: wrp-grp-hdr;
+        font-size: 2.5rem;
+        font-weight: 600;
+        place-self: end center;
+        margin: 0rem;
+    }
+
+    .gift-summary {
+        grid-area: wrp-grp-sum;
+        font-size: 1.5rem;
+        font-weight: 500;
+        place-self: center center;
+        margin: 2rem 0rem;
+    }
+
+    .gift-button {
+        grid-area: wrp-grp-btn;
+        width: 12rem;
+        padding: 1rem 1.4rem 1.1rem;
+        place-self: center center;
+    }
+
+    .extras-custom {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "cst-grp cst-img";
+        place-self: center center;
+    }
+
+    .custom-image {
+        grid-area: cst-img;
+        width: 33rem;
+        box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
+        place-self: center start;
+        margin: 0rem 3rem;
+    }
+
+    .custom-group {
+        grid-template-columns: 1fr;
+        place-self: center center;
+    }
+
+}
+
+/****  /screen and (min-width: 767px)  ****/
 

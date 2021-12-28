@@ -4,8 +4,6 @@ $(document).ready(function() {
     $(window).resize(function () {
         var winWidth = $(window).innerWidth();
 
-        console.log("winWidth: " + winWidth)
-
         if (winWidth > 1024) {
             $(".container-mobile").addClass("hide-menu");
             $(".container-navbar").removeClass("hide-menu");
