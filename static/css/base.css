@@ -723,7 +723,7 @@ body {
 
 .container-footer {
     font-family: 'Montserrat', sans-serif;
-    background: #c37727;
+    background: var(--footer__orange);
     color: var(--std__blue);
     display: grid;
     grid-template-columns: repeat(2, 50vw);
@@ -871,7 +871,7 @@ body {
     font-weight: 600;
     color: var(--std__blue);
     background: transparent;
-    border: 0.1rem solid #1d2b51;
+    border: 0.1rem solid var(--std__blue);
     border-radius: 0.4rem;
     width: auto;
     padding: 0.5rem 0.6rem;
@@ -879,8 +879,8 @@ body {
 }
 
 .community-form-button:hover {
-    color: #e5b27c;
-    background: #1d2b51;
+    color: var(--std__orange);
+    background: var(--std__blue);
     transition: all 0.3s;
 }
 
@@ -1076,6 +1076,49 @@ body {
 }
 
 /****  /screen and (min-width: 767px)  ****/
+
+
+/****  screen and (min-width: 1024px)  ****/
+
+@media screen and (min-width: 1024px) {
+
+    /******************/
+    /****  Footer  ****/
+    /******************/
+
+    .container-footer {
+        grid-template-columns: max-content auto max-content;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas:
+            "men mid pol"
+            "men soc pol"
+            "pay pay pay"
+            "cop cop cop";
+        padding: 3rem 10rem 1rem;
+    }
+
+    .footer-menu {
+        place-self: start start;
+        margin: 2rem 0rem 0rem;
+    }
+
+    .footer-middle {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-community {
+        padding: 0rem 5rem;
+        margin-top: 0rem;
+    }
+
+    .footer-policies {
+        place-self: start start;
+        margin: 2rem 0rem 0rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1024px)  ****/
 
 
 /****  /screen and (min-width: 1200px)  ****/
