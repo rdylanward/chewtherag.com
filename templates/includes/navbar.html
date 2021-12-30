@@ -13,7 +13,7 @@
         <a href="{% url 'home' %}" class="navbar-brand-icon no-decoration">
             <img class="navbar-brand-logo" src="/media/CTR_LOGO.png" alt="Chew the Rag Clothing Co. Logo" />
         </a>
-        <a href="{% url 'home' %}" class="navbar-brand-title no-decoration white">
+        <a href="{% url 'home' %}" class="navbar-brand-title no-decoration">
             Chew the Rag Clothing Co.
         </a>
     </div>
@@ -27,37 +27,37 @@
     <div class="navbar-menu">
         <ul class="navbar-menu-list no-list-style">
             <li class="navbar-menu-item">
-                <a href="{% url 'home' %}" class="navbar-menu-link no-decoration uppercase white">
+                <a href="{% url 'home' %}" class="navbar-menu-link no-decoration uppercase">
                     Welcome
                 </a>
             </li>
             <li class="navbar-menu-item">
-                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">
+                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase">
                     Journey
                 </a>
             </li>
             <li class="navbar-menu-item">
-                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">
+                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase">
                     Collections
                 </a>
             </li>
             <li class="navbar-menu-item">
-                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">
+                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase">
                     Community
                 </a>
             </li>
             <li class="navbar-menu-item">
-                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase white">
+                <a href="javascript:void(0);" class="navbar-menu-link no-decoration uppercase">
                     Contact
                 </a>
             </li>
             <li class="navbar-menu-item navbar-login-text">
                 {% if request.user.is_authenticated %}
-                    <span class="navbar-menu-link uppercase white">
+                    <span class="navbar-menu-link uppercase">
                         My Account
                     </span>
                 {% else %}
-                    <span class="navbar-menu-link uppercase white">
+                    <span class="navbar-menu-link uppercase">
                         Login / Register
                     </span>
                 {% endif %}
@@ -76,29 +76,29 @@
             {% if request.user.is_authenticated %}
                 {% if request.user.is_authenticated %}
                     <li class="navbar-dropdown-item">
-                        <a href="{% url 'account_logout' %}" class="navbar-dropdown-link no-decoration uppercase white">
+                        <a href="{% url 'account_logout' %}" class="navbar-dropdown-link no-decoration uppercase">
                             Admin
                         </a>
                     </li>
                 {% endif %}
                 <li class="navbar-dropdown-item">
-                    <a href="" class="navbar-dropdown-link no-decoration uppercase white">
+                    <a href="" class="navbar-dropdown-link no-decoration uppercase">
                         My Profile
                     </a>
                 </li>
                 <li class="navbar-dropdown-item">
-                    <a href="{% url 'account_logout' %}" class="navbar-dropdown-link no-decoration uppercase white">
+                    <a href="{% url 'account_logout' %}" class="navbar-dropdown-link no-decoration uppercase">
                         Logout
                     </a>
                 </li>
             {% else %}
                 <li class="navbar-dropdown-item">
-                    <a href="{% url 'account_signup' %}" class="navbar-dropdown-link no-decoration uppercase white">
+                    <a href="{% url 'account_signup' %}" class="navbar-dropdown-link no-decoration uppercase">
                         Register
                     </a>
                 </li>
                 <li class="navbar-dropdown-item">
-                    <a href="{% url 'account_login' %}" class="navbar-dropdown-link no-decoration uppercase white">
+                    <a href="{% url 'account_login' %}" class="navbar-dropdown-link no-decoration uppercase">
                         Login
                     </a>
                 </li>
@@ -113,7 +113,7 @@
         NAVBAR MESSAGE
     -->
     <div class="navbar-message">
-        <p class="navbar-message-text uppercase white">
+        <p class="navbar-message-text uppercase">
             Free shipping for all orders over &euro;{{ free_shipping_goal }}!
         </p>
     </div>
@@ -126,12 +126,12 @@
     -->
     <div class="navbar-icons">
         <div class="navbar-icons-cart">
-            <a href="javascript:void(0);" class="no-decoration white">
+            <a href="javascript:void(0);" class="no-decoration">
                 <i class="fas fa-shopping-cart"></i>
             </a>
         </div>
         <div class="navbar-cart-text">
-            <a href="javascript:void(0);" class="no-decoration uppercase white">
+            <a href="javascript:void(0);" class="no-decoration uppercase">
                 {% if items_reserved %}
                     {{ items_reserved }}
                 {% else %}

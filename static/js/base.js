@@ -1,30 +1,29 @@
 $(document).ready(function() {
 
-    /* Enabel/Disable mobile menu */
-    $(window).resize(function () {
+    /* Toggle mobile menu */
+    function toggleMobileMenu() {
         var winWidth = $(window).innerWidth();
 
-        console.log("winWidth: " + winWidth);
-
-        if (winWidth >= 1024) {
+        if (winWidth > 1023) {
             $(".container-mobile").addClass("hide-menu");
             $(".container-navbar").removeClass("hide-menu");
         } else if (winWidth < 1024) {
             $(".container-mobile").removeClass("hide-menu");
             $(".container-navbar").addClass("hide-menu");
         };
-    })
+    };
 
-    /* Enabel/Disable sticky menu */
-    function stickyMenu() {
+    /* Toggle sticky menu */
+    function toggleStickyMenu() {
         var sticky = 120;
         var mobile_sticky = 80;
+        var winWidth = $(window).innerWidth();
 
-        if ($(".container-navbar.hide-menu") && $(window).scrollTop() >= mobile_sticky) {
+        if (winWidth < 1024 && $(window).scrollTop() > mobile_sticky) {
             $(".container-mobile").addClass("sticky-container-mobile");
-        } else if ($(".container-navbar.hide-menu") && $(window).scrollTop() <= mobile_sticky) {
+        } else if (winWidth < 1024 && $(window).scrollTop() <= mobile_sticky) {
             $(".container-mobile").removeClass("sticky-container-mobile");
-        } else if ($(".container-navbar.show-menu") && $(window).scrollTop() >= sticky) {
+        } else if (winWidth > 1023 && $(window).scrollTop() > sticky) {
             $(".container-navbar").addClass("sticky-navbar");
             $(".navbar-brand").addClass("sticky-navbar-brand");
             $(".navbar-menu").addClass("sticky-navbar-menu");
@@ -41,11 +40,17 @@ $(document).ready(function() {
         };
     };
 
-    /* On window scroll */
-    $(window).scroll(stickyMenu);
+    /* Enable/Disable mobile menu on resize */
+    $(window).resize(toggleMobileMenu);
+
+    /* Check mobile menu on page refresh */
+    $(document).on('readystatechange', toggleMobileMenu);
+
+    /* Toggle sticky menu on window scroll */
+    $(window).scroll(toggleStickyMenu);
 
     /* Check sticky menu on page refresh */
-    $(document).on('readystatechange', stickyMenu);
+    $(document).on('readystatechange', toggleStickyMenu);
 
     /* Sliding Navbar/Hamburger action */
     $(".hamburger-menu").click(function() {
