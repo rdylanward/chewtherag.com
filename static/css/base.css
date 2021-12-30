@@ -979,6 +979,18 @@ body {
 
 @media screen and (min-width: 767px) {
 
+    /***********************/
+    /**** Mobile Navbar ****/
+    /***********************/
+
+    .sliding-brand {
+        padding-left: 2rem;
+    }
+
+    .hamburger-menu {
+        padding-right: 2.3rem;
+    }
+
     /******************/
     /****  Footer  ****/
     /******************/
