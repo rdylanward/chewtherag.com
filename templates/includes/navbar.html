@@ -51,7 +51,7 @@
                     Contact
                 </a>
             </li>
-            <li class="navbar-menu-item navbar-login-text">
+            <li class="navbar-menu-item navbar-dropdown pointer">
                 {% if request.user.is_authenticated %}
                     <span class="navbar-menu-link uppercase">
                         My Account
@@ -71,7 +71,7 @@
     <!--
         NAVBAR DROPDOWN
     -->
-    <div class="navbar-login-dropdown">
+    <div class="navbar-login-dropdown hide-menu">
         <ul class="navbar-dropdown-list no-list-style">
             {% if request.user.is_authenticated %}
                 {% if request.user.is_authenticated %}

@@ -40,6 +40,54 @@ $(document).ready(function() {
         };
     };
 
+    /* Enable dropdown menu
+    function hoverDropdown(event) {
+        var dropdown_pos = $(event.data.specifiedElementOne).position();
+        var dropdown_height = $(event.data.specifiedElementOne).outerHeight(true);
+        var dropdown_left = dropdown_pos.left;
+        var dropdown_top = dropdown_pos.top + dropdown_height;
+
+        if (event.data.isEnabled === "True" && $(event.data.specifiedElementTwo + ".hide-menu")) { */
+            /* Enable dropdown menu
+            $(event.data.specifiedElementTwo).css("left", dropdown_left);
+            $(event.data.specifiedElementTwo).css("top", (dropdown_top - 2));
+            $(event.data.specifiedElementTwo).css("display", "block");
+        } else if (!$(event.data.specifiedElementTwo + ".hide-menu")) {
+            $(event.data.specifiedElementTwo).css("display", "block");
+        } else {
+            $(event.data.specifiedElementTwo).css("display", "none");
+        };
+    }; */
+
+    /* Hide/Show dropdown on click */
+    function toggleDropdown(event) {
+        console.log($(this).attr('class').split(' '));
+
+        if (!($(this).attr('class').split(' ')[1])) {
+            var thisElement = ".".concat($(this).attr('class').split(' ')[0]);
+        } else {
+            var thisElement = ".".concat($(this).attr('class').split(' ')[1]);
+        };
+        var element_pos = $(thisElement).position();
+        var element_height = $(thisElement).outerHeight(true);
+        var element_width = $(thisElement).outerWidth(true);
+        var element_top = element_pos.top;
+        var element_left = element_pos.left;
+        var element_right = element_left + element_width;
+        var element_bottom = element_top + element_height;
+
+        if (!(event.pageY >= element_bottom && element_left < event.pageX < element_right)) {
+            if ($(event.data.menuElement + ".hide-menu")) {
+                $(event.data.menuElement).css("left", element_left);
+                $(event.data.menuElement).css("top", element_bottom);
+                $(event.data.menuElement).css("width", element_width);
+            };
+            $(event.data.menuElement).toggleClass('hide-menu');
+        } else if (!($(this).attr('class').split(' ')[1])) {
+            $(event.data.menuElement).toggleClass('hide-menu');
+        };
+    };
+
     /* Enable/Disable mobile menu on resize */
     $(window).resize(toggleMobileMenu);
 
@@ -56,33 +104,27 @@ $(document).ready(function() {
     $(".hamburger-menu").click(function() {
         $(".sliding-navbar").toggleClass('sliding-navbar--open');
         $(".hamburger").toggleClass('menu-opened');
-    })
+    });
 
     /* Hide/Show login dropdown */
-    $(".sliding-login-register").click(function() {
-        $(".sliding-login-dropdown").toggleClass('hide-menu');
-    })
+    $(".sliding-login-register").click({
+        specifiedElement: ".sliding-login-dropdown"
+    }, toggleDropdown);
 
-    /* Enable/Disable the login dropdown menu */
-    $(".navbar-login-text").mouseover(function(){
-        var login_pos = $(".navbar-login-text").position();
-        var login_height = $(".navbar-login-text").outerHeight(true)
-        var login_left = login_pos.left;
-        var login_top = login_pos.top + login_height;
+    /* Hide/Show login dropdown */
+    $(".navbar-dropdown").click({
+        menuElement: ".navbar-login-dropdown"
+    }, toggleDropdown);
     
-        $(".navbar-login-dropdown").css("left", login_left);
-        $(".navbar-login-dropdown").css("top", login_top);
-        $(".navbar-login-dropdown").css("display", "block");
-    }).mouseout(function(){        
-        $(".navbar-login-dropdown").css("display", "none");    
-    })
+    $(".navbar-dropdown").mouseenter({
+        menuElement: ".navbar-login-dropdown"
+    }, toggleDropdown).mouseleave({
+        menuElement: ".navbar-login-dropdown"
+    }, toggleDropdown);
 
-    /* Keep the login dropdown menu open while in focus*/
-    $(".navbar-login-dropdown").mouseover(function(){
-        $(".navbar-login-dropdown").css("display", "block");
-    }).mouseout(function(){        
-        $(".navbar-login-dropdown").css("display", "none");   
-    })
+    $(".navbar-login-dropdown").mouseleave({
+        menuElement: ".navbar-login-dropdown"
+    }, toggleDropdown);
 
     /* This code was provided by Code Institute from their 'Boutique Ado' 
        example project and repurposed for sorting items in the collection */
