@@ -798,9 +798,9 @@
 /****  /screen and (min-width: 767px)  ****/
 
 
-/****  screen and (min-width: 1024px)  ****/
+/****  screen and (min-width: 1023px)  ****/
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
 
     /****************/
     /***  Header  ***/
@@ -835,26 +835,17 @@
         grid-template-areas:
             "wel-img wel-blb";
         place-content: center center;
-        margin: 6rem 0rem;
+        margin: 6rem 10rem;
     }
 
     .welcome-image {
-        grid-area: wel-img;
-        width: 33rem;
-        box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
-        place-self: center center;
-        margin: 0rem 3rem 0rem;
+        place-self: center start;
+        margin: 0rem;
     }
 
     .welcome-blurb {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, max-content);
-        grid-template-areas:
-            "blb-ttl"
-            "blb-txt"
-            "blb-btn";
-        place-content: center start;
-        margin: 3rem;
+        place-content: center end;
+        margin: 0rem;
     }
 
     /*********************/
@@ -943,5 +934,5 @@
 
 }
 
-/****  /screen and (min-width: 1024px)  ****/
+/****  /screen and (min-width: 1023px)  ****/
 
