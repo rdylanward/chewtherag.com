@@ -592,7 +592,7 @@ body {
     color: var(--almost__white);
     position: absolute;
     background: rgba(29, 43, 81, 0.95);
-    width: 10rem;
+    min-width: 10rem;
     height: auto;
     overflow: auto;
     margin-top: 0rem;
@@ -666,7 +666,7 @@ body {
     grid-template-rows: 8rem;
     grid-template-areas:
         "brnd menu icon";
-    background: rgba(0, 0, 0, 0.95) !important;
+    background: rgba(7, 10, 18, 0.97) !important;
     transition: all 0.3s;
 }
 

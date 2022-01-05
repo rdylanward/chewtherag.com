@@ -40,52 +40,36 @@ $(document).ready(function() {
         };
     };
 
-    /* Enable dropdown menu
-    function hoverDropdown(event) {
-        var dropdown_pos = $(event.data.specifiedElementOne).position();
-        var dropdown_height = $(event.data.specifiedElementOne).outerHeight(true);
-        var dropdown_left = dropdown_pos.left;
-        var dropdown_top = dropdown_pos.top + dropdown_height;
-
-        if (event.data.isEnabled === "True" && $(event.data.specifiedElementTwo + ".hide-menu")) { */
-            /* Enable dropdown menu
-            $(event.data.specifiedElementTwo).css("left", dropdown_left);
-            $(event.data.specifiedElementTwo).css("top", (dropdown_top - 2));
-            $(event.data.specifiedElementTwo).css("display", "block");
-        } else if (!$(event.data.specifiedElementTwo + ".hide-menu")) {
-            $(event.data.specifiedElementTwo).css("display", "block");
-        } else {
-            $(event.data.specifiedElementTwo).css("display", "none");
-        };
-    }; */
-
     /* Hide/Show dropdown on click */
     function toggleDropdown(event) {
-        console.log($(this).attr('class').split(' '));
 
-        if (!($(this).attr('class').split(' ')[1])) {
-            var thisElement = ".".concat($(this).attr('class').split(' ')[0]);
-        } else {
+        /* Determine if the menu is currently open */
+        var isHidden = true;
+        if (!$(event.data.menuElement).attr('class').split(' ')[1]){
+            isHidden = false;
+        };
+
+        /* Capture element attributes */
+        if (isHidden) {
             var thisElement = ".".concat($(this).attr('class').split(' ')[1]);
+        } else {
+            var thisElement = ".".concat($(this).attr('class').split(' ')[0]);
         };
-        var element_pos = $(thisElement).position();
-        var element_height = $(thisElement).outerHeight(true);
-        var element_width = $(thisElement).outerWidth(true);
-        var element_top = element_pos.top;
-        var element_left = element_pos.left;
-        var element_right = element_left + element_width;
-        var element_bottom = element_top + element_height;
+        var elementPos = $(thisElement).position();
+        var elementHeight = $(thisElement).outerHeight(true);
+        var elementWidth = $(thisElement).outerWidth(true);
+        var elementTop = elementPos.top;
+        var elementLeft = elementPos.left;
+        var elementBottom = elementTop + elementHeight;
 
-        if (!(event.pageY >= element_bottom && element_left < event.pageX < element_right)) {
-            if ($(event.data.menuElement + ".hide-menu")) {
-                $(event.data.menuElement).css("left", element_left);
-                $(event.data.menuElement).css("top", element_bottom);
-                $(event.data.menuElement).css("width", element_width);
-            };
-            $(event.data.menuElement).toggleClass('hide-menu');
-        } else if (!($(this).attr('class').split(' ')[1])) {
-            $(event.data.menuElement).toggleClass('hide-menu');
+        /* Set menu position and width */
+        if (isHidden) {
+            $(event.data.menuElement).css("left", elementLeft);
+            $(event.data.menuElement).css("top", elementBottom);
+            $(event.data.menuElement).css("min-width", elementWidth);
         };
+
+        $(event.data.menuElement).toggleClass('hide-menu');
     };
 
     /* Enable/Disable mobile menu on resize */
@@ -115,13 +99,8 @@ $(document).ready(function() {
     $(".navbar-dropdown").click({
         menuElement: ".navbar-login-dropdown"
     }, toggleDropdown);
-    
-    $(".navbar-dropdown").mouseenter({
-        menuElement: ".navbar-login-dropdown"
-    }, toggleDropdown).mouseleave({
-        menuElement: ".navbar-login-dropdown"
-    }, toggleDropdown);
 
+    /* Hide/Show login dropdown */
     $(".navbar-login-dropdown").mouseleave({
         menuElement: ".navbar-login-dropdown"
     }, toggleDropdown);
