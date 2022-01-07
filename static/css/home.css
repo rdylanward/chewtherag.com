@@ -722,7 +722,7 @@
     }
 
     .specials-image {
-        place-self: center center;
+        place-self: center start;
         margin: 0rem 3rem;
     }
 
@@ -912,14 +912,6 @@
         margin: 0rem;
     }
 
-    .extras-custom {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-template-areas:
-            "cst-grp cst-img";
-        place-self: center center;
-    }
-
     .custom-image {
         width: 38rem;
         place-self: center end;
@@ -935,4 +927,175 @@
 }
 
 /****  /screen and (min-width: 1023px)  ****/
+
+
+/****  screen and (min-width: 1200px)  ****/
+
+@media screen and (min-width: 1200px) {
+
+    /****************/
+    /***  Header  ***/
+    /****************/
+
+    .home-header-title {
+        margin: 0rem 15rem;
+    }
+
+    .home-header-text {
+        margin: 0rem 15rem 1rem;
+    }
+
+    .home-header-button {
+        margin: 1rem 15rem 0rem;
+    }
+
+    /*****************/
+    /***  Welcome  ***/
+    /*****************/
+
+    .home-welcome {
+        margin: 6rem 15rem;
+    }
+
+    /*********************/
+    /***  Collections  ***/
+    /*********************/
+
+    .home-collections {
+        height: 60vh;
+    }
+
+    .home-collections-title {
+        margin: 0rem 15rem 3rem;
+    }
+
+    .home-collections-summary {
+        margin: 0rem 35rem 3rem 15rem;
+    }
+
+    .home-collections-link {
+        margin: 0rem 15rem;
+    }
+
+    /**********************/
+    /***  Testimonials  ***/
+    /**********************/
+
+    .home-testimonials {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: max-content;
+        grid-template-areas:
+            "tst-one tst-two tst-thr";
+        place-content: center center;
+        padding: 6rem 15rem;
+    }
+
+    .testimonial-one {
+        place-self: start end;
+        padding: 0rem 6.5rem 0rem 0rem;
+    }
+
+    .testimonial-two {
+        place-self: start center;
+        padding: 0rem 3.25rem;
+    }
+
+    .testimonial-three {
+        place-self: start start;
+        padding: 0rem 0rem 0rem 6.5rem;
+    }
+
+    .testimonial-heading {
+        margin: 0rem;
+    }
+
+    .testimonial-quote {
+        margin: 0rem;
+    }
+
+    /****************/
+    /***  Extras  ***/
+    /****************/
+
+    .extras-specials {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas:
+            "spc-img spc-hdg"
+            "spc-img spc-sum";
+        place-content: center center;
+        margin-bottom: 6rem;
+    }
+
+    .specials-image {
+        width: 38rem;
+        place-self: center start;
+        margin: 0rem 0rem 0rem 15rem;
+    }
+
+    .specials-heading {
+        place-self: end center;
+        padding: 0rem;
+        margin: 0rem 15rem 2rem 0rem;
+    }
+
+    .specials-summary {
+        place-self: start start;
+        padding: 0rem 15rem 0rem 0rem;
+        margin: 0rem;
+    }
+
+    .extras-custom {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "cst-grp cst-img";
+        place-self: center center;
+    }
+
+    .custom-image {
+        width: 38rem;
+        place-self: center center;
+        margin: 0rem 15rem 0rem 10rem;
+    }
+
+    .custom-group {
+        grid-template-columns: 1fr;
+        place-self: center center;
+        margin: 0rem 15rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1200px)  ****/
+
+
+/****  screen and (min-width: 1400px)  ****/
+
+@media screen and (min-width: 1400px) {
+
+    /****************/
+    /***  Header  ***/
+    /****************/
+
+    .home-header-title{
+        margin: 0rem 15rem;
+    }
+
+    .home-header-title span{
+        font-size: 3.4rem;
+    }
+
+    .home-header-text {
+        font-size: 2.4rem;
+        margin: 0rem 15rem 2rem;
+    }
+
+    .home-header-button {
+        margin: 1rem 15rem 0rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1400px)  ****/
 
