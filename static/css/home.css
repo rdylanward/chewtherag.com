@@ -1095,6 +1095,82 @@
         margin: 1rem 15rem 0rem;
     }
 
+    /*****************/
+    /***  Welcome  ***/
+    /*****************/
+
+    .home-welcome {
+        margin: 6rem 20rem;
+    }
+
+    /*********************/
+    /***  Collections  ***/
+    /*********************/
+
+    .home-collections-title {
+        margin: 0rem 20rem 3rem;
+    }
+
+    .home-collections-summary {
+        margin: 0rem 55rem 3rem 20rem;
+    }
+
+    .home-collections-link {
+        margin: 0rem 20rem;
+    }
+
+    /**********************/
+    /***  Testimonials  ***/
+    /**********************/
+
+    .home-testimonials {
+        padding: 6rem 20rem;
+    }
+
+    /****************/
+    /***  Extras  ***/
+    /****************/
+
+    .extras-specials {
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas:
+            "spc-img spc-hdg"
+            "spc-img spc-sum";
+        place-content: center center;
+        margin-bottom: 6rem;
+    }
+
+    .specials-image {
+        width: 38rem;
+        place-self: center start;
+        margin: 0rem 0rem 0rem 20rem;
+    }
+
+    .specials-heading {
+        place-self: end center;
+        padding: 0rem;
+        margin: 0rem 20rem 2rem 10rem;
+    }
+
+    .specials-summary {
+        place-self: start start;
+        padding: 0rem 20rem 0rem 10rem;
+        margin: 0rem;
+    }
+
+    .custom-image {
+        width: 38rem;
+        place-self: center start;
+        margin: 0rem 20rem 0rem 4rem;
+    }
+
+    .custom-group {
+        grid-template-columns: 1fr;
+        place-self: center end;
+        margin: 0rem 10rem 0rem 20rem;
+    }
+
 }
 
 /****  /screen and (min-width: 1400px)  ****/

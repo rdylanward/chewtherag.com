@@ -1099,7 +1099,12 @@ body {
 
     .footer-menu {
         place-self: start start;
-        margin: 2rem 0rem 0rem;
+        margin: 0rem;
+    }
+
+    .footer-policies {
+        place-self: start start;
+        margin: 0rem;
     }
 
     .footer-middle {
@@ -1109,11 +1114,6 @@ body {
     .footer-community {
         padding: 0rem 5rem;
         margin-top: 0rem;
-    }
-
-    .footer-policies {
-        place-self: start start;
-        margin: 2rem 0rem 0rem;
     }
 
 }
@@ -1133,26 +1133,16 @@ body {
         padding: 0rem 9rem;
     }
 
-    /*************************/
-    /****  Sticky Navbar  ****/
-    /************************
-
-    .sticky-navbar-brand img {
-        height: 3.4rem;
-        width: 3.4rem;
-    }
-    
-    .sticky-navbar-brand .navbar-brand-title {
-        font-size: 2.1rem !important;
-        margin-left: 0.9rem !important;
-    } */
-
     /******************/
     /****  Footer  ****/
     /******************/
 
     .container-footer {
-        padding: 3rem 15rem 1rem;
+        padding: 4rem 15rem 1rem;
+    }
+
+    .footer-menu {
+        margin: 0rem;
     }
 
     .footer-middle {
@@ -1173,7 +1163,18 @@ body {
 
 @media screen and (min-width: 1400px) {
 
+    /******************/
+    /****  Footer  ****/
+    /******************/
 
+    .container-footer {
+        padding: 4rem 20rem 1rem;
+    }
+
+    .footer-community-form {
+        width: 80% !important;
+        padding: 0rem 6rem;
+    }
 }
 
 /****  /screen and (min-width: 1400px)  ****/
