@@ -183,3 +183,285 @@
 /***                         Media Queries                          ***/
 /**********************************-***********************************/
 
+
+/****  screen and (min-width: 767px)  ****/
+
+@media screen and (min-width: 767px) {
+
+    /****************/
+    /**** Header ****/
+    /****************/
+
+    .about-header-title {
+        padding: 0rem 20rem 2rem 6rem;
+    }
+
+    .header-dictionary-title {
+        padding: 0rem 20rem 2rem 6rem;
+    }
+
+    .header-dictionary-category {
+        padding: 0rem 20rem 2rem 6rem;
+    }
+
+    .header-dictionary-description {
+        padding: 0rem 20rem 2rem 6rem;
+    }
+
+    .header-dictionary-quote {
+        padding: 0rem 20rem 2rem 6rem;
+    }
+
+    /***************/
+    /**** Story ****/
+    /***************/
+
+    .story-quote {
+        padding: 0rem 6rem;
+    }
+
+    .story-text {
+        padding: 0rem 6rem;
+    }
+
+}
+
+/****  /screen and (min-width: 767px)  ****/
+
+
+/****  screen and (min-width: 1023px)  ****/
+
+@media screen and (min-width: 1023px) {
+
+    /****************/
+    /**** Header ****/
+    /****************/
+
+    .about-header-title {
+        padding: 0rem 30rem 2rem 10rem;
+    }
+
+    .header-dictionary-title {
+        font-size: 2rem;
+        padding: 0rem 30rem 2rem 10rem;
+    }
+
+    .header-dictionary-category {
+        font-size: 2rem;
+        padding: 0rem 30rem 2rem 10rem;
+    }
+
+    .header-dictionary-description {
+        padding: 0rem 30rem 2rem 10rem;
+    }
+
+    .dictionary-description-number {
+        font-size: 1.7rem;
+    }
+
+    .dictionary-description-text {
+        font-size: 1.7rem;
+    }
+
+    .header-dictionary-quote {
+        font-size: 1.7rem;
+        padding: 0rem 30rem 2rem 10rem;
+    }
+
+    /***************/
+    /**** Story ****/
+    /***************/
+
+    .about-story {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas:
+            "story-img story-qte"
+            "story-txt story-txt";
+        margin: 6rem 0rem 7rem;
+    }
+
+    .story-image {
+        place-self: center end;
+        margin: 0rem 8rem 0rem 0rem;
+    }
+
+    .story-quote {
+        padding: 0rem 10rem 0rem 3rem;
+    }
+
+    .story-text {
+        padding: 0rem 10rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1023px)  ****/
+
+
+/****  screen and (min-width: 1200px)  ****/
+
+@media screen and (min-width: 1200px) {
+
+    /****************/
+    /**** Header ****/
+    /****************/
+
+    .about-header-title {
+        padding: 0rem 30rem 2rem 15rem;
+    }
+
+    .header-dictionary-title {
+        padding: 0rem 30rem 2rem 15rem;
+    }
+
+    .header-dictionary-category {
+        padding: 0rem 30rem 2rem 15rem;
+    }
+
+    .header-dictionary-description {
+        padding: 0rem 30rem 2rem 15rem;
+    }
+
+    .header-dictionary-quote {
+        padding: 0rem 30rem 2rem 15rem;
+    }
+
+    /***************/
+    /**** Story ****/
+    /***************/
+
+    .about-story {
+        margin: 6rem 0rem 7rem;
+    }
+
+    .story-image {
+        width: 38.5rem;
+        place-self: center end;
+        margin: 0rem 10rem 0rem 8rem;
+    }
+
+    .story-quote {
+        padding: 0rem 24rem 0rem 0rem;
+    }
+
+    .story-text {
+        padding: 0rem 15rem;
+        margin-top: 6rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1200px)  ****/
+
+
+/****  screen and (min-width: 1400px)  ****/
+
+@media screen and (min-width: 1400px) {
+
+    /****************/
+    /**** Header ****/
+    /****************/
+
+    .about-header-title {
+        padding: 0rem 30rem 2rem 20rem;
+    }
+
+    .header-dictionary-title {
+        padding: 0rem 30rem 2rem 20rem;
+    }
+
+    .header-dictionary-category {
+        padding: 0rem 30rem 2rem 20rem;
+    }
+
+    .header-dictionary-description {
+        padding: 0rem 50rem 2rem 20rem;
+    }
+
+    .header-dictionary-quote {
+        padding: 0rem 50rem 2rem 20rem;
+    }
+
+    /***************/
+    /**** Story ****/
+    /***************/
+
+    .about-story {
+        margin: 6rem 0rem 7rem;
+    }
+
+    .story-image {
+        width: 42rem;
+        place-self: center end;
+        margin: 0rem 10rem 0rem 20rem;
+    }
+
+    .story-quote {
+        padding: 0rem 30rem 0rem 0rem;
+    }
+
+    .story-text {
+        padding: 0rem 20rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1400px)  ****/
+
+
+/****  screen and (min-width: 1900px)  ****/
+
+@media screen and (min-width: 1900px) {
+
+    /****************/
+    /**** Header ****/
+    /****************/
+
+    .about-header-title {
+        font-size: 3.2rem;
+        padding: 0rem 30rem 2rem 25rem;
+    }
+
+    .header-dictionary-title {
+        padding: 0rem 30rem 2rem 25rem;
+    }
+
+    .header-dictionary-category {
+        padding: 0rem 30rem 2rem 25rem;
+    }
+
+    .header-dictionary-description {
+        padding: 0rem 90rem 2rem 25rem;
+    }
+
+    .header-dictionary-quote {
+        padding: 0rem 90rem 2rem 25rem;
+    }
+
+    /***************/
+    /**** Story ****/
+    /***************/
+
+    .about-story {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 6rem 0rem 7rem;
+    }
+
+    .story-image {
+        width: 44rem;
+        place-self: center start;
+        margin: 0rem 10rem 0rem 35rem;
+    }
+
+    .story-quote {
+        padding: 0rem 50rem 0rem 0rem;
+    }
+
+    .story-text {
+        padding: 0rem 35rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1900px)  ****/

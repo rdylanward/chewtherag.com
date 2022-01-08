@@ -62,6 +62,8 @@ $(document).ready(function() {
         var elementLeft = elementPos.left;
         var elementBottom = elementTop + elementHeight;
 
+        console.log(event.data.isMobile);
+
         /* Set menu position and width */
         if (isHidden) {
             $(event.data.menuElement).css("left", elementLeft);
@@ -91,9 +93,9 @@ $(document).ready(function() {
     });
 
     /* Hide/Show login dropdown */
-    $(".sliding-login-register").click({
-        specifiedElement: ".sliding-login-dropdown"
-    }, toggleDropdown);
+    $(".sliding-login-register").click(function () {
+        $(".sliding-login-dropdown").toggleClass('hide-menu');
+    });
 
     /* Hide/Show login dropdown */
     $(".navbar-dropdown").click({

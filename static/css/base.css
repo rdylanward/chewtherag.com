@@ -1180,11 +1180,18 @@ body {
 /****  /screen and (min-width: 1400px)  ****/
 
 
-/****  screen and (min-width: 1920px)  ****/
+/****  screen and (min-width: 1900px)  ****/
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1900px) {
 
+    /******************/
+    /****  Footer  ****/
+    /******************/
+
+    .container-footer {
+        padding: 4rem 35rem 1rem;
+    }
 
 }
 
-/****  /screen and (min-width: 1920px)  ****/
+/****  /screen and (min-width: 1900px)  ****/

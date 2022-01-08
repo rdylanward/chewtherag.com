@@ -1132,7 +1132,7 @@
     /****************/
 
     .extras-specials {
-        grid-template-columns: max-content 1fr;
+        grid-template-columns: max-content auto;
         grid-template-rows: repeat(2, max-content);
         grid-template-areas:
             "spc-img spc-hdg"
@@ -1174,4 +1174,104 @@
 }
 
 /****  /screen and (min-width: 1400px)  ****/
+
+
+/****  screen and (min-width: 1920px)  ****/
+
+@media screen and (min-width: 1920px) {
+
+    /****************/
+    /***  Header  ***/
+    /****************/
+
+    .home-header-title{
+        margin: 0rem 20rem;
+    }
+
+    .home-header-title span{
+        font-size: 3.4rem;
+    }
+
+    .home-header-text {
+        font-size: 2.4rem;
+        margin: 0rem 20rem 2rem;
+    }
+
+    .home-header-button {
+        margin: 1rem 20rem 0rem;
+    }
+
+    /*****************/
+    /***  Welcome  ***/
+    /*****************/
+
+    .home-welcome {
+        margin: 6rem 25rem;
+    }
+
+    .welcome-image {
+        place-self: center center;
+    }
+
+    .welcome-blurb {
+        padding-right: 18rem;
+        place-content: center start;
+    }
+
+    /*********************/
+    /***  Collections  ***/
+    /*********************/
+
+    .home-collections-title {
+        margin: 0rem 25rem 3rem;
+    }
+
+    .home-collections-summary {
+        margin: 0rem 65rem 3rem 25rem;
+    }
+
+    .home-collections-link {
+        margin: 0rem 25rem;
+    }
+
+    /**********************/
+    /***  Testimonials  ***/
+    /**********************/
+
+    .home-testimonials {
+        padding: 6rem 25rem;
+    }
+
+    .testimonial-one {
+        place-self: start end;
+        padding: 0rem 8rem 0rem 0rem;
+    }
+
+    .testimonial-two {
+        place-self: start center;
+        padding: 0rem 4rem;
+    }
+
+    .testimonial-three {
+        place-self: start start;
+        padding: 0rem 0rem 0rem 8rem;
+    }
+
+    /****************/
+    /***  Extras  ***/
+    /****************/
+
+    .extras-specials {
+        grid-template-columns: max-content auto;
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas:
+            "spc-img spc-hdg"
+            "spc-img spc-sum";
+        place-content: center center;
+        margin-bottom: 6rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1920px)  ****/
 
