@@ -7,8 +7,8 @@
     font-family: 'Montserrat', sans-serif;
     color: var(--std__blue);
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 18vh repeat(2, max-content);
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem repeat(2, max-content);
     grid-template-areas: 
         "col-hdr"
         "col-sch"
@@ -26,7 +26,7 @@
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 18vh;
+    height: 10rem;
     background-attachment: fixed;
 }
 
@@ -38,12 +38,12 @@
 .collection-search {
     grid-area: col-sch;
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(2, max-content);
     grid-template-areas:
         "sch-ttl"
         "sch-itm";
-    margin: 4rem 0rem 2.5rem;
+    margin: 2rem 0rem 1rem;
 }
 
 .item-title {
@@ -51,7 +51,7 @@
     font-size: 3rem;
     font-weight: 600;
     text-align: center;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
     margin: 0rem;
 }
 
@@ -71,12 +71,13 @@
 .search-form {
     grid-area: sch-frm;
     font-family: 'Montserrat', sans-serif;
+    width: 100%;
     display: grid;
     grid-template-columns: auto 5rem;
     grid-template-areas: 
         "sch-txt sch-btn";
     grid-template-rows: max-content;
-    place-items: center center;
+    place-self: center center;
     padding: 0rem 2rem 1rem;
 }
 
@@ -120,7 +121,7 @@
     grid-template-areas:
         "cnt-hme cnt-res";
     place-content: center center;
-    padding: 0rem 2rem 1.5rem;
+    padding: 0rem 0rem 1.5rem;
     margin: 0rem;
 }
 
@@ -265,7 +266,7 @@
 .container-item-detail {
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 18vh repeat(2, max-content);
+    grid-template-rows: 10rem repeat(2, max-content);
     grid-template-areas:
         "det-hdr"
         "det-img"
@@ -280,14 +281,14 @@
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 18vh;
+    height: 10rem;
     background-attachment: fixed;
 }
 
 .item-detail-image {
     grid-area: det-img;
     place-self: center center;
-    padding: 6rem 0rem 2rem;
+    padding: 4rem 0rem 0rem;
 }
 
 .item-detail-image img {
@@ -513,20 +514,236 @@
 /**********************************-***********************************/
 
 
-/****  /screen and (min-width: 1400px)  ****/
+/****  screen and (min-width: 767px)  ****/
+
+@media screen and (min-width: 767px) {
+
+    /****************/
+    /**** Search ****/
+    /****************/
+
+    .item-search {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas:
+            "sch-frm sch-frm"
+            "sch-cnt sch-srt";
+        grid-row-gap: 1rem;
+        padding: 0rem 6rem;
+    }
+
+    .search-form {
+        grid-template-columns: auto minmax(5rem, 8rem);
+        padding: 0rem 6rem 1rem;
+    }
+
+    .item-count {
+        height: 100%;
+        place-content: end start;
+        padding: 0rem;
+        margin: 0rem;
+    }
+
+    .item-sort {
+        place-self: end end;
+    }
+
+    /*********************/
+    /**** Item Detail ****/
+    /*********************/
+
+    .item-detail-image {
+        padding: 6rem 0rem 2rem;
+    }
+
+    .item-details {
+        margin: 0rem 6rem 6rem;
+    }
+
+    .detail-actions {
+        grid-template-columns: repeat(2, max-content);
+        grid-template-rows: max-content;
+        grid-template-areas:
+            "act-shp act-add";
+        place-content: center start;
+    }
+
+    .actions-keep-shopping {
+        width: 15rem;
+        margin-bottom: 0rem;
+        margin-right: 0.4rem;
+    }
+
+}
+
+/****  /screen and (min-width: 767px)  ****/
+
+
+/****  screen and (min-width: 1023px)  ****/
+
+@media screen and (min-width: 1023px) {
+
+    /********************/
+    /**** Collection ****/
+    /********************/
+
+    .container-collection {
+        grid-template-rows: 14rem repeat(2, max-content);
+    }
+
+    /****************/
+    /**** Header ****/
+    /****************/
+
+    .collection-header {
+        height: 13rem;
+    }
+
+    /****************/
+    /**** Search ****/
+    /****************/
+
+    .item-search {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas:
+            "sch-frm sch-frm"
+            "sch-cnt sch-srt";
+        grid-row-gap: 1rem;
+        padding: 0rem 16rem;
+    }
+
+    .search-form {
+        grid-template-columns: auto minmax(7rem, 10rem);
+        padding: 0rem 5rem 1rem;
+    }
+
+    /*********************/
+    /**** Item Detail ****/
+    /*********************/
+
+    .container-item-detail {
+        grid-template-rows: 13rem repeat(2, max-content);
+    }
+
+    .item-detail-header {
+        height: 13rem;
+    }
+
+    .item-detail-image {
+        padding: 6rem 0rem 2rem;
+    }
+
+    .item-detail-image img {
+        width: 38rem;
+    }
+
+    .item-details {
+        margin: 0rem 10rem 6rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1023px)  ****/
+
+
+/****  screen and (min-width: 1200px)  ****/
+
+@media screen and (min-width: 1200px) {
+
+    /****************/
+    /**** Search ****/
+    /****************/
+
+    .item-title {
+        padding-bottom: 1.5rem;
+    }
+
+    .search-form {
+        padding: 0rem 5rem;
+    }
+
+    /*********************/
+    /**** Item Detail ****/
+    /*********************/
+
+    .container-item-detail {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 13rem max-content;
+        grid-template-areas:
+            "det-hdr det-hdr"
+            "det-img det-sum";
+        place-self: center center;
+    }
+
+    .item-detail-image {
+        place-self: center start;
+        padding: 0rem;
+        margin-left: 15rem;
+    }
+
+    .item-detail-image img {
+        width: 40rem;
+    }
+
+    .item-details {
+        margin: 6rem 15rem 6rem 10rem;
+    }
+
+    .detail-name {
+        margin: 0rem 0rem 3.5rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1200px)  ****/
+
+
+/****  screen and (min-width: 1400px)  ****/
 
 @media screen and (min-width: 1400px) {
 
-    /******************/
-    /****  Header  ****/
-    /******************/
+    /****************/
+    /**** Search ****/
+    /****************/
 
-    .collection-header-title {
-        margin: 2rem 7rem 2rem 4rem;
+    .collection-search {
+        margin: 4rem 0rem 2rem;
     }
 
-    .collection-text {
-        margin: 2.2rem 8rem 2.2rem 5rem;
+    .item-search {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas:
+            "sch-frm sch-frm"
+            "sch-cnt sch-srt";
+        grid-row-gap: 1rem;
+        padding: 0rem 20rem;
+    }
+
+    .item-title {
+        font-size: 3.4rem;
+        padding-bottom: 4rem;
+    }
+
+    .search-form {
+        padding: 0rem 5rem 1rem;
+    }
+
+    /*********************/
+    /**** Item Detail ****/
+    /*********************/
+
+    .item-detail-image {
+        margin-left: 20rem;
+    }
+
+    .item-detail-image img {
+        width: 42rem;
+    }
+
+    .item-details {
+        margin: 6rem 20rem 6rem 15rem;
     }
 
 }
@@ -534,22 +751,34 @@
 /****  /screen and (min-width: 1400px)  ****/
 
 
-/****  screen and (min-width: 1920px)  ****/
+/****  screen and (min-width: 1900px)  ****/
 
-@media only screen and (min-width: 1920px) {
+@media screen and (min-width: 1900px) {
 
-    /******************/
-    /****  Header  ****/
-    /******************/
+    /****************/
+    /**** Search ****/
+    /****************/
 
-    .collection-header-title {
-        margin: 2rem 7rem;
+    .item-search {
+        padding: 0rem 40rem;
     }
 
-    .collection-text {
-        margin: 2.2rem 12rem 2.2rem 7.5rem;
+    /*********************/
+    /**** Item Detail ****/
+    /*********************/
+
+    .item-detail-image {
+        margin-left: 25rem;
+    }
+
+    .item-detail-image img {
+        width: 45rem;
+    }
+
+    .item-details {
+        margin: 15rem 25rem 15rem 20rem;
     }
 
 }
 
-/****  /screen and (min-width: 1920px)  ****/
+/****  /screen and (min-width: 1900px)  ****/

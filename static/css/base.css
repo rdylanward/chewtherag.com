@@ -1078,9 +1078,17 @@ body {
 /****  /screen and (min-width: 767px)  ****/
 
 
-/****  screen and (min-width: 1024px)  ****/
+/****  screen and (min-width: 1023px)  ****/
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
+
+    /******************/
+    /****  Navbar  ****/
+    /******************/
+
+    .navbar-message {
+        padding: 0rem 9rem;
+    }
 
     /******************/
     /****  Footer  ****/
@@ -1118,7 +1126,7 @@ body {
 
 }
 
-/****  /screen and (min-width: 1024px)  ****/
+/****  /screen and (min-width: 1023px)  ****/
 
 
 /****  /screen and (min-width: 1200px)  ****/

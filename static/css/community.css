@@ -66,11 +66,11 @@
     /****************/
 
     .community-header-title {
-        padding: 0rem 6rem 2rem;
+        padding: 0rem 15rem 2rem 6rem;
     }
 
     .community-header-text {
-        padding: 0rem 6rem;
+        padding: 0rem 15rem 0rem 6rem;
     }
 
 }
@@ -91,7 +91,7 @@
     }
 
     .community-header-text {
-        padding: 0rem 20rem 0rem 10rem;
+        padding: 0rem 30rem 0rem 10rem;
     }
 
 }
