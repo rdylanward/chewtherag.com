@@ -6,26 +6,33 @@
 {% endblock %}
 
 {% block content %}
-<!--  GRID CONTAINER  -->
 
+<!--
+    GRID CONTAINER
+-->
 <div class="container-cart blue">
 
-    <!--  CART HEADER  -->
-
+    <!--
+        CART HEADER
+    -->
     <div class="cart-header"></div>
+    <!--
+        /CART HEADER
+    -->
 
-    <!--  /CART HEADER  -->
-
-    <!--  CART HEADING  -->
-
+    <!--
+        CART HEADING
+    -->
     <div class="cart-heading">
         <p class="uppercase blue">Reserved Items<i class="fas fa-shopping-cart"></i></p>
     </div>
+    <!--
+        /CART HEADING
+    -->
 
-    <!--  /CART HEADING  -->
-
-    <!--  CART ITEMS  -->
-
+    <!--
+        CART ITEMS
+    -->
     <div class="cart-items">
         <div class="cart-items-header">
                 <span class="label-detail items-header-label">Detail</span>
@@ -109,7 +116,7 @@
                         <a class="cart-empty-shopping btn-blue-white no-decoration uppercase" href="{% url 'collection' %}">
                             Keep Shopping
                         </a>
-                        <a class="cart-actions-checkout btn-greyed-out no-decoration uppercase" href="javascript:void(0);">
+                        <a class="cart-empty-checkout btn-greyed-out no-decoration uppercase" href="javascript:void(0);">
                             Secure Checkout<i class="fas fa-lock"></i>
                         </a>
                     </div>
@@ -117,12 +124,14 @@
             {% endif %}
         </div>
     </div>
-
-    <!--  /CART ITEMS  -->
+    <!--
+        /CART ITEMS
+    -->
 
 </div>
-
-<!--  /GRID CONTAINER  -->
+<!--
+    /GRID CONTAINER
+-->
 
 {% endblock %}
 

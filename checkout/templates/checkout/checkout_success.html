@@ -6,53 +6,37 @@
 {% endblock %}
 
 {% block content %}
-<!--  GRID CONTAINER  -->
 
-<div class="container-checkout-success blue">
+<!--
+    GRID CONTAINER
+-->
+<div class="container-checkout-success">
 
-    <!--  SUCCESS HEADER  -->
-
-    <div class="checkout-success-header"></div>
-
-    <!--  /SUCCESS HEADER  -->
-
-    <!--  SUCCESS HEADING  -->
-
-    <div class="checkout-success-heading">
-        <p class="uppercase blue">Thank you for your order!<i class="fas fa-thumbs-up"></i></p>
-    </div>
-
-    <!--  /SUCCESS HEADING  -->
-
-    <!--  SUCCESS FOLLOW UP  -->
-
-    <div class="checkout-success-follow-up">
-        <p class="blue">
-            Your patronage is always appreciated. You will receive a confirmation email will be sent to {{ order.email }} 
+    <!--
+        SUCCESS HEADER
+    -->
+    <div class="checkout-success-header">
+        <p class="checkout-success-heading uppercase">
+            Thank you for your order!
+            <i class="fas fa-thumbs-up"></i>
+        </p>
+        <p class="checkout-success-follow-up">
+            Your patronage is always appreciated. A confirmation email will be sent to {{ order.email }}
             with the details of your order. We hope you enjoy your purchased items.
         </p>
-    </div>
-
-    <!--  /SUCCESS FOLLOW UP  -->
-
-    <!--  SUCCESS BLANK DIV  -->
-
-    <div class="checkout-success-blank"></div>
-
-    <!--  /SUCCESS BLANK DIV  -->
-
-    <!--  SUCCESS BACK TO COLLECTIONS  -->
-
-    <div class="checkout-success-back">                    
-        <a class="btn-blue-white no-decoration uppercase" href="{% url 'collection' %}?category=new_arrivals,deals,clearance">
-            <span>Why not continue shopping?</span>
+        <a class="checkout-success-back btn-white no-decoration uppercase" href="{% url 'collection' %}?category=new_arrivals,deals,clearance">
+            <span>
+                Why not continue shopping?
+            </span>
         </a>
     </div>
-
-    <!--  SUCCESS BACK TO COLLECTIONS  -->
+    <!--
+        /SUCCESS HEADER
+    -->
 
 </div>
-
-<!--  /GRID CONTAINER  -->
+<!--
+    /GRID CONTAINER
+-->
 
 {% endblock %}

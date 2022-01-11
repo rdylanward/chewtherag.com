@@ -9,7 +9,7 @@
 {% block content %}
 <!--  GRID CONTAINER  -->
 
-<div class="container-checkout blue">
+<div class="container-checkout">
 
     <!--  CHECKOUT HEADER  -->
 
@@ -20,22 +20,70 @@
     <!--  CHECKOUT HEADING  -->
 
     <div class="checkout-heading">
-        <p class="uppercase blue">Checkout<i class="fas fa-cash-register"></i></p>
+        <p class="uppercase">Checkout<i class="fas fa-cash-register"></i></p>
     </div>
 
     <!--  /CHECKOUT HEADING  -->
 
+    <!--  CHECKOUT SUMMARY  -->
+
+    <div class="checkout-summary">
+        <p class="summary-heading"><span>Order Summary<i class="fas fa-scroll"></i></span></p>
+        <div class="summary-labels">
+            <span class="labels-detail label-wrapper">Detail</span>
+            <span class="labels-item label-wrapper">Item</span>
+            <span class="labels-subtotal label-wrapper">Subtotal</span>
+        </div>
+        <div class="summary-order-list">
+            {% for item in cart_items %}
+                <div class="order-list-wrapper">
+                    <div class="summary-image">
+                        <a href="{% url 'item_detail' item.item.id %}">
+                            {% if item.item.image %}
+                                <img class="checkout-image checkout-img-shadow" src="{{ item.item.image.url }}" alt="{{ item.name }}">
+                            {% else %}
+                                <img class="checkout-image checkout-img-shadow" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="summary-identifiers">
+                        <p class="identifiers-name"><strong>{{ item.item.name }}</strong></p>
+                        <p class="identifiers-size">Size: {% if item.item.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                        <p class="identifiers-quantity">Qty: {{ item.quantity }}</p>
+                    </div>
+                    <div class="summary-subtotal">
+                        <p class="">&euro;{{ item.item.price | calc_subtotal:item.quantity }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="summary-order-totals">
+            <div class="totals-labels">
+                <p class="labels-total totals-label"><strong>Order Total:</strong></p>
+                <p class="labels-shipping totals-label"><strong>Shipping:</strong></p>
+                <p class="labels-grand-total totals-label"><strong>Grand Total:</strong></p>
+            </div>
+            <div class="totals-values">
+                <p class="values-total totals-value"><strong>&euro;{{ total | floatformat:2 }}</strong></p>
+                <p class="values-shipping totals-value"><strong>&euro;{{ shipping | floatformat:2 }}</strong></p>
+                <p class="values-grand-total totals-value"><strong>&euro;{{ cart_total | floatformat:2 }}</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!--  /CHECKOUT SUMMARY  -->
+
     <!--  CHECKOUT FORM  -->
 
-    <div class="checkout-form blue">
-        <p class="checkout-instructions blue">Please fill out the required details and enter your credit card to complete your order.</p>
-        <form class="checkout-info blue" action="{% url 'checkout' %}" method="POST" id="checkout-info">
+    <div class="checkout-form">
+        <p class="checkout-instructions">Please fill out the required details and enter your credit card to complete your order.</p>
+        <form class="checkout-info" action="{% url 'checkout' %}" method="POST" id="checkout-info">
             {% csrf_token %}
 
             <!-- CHECKOUT DETAILS -->
 
-            <fieldset class="info-details blue">
-                <legend class="blue">Details</legend>
+            <fieldset class="info-details">
+                <legend>Details</legend>
                 {{ order_form.full_name | as_crispy_field }}
                 {{ order_form.email | as_crispy_field }}
             </fieldset>
@@ -44,7 +92,7 @@
 
             <!-- CHECKOUT SHIPPING -->
 
-            <fieldset class="info-shipping blue">
+            <fieldset class="info-shipping">
                 <legend class="blue">Shipping</legend>
                 {{ order_form.phone_number | as_crispy_field }}
                 {{ order_form.street_address1 | as_crispy_field }}
@@ -53,14 +101,14 @@
                 {{ order_form.county | as_crispy_field }}
                 {{ order_form.postcode | as_crispy_field }}
                 {{ order_form.country | as_crispy_field }}
-                <div class="info-save blue">
+                <div class="info-save">
                     {% if user.is_authenticated %}
-                        <label class="info-save-label blue" for="info-save-info">Save information to my profile</label>
-                        <input class="info-save-input blue" type="checkbox" id="info-save-info" name="save-info" checked>
+                        <label class="info-save-label" for="info-save-info">Save information to my profile</label>
+                        <input class="info-save-input" type="checkbox" id="info-save-info" name="save-info" checked>
                     {% else %}
-                        <label class="info-save-label blue" for="info-save-info">
-                            <a class="info-save-link no-decoration blue" href="{% url 'account_signup' %}"><strong>Register</strong> an account</a> or 
-                            <a class="info-save-link no-decoration blue" href="{% url 'account_login' %}"><strong>login</strong></a> to save this information.
+                        <label class="info-save-label" for="info-save-info">
+                            <a class="info-save-link no-decoration" href="{% url 'account_signup' %}"><strong>Register</strong> an account</a> or
+                            <a class="info-save-link no-decoration" href="{% url 'account_login' %}"><strong>login</strong></a> to save this information.
                         </label>
                     {% endif %}
                 </div>
@@ -71,7 +119,7 @@
             <!-- CHECKOUT PAYMENT -->
 
             <fieldset class="info-payment">
-                <legend class="blue">Payment</legend>
+                <legend>Payment</legend>
                 <!-- A Stripe card element will go here -->
                 <div class="payment-card-element" id="payment-card-element"></div>
 
@@ -104,52 +152,6 @@
     </div>
 
     <!--  /CHECKOUT FORM  -->
-
-    <!--  CHECKOUT SUMMARY  -->
-
-    <div class="checkout-summary">
-        <p class="summary-heading"><span>Order Summary<i class="fas fa-scroll"></i></span></p>
-        <div class="summary-labels">
-            <span class="labels-detail label-wrapper">Detail</span>
-            <span class="labels-item label-wrapper">Item</span>
-            <span class="labels-subtotal label-wrapper">Subtotal</span>
-        </div>
-        <div class="summary-order-list">
-            {% for item in cart_items %}
-                <div class="summary-image">
-                    <a href="{% url 'item_detail' item.item.id %}">
-                        {% if item.item.image %}
-                            <img class="checkout-image checkout-img-shadow" src="{{ item.item.image.url }}" alt="{{ item.name }}">
-                        {% else %}
-                            <img class="checkout-image checkout-img-shadow" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.name }}">
-                        {% endif %}
-                    </a>
-                </div>
-                <div class="summary-identifiers">
-                    <p class="identifiers-name">{{ item.item.name }}</p>
-                    <p class="identifiers-size">Size: {% if item.item.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                    <p class="identifiers-quantity">Qty: {{ item.quantity }}</p>
-                </div>
-                <div class="summary-subtotal">
-                    <p class="">&euro;{{ item.item.price | calc_subtotal:item.quantity }}</p>
-                </div>
-            {% endfor %}
-        </div>
-        <div class="summary-order-totals">
-            <div class="totals-labels">
-                <p class="labels-total totals-label">Order Total:</p>
-                <p class="labels-shipping totals-label">Shipping:</p>
-                <p class="labels-grand-total totals-label">Grand Total:</p>
-            </div>
-            <div class="totals-values">
-                <p class="values-total totals-value">&euro;{{ total | floatformat:2 }}</p>
-                <p class="values-shipping totals-value">&euro;{{ shipping | floatformat:2 }}</p>
-                <p class="values-grand-total totals-value">&euro;{{ cart_total | floatformat:2 }}</p>
-            </div>
-        </div>
-    </div>
-
-    <!--  /CHECKOUT SUMMARY  -->
 
 </div>
 

@@ -3,16 +3,29 @@
 /**********************************-***********************************/
 
 
-.container-checkout {
+/* .container-checkout {
     font-family: 'Montserrat', sans-serif;
     min-height: 82vh;
     display: grid;
     grid-template-columns: 15% repeat(2, 35%) 15%;
-    grid-template-rows: 18vh repeat(3, max-content);
+    grid-template-rows: 13rem repeat(3, max-content);
     grid-template-areas: 
         "chk-hdr chk-hdr chk-hdr chk-hdr"
         ". chk-hdn chk-hdn ."
         ". chk-frm chk-sum .";
+    margin-bottom: 6rem;
+} */
+
+.container-checkout {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10rem repeat(3, max-content);
+    grid-template-areas:
+        "chk-hdr"
+        "chk-hdn"
+        "chk-sum"
+        "chk-frm";
     margin-bottom: 6rem;
 }
 
@@ -23,11 +36,11 @@
 
 .checkout-header {
     grid-area: chk-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/interestingly-designed-store.jpg');
+    background-image: linear-gradient(rgba(7, 10, 18, 0.55), rgba(7, 10, 18, 0.55)), url('/media/interestingly-designed-store.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 18vh;
+    height: 10rem;
     background-attachment: fixed;
 }
 
@@ -39,17 +52,222 @@
 
 .checkout-heading {
     grid-area: chk-hdn;
-    margin: 6rem 0rem 3rem 0rem;
+    margin: 3rem 2rem 2rem;
 }
 
 .checkout-heading p {
-    font-size: 3.9rem;
+    font-size: 3.1rem;
     font-weight: 600;
     margin: 0rem;
 }
 
 .checkout-heading p i {
-    margin-left: 1.8rem;
+    margin-left: 1.2rem;
+}
+
+
+/**********************************************************************/
+/***                Checkout Summary (checkout.html)                ***/
+/**********************************-***********************************/
+
+
+.checkout-summary {
+    grid-area: chk-sum;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+        "chk-sum-hdr"
+        "chk-sum-lst"
+        "chk-sum-tot";
+    padding: 0rem;
+    margin: 0rem 2rem;
+}
+
+.summary-heading {
+    grid-area: chk-sum-hdr;
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin: 0rem 0rem 3rem;
+}
+
+.summary-heading span {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.summary-heading span i {
+    margin-left: 0.6rem;
+}
+
+.summary-labels {
+    grid-area: chk-sum-lbl;
+    display: none;
+    grid-template-columns: 28% auto 17%;
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        "sum-lbl-dtl sum-lbl-itm sum-lbl-sub";
+    border-bottom: 0.2rem solid var(--std__blue);
+    width: 100%;
+}
+
+.labels-detail {
+    grid-area: sum-lbl-dtl;
+    background: rgba(29, 43, 81, 0.1);
+}
+
+.labels-item {
+    grid-area: sum-lbl-itm;
+    background: rgba(29, 43, 81, 0.05);
+}
+
+.labels-subtotal {
+    grid-area: sum-lbl-sub;
+    background: rgba(29, 43, 81, 0.1);
+}
+
+.label-wrapper {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem;
+}
+
+.summary-order-list {
+    grid-area: chk-sum-lst;
+}
+
+.order-list-wrapper {
+    display: grid;
+    grid-template-columns: auto 9rem;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
+        "ord-lst-img ord-lst-img"
+        "ord-lst-idn ord-lst-sub";
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.summary-order-totals {
+    grid-area: chk-sum-tot;
+}
+
+.summary-image {
+    grid-area: ord-lst-img;
+    place-self: center center;
+    margin: 0.6rem;
+}
+
+.checkout-image {
+    width: 16rem;
+}
+
+.summary-identifiers {
+    grid-area: ord-lst-idn;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+        "idn-nam"
+        "idn-siz"
+        "idn-qty";
+    place-self: start start;
+}
+
+.identifiers-name {
+    grid-area: idn-nam;
+    font-weight: 600;
+}
+
+.identifiers-size {
+    grid-area: idn-siz;
+    font-weight: 500;
+}
+
+.identifiers-quantity {
+    grid-area: idn-qty;
+    font-weight: 500;
+}
+
+.summary-identifiers p {
+    font-size: 1.3rem;
+    text-align: left;
+    place-self: start start;
+    padding: 0.6rem 0.6rem 1rem;
+    margin: 0rem;
+}
+
+.summary-subtotal {
+    grid-area: ord-lst-sub;
+    font-size: 1.3rem;
+    text-align: right;
+    place-self: start end;
+}
+
+.summary-subtotal p {
+    padding: 0.5rem;
+    margin: 0rem 2rem 0rem 0rem;
+}
+
+.summary-order-totals {
+    grid-area: chk-sum-tot;
+    border-top: 0.2rem solid var(--std__blue);
+    background: rgba(29, 43, 81, 0.25);
+    display: grid;
+    grid-template-columns: auto 8rem;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas: 
+        "tot-lbl-tot tot-val-tot"
+        "tot-lbl-shp tot-val-shp"
+        "tot-lbl-grd tot-val-grd";
+    place-items: center end;
+    padding: 2rem 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.labels-total {
+    grid-area: tot-lbl-tot;
+    margin: 0rem 0rem 1rem;
+}
+
+.labels-shipping {
+    grid-area: tot-lbl-shp;
+    margin: 0rem 0rem 1rem;
+}
+
+.labels-grand-total {
+    grid-area: tot-lbl-grd;
+    margin: 0rem 0rem 1rem;
+}
+
+.values-total {
+    grid-area: tot-val-tot;
+    margin: 0rem 0.5rem;
+}
+
+.values-shipping {
+    grid-area: tot-val-shp;
+    margin: 0rem 0.5rem;
+}
+
+.values-grand-total {
+    grid-area: tot-val-grd;
+    margin: 0rem 0.5rem;
+}
+
+.totals-label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.totals-value {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: right;
+    margin-bottom: 1rem;
 }
 
 
@@ -60,7 +278,8 @@
 
 .checkout-form {
     grid-area: chk-frm;
-    margin-right: 3rem;
+    color: var(--std__blue);
+    margin: 2rem;
 }
 
 .checkout-form p {
@@ -71,14 +290,14 @@
 .checkout-instructions {
     font-size: 1.6rem !important;
     text-align: justify;
-    margin: 0.5rem 0rem 2.5rem 0rem;
+    margin: 0.5rem 0rem 2.5rem;
 }
 
 .info-details,
 .info-shipping,
 .info-payment {
-    color: #1d2b51;
     border: transparent;
+    width: auto;
     margin-bottom: 1.5rem;
 }
 
@@ -131,18 +350,30 @@ select option,
 }
 
 .order-submit {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
+        "ord-sub-upd"
+        "ord-sub-com";
+    place-content: center center;
     margin-top: 2.5rem;
 }
 
 .submit-update {
-    width: 15rem;
+    grid-area: ord-sub-upd;
+    width: 18.5rem;
+    place-self: center center;
     padding: 0.75rem 1rem 0.76rem 1rem;
-    margin: 0rem 0.2rem 0rem 1.2rem;
+    margin: 0rem 0rem 0.2rem;
 }
 
 .submit-complete {
+    grid-area: ord-sub-com;
     font-family: 'Montserrat', sans-serif;
-    width: 20rem;
+    width: 21rem;
+    height: 4rem;
+    place-self: center center;
     padding: 0.75rem 1rem 0.76rem 1rem;
 }
 
@@ -151,7 +382,8 @@ select option,
 }
 
 .order-submit-disclaimer {
-    margin: 2rem 0rem 0rem 1.2rem;
+    place-self: center center;
+    margin: 3rem 0rem 0rem 1.2rem;
 }
 
 
@@ -188,265 +420,333 @@ select option,
 
 
 /**********************************************************************/
-/***                Checkout Summary (checkout.html)                ***/
-/**********************************-***********************************/
-
-
-.checkout-summary {
-    grid-area: chk-sum;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4, max-content);
-    grid-template-areas:
-        "chk-sum-hdr"
-        "chk-sum-lbl"
-        "chk-sum-lst"
-        "chk-sum-tot";
-    padding: 0rem;
-    margin-left: 3rem;
-}
-
-.summary-heading {
-    font-size: 2.4rem;
-    font-weight: 900;
-    margin: 0rem 0rem 4.6rem;
-}
-
-.summary-heading span {
-    font-size: 1.8rem;
-    font-weight: 500;
-}
-
-.summary-heading span i {
-    margin-left: 0.6rem;
-}
-
-.summary-heading {
-    grid-area: chk-sum-hdr;
-}
-
-.summary-labels {
-    grid-area: chk-sum-lbl;
-    display: grid;
-    grid-template-columns: 28% auto 17%;
-    grid-template-rows: max-content;
-    grid-template-areas: 
-        "sum-lbl-dtl sum-lbl-itm sum-lbl-sub";
-    border-bottom: 0.2rem solid #1d2b51;
-    width: 100%;
-}
-
-.labels-detail {
-    grid-area: sum-lbl-dtl;
-    background: rgba(29, 43, 81, 0.1);
-}
-
-.labels-item {
-    grid-area: sum-lbl-itm;
-    background: rgba(29, 43, 81, 0.05);
-}
-
-.labels-subtotal {
-    grid-area: sum-lbl-sub;
-    background: rgba(29, 43, 81, 0.1);
-}
-
-.label-wrapper {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 1rem;
-}
-
-.summary-order-list {
-    grid-area: chk-sum-lst;
-    display: grid;
-    grid-template-columns: 28% auto 17%;
-    width: 100%;
-    height: 100%;
-    justify-self: center;
-}
-
-.summary-order-list > div:nth-child(3n+1) {
-    padding: 2rem 0.8rem;
-}
-
-.summary-order-list > div:nth-child(3n+2) {
-    padding: 2rem 0.8rem;
-}
-
-.summary-order-list > div:nth-child(3n+3) {
-    padding: 0.6rem 0.8rem;
-}
-
-.summary-order-totals {
-    grid-area: chk-sum-tot;
-}
-
-.checkout-image {
-    width: 16rem;
-}
-
-.summary-identifiers {
-    background-size: cover;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, max-content);
-    grid-template-areas:
-        "idn-nam"
-        "idn-siz"
-        "idn-qty";
-    place-self: start start;
-}
-
-.identifiers-name {
-    grid-area: idn-nam;
-    font-weight: 600;
-}
-
-.identifiers-size {
-    grid-area: idn-siz;
-    font-weight: 500;
-}
-
-.identifiers-quantity {
-    grid-area: idn-qty;
-    font-weight: 500;
-}
-
-.summary-identifiers p {
-    font-size: 1.3rem;
-    text-align: left;
-    padding: 0rem 0rem 1rem;
-    margin: 0rem;
-}
-
-.summary-subtotal {
-    font-size: 1.3rem;
-    text-align: right;
-}
-
-.summary-order-totals {
-    grid-area: chk-sum-tot;
-    border-top: 0.2rem solid #1d2b51;
-    background: rgba(29, 43, 81, 0.1);
-    display: grid;
-    grid-template-columns: 84% 17%;
-    grid-template-rows: repeat(3, max-content);
-    grid-template-areas: 
-        "tot-lbl-tot tot-val-tot"
-        "tot-lbl-shp tot-val-shp"
-        "tot-lbl-grd tot-val-grd";
-    place-items: center end;
-    padding: 1rem 0.8rem;
-}
-
-.labels-total {
-    grid-area: tot-lbl-tot;
-}
-
-.labels-shipping {
-    grid-area: tot-lbl-shp;
-}
-
-.labels-grand-total {
-    grid-area: tot-lbl-grd;
-}
-
-.values-total {
-    grid-area: tot-val-tot;
-}
-
-.values-shipping {
-    grid-area: tot-val-shp;
-}
-
-.values-grand-total {
-    grid-area: tot-val-grd;
-}
-
-.totals-label {
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-align: right;
-    margin-bottom: 1rem;
-}
-
-.totals-value {
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-align: right;
-    padding-right: 0.8rem;
-    margin-bottom: 1rem;
-}
-
-
-/**********************************************************************/
 /***           Checkout Success (checkout_success.html)             ***/
 /**********************************-***********************************/
 
 
 .container-checkout-success {
     font-family: 'Montserrat', sans-serif;
-    min-height: 82vh;
     display: grid;
-    grid-template-columns: 20% repeat(2, 30%) 20%;
-    grid-template-rows: 18vh repeat(4, max-content);
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
     grid-template-areas: 
-        "suc-hdr suc-hdr suc-hdr suc-hdr"
-        ". suc-hdn suc-hdn ."
-        ". suc-flw suc-flw ."
-        ". suc-blk suc-blk ."
-        ". suc-btn suc-btn .";
-    margin-bottom: 6rem;
+        "chk-suc-hdr";
 }
 
 .checkout-success-header {
-    grid-area: suc-hdr;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/media/interestingly-designed-store.jpg');
+    grid-area: chk-suc-hdr;
+    background-image: linear-gradient(rgba(7, 10, 18, 0.55), rgba(7, 10, 18, 0.55)), url('/media/shopping_bag.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 18vh;
+    height: 100vh;
     background-attachment: fixed;
+    color: var(--almost__white);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+        "chk-suc-hdr-ttl"
+        "chk-suc-hdr-txt"
+        "chk-suc-hdr-btn";
+    place-content: center start;
 }
 
 .checkout-success-heading {
-    grid-area: suc-hdn;
-    place-self: center start;
-    margin: 6rem 0rem 3rem 0rem;
-}
-
-.checkout-success-heading p {
-    font-size: 3.9rem;
+    grid-area: chk-suc-hdr-ttl;
+    font-size: 2.6rem;
     font-weight: 600;
-    margin: 0rem;
+    place-self: center start;
+    margin: 6rem 2rem 3rem;
 }
 
-.checkout-success-heading p i {
-    margin-left: 1.8rem;
+.checkout-success-heading i {
+    margin-left: 0.8rem;
 }
 
 .checkout-success-follow-up {
-    grid-area: suc-flw;
+    grid-area: chk-suc-hdr-txt;
     font-size: 1.6rem;
     text-align: justify;
     place-self: center start;
-    margin: 0.5rem 0rem 2.5rem 0rem;
-}
-
-.checkout-success-blank {
-    grid-area: suc-blk;
+    margin: 0.5rem 2rem 2rem;
 }
 
 .checkout-success-back {
-    grid-area: suc-btn;
-    width: 100%;
+    grid-area: chk-suc-hdr-btn;
+    width: 24rem;
+    height: 4rem;
     place-self: center start;
-    margin: 3rem 0rem;
+    padding: 0.75rem 1rem 0.76rem 1rem;
+    margin: 2rem 2rem;
 }
 
-.checkout-success-back a {
-    width: 35rem;
-    padding: 0.75rem 1rem 0.76rem 1rem;
+
+/**********************************************************************/
+/***                         Media Queries                          ***/
+/**********************************-***********************************/
+
+
+/****  screen and (min-width: 767px)  ****/
+
+@media screen and (min-width: 767px) {
+
+    /*****************/
+    /***  Heading  ***/
+    /*****************/
+
+    .checkout-heading {
+        margin: 3rem 6rem 2rem;
+    }
+
+    /*****************/
+    /***  Summary  ***/
+    /*****************/
+
+    .checkout-summary {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, max-content);
+        grid-template-areas:
+            "chk-sum-hdr"
+            "chk-sum-lbl"
+            "chk-sum-lst"
+            "chk-sum-tot";
+        margin: 0rem 6rem
+    }
+
+    .summary-labels {
+        display: grid;
+    }
+
+    .order-list-wrapper {
+        display: grid;
+        grid-template-columns:  28% auto 17%;
+        grid-template-rows: max-content;
+        grid-template-areas:
+            "ord-lst-img ord-lst-idn ord-lst-sub";
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    /**************/
+    /***  Form  ***/
+    /**************/
+
+    .checkout-form {
+        margin: 0rem 6rem 6rem;
+    }
+
+    /******************/
+    /***  Checkout  ***/
+    /******************/
+
+    .checkout-success-heading {
+        margin: 6rem 6rem 3rem;
+    }
+
+    .checkout-success-follow-up {
+        margin: 0.5rem 10rem 2rem 6rem;
+    }
+
+    .checkout-success-back {
+        margin: 2rem 6rem;
+    }
+
 }
+
+/****  /screen and (min-width: 767px)  ****/
+
+
+/****  screen and (min-width: 1023px)  ****/
+
+@media screen and (min-width: 1023px) {
+
+    /*******************/
+    /***  Container  ***/
+    /*******************/
+
+    .container-checkout {
+        grid-template-rows: 13rem repeat(3, max-content);
+        margin-bottom: 10rem;
+    }
+
+    /*****************/
+    /***  Header  ***/
+    /*****************/
+
+    .checkout-header {
+        height: 13rem;
+    }
+
+    /*****************/
+    /***  Heading  ***/
+    /*****************/
+
+    .checkout-heading {
+        margin: 3rem 10rem 2rem;
+    }
+
+    /*****************/
+    /***  Summary  ***/
+    /*****************/
+
+    .checkout-summary {
+        margin: 0rem 10rem
+    }
+
+    /**************/
+    /***  Form  ***/
+    /**************/
+
+    .checkout-form {
+        margin: 0rem 10rem 6rem;
+    }
+
+    /******************/
+    /***  Checkout  ***/
+    /******************/
+
+    .checkout-success-heading {
+        margin: 6rem 10rem 3rem;
+    }
+
+    .checkout-success-follow-up {
+        margin: 0.5rem 25rem 2rem 10rem;
+    }
+
+    .checkout-success-back {
+        margin: 2rem 10rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1023px)  ****/
+
+
+/****  screen and (min-width: 1200px)  ****/
+
+@media screen and (min-width: 1200px) {
+
+    /*******************/
+    /***  Container  ***/
+    /*******************/
+
+    .container-checkout {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 13rem repeat(3, max-content);
+        grid-template-areas:
+            "chk-hdr chk-hdr"
+            "chk-hdn chk-hdn"
+            "chk-sum chk-frm";
+        margin-bottom: 6rem;
+    }
+
+    /*****************/
+    /***  Heading  ***/
+    /*****************/
+
+    .checkout-heading {
+        margin: 3rem 6rem 2rem;
+    }
+
+    /*****************/
+    /***  Summary  ***/
+    /*****************/
+
+    .checkout-summary {
+        margin: 0rem 5rem 0rem 6rem;
+    }
+
+    .checkout-image {
+        width: 13rem;
+    }
+
+    /**************/
+    /***  Form  ***/
+    /**************/
+
+    .checkout-form {
+        margin: 0rem 6rem 0rem 5rem;
+    }
+
+    /******************/
+    /***  Checkout  ***/
+    /******************/
+
+    .checkout-success-heading {
+        margin: 6rem 10rem 3rem;
+    }
+
+    .checkout-success-follow-up {
+        margin: 0.5rem 55rem 2rem 10rem;
+    }
+
+    .checkout-success-back {
+        margin: 2rem 10rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1200px)  ****/
+
+
+/****  screen and (min-width: 1400px)  ****/
+
+@media screen and (min-width: 1400px) {
+
+    /*****************/
+    /***  Heading  ***/
+    /*****************/
+
+    .checkout-heading {
+        margin: 6rem 15rem 2rem;
+    }
+
+    /*****************/
+    /***  Summary  ***/
+    /*****************/
+
+    .checkout-summary {
+        margin: 0rem 10rem 0rem 15rem;
+    }
+
+    .checkout-image {
+        width: 16rem;
+    }
+
+    /**************/
+    /***  Form  ***/
+    /**************/
+
+    .checkout-form {
+        margin: 0rem 15rem 0rem 10rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1400px)  ****/
+
+
+/****  screen and (min-width: 1920px)  ****/
+
+@media screen and (min-width: 1920px) {
+
+    /******************/
+    /***  Checkout  ***/
+    /******************/
+
+    .checkout-success-heading {
+        margin: 6rem 15rem 3rem;
+    }
+
+    .checkout-success-follow-up {
+        margin: 0.5rem 75rem 2rem 15rem;
+    }
+
+    .checkout-success-back {
+        margin: 2rem 15rem;
+    }
+
+}
+
+/****  /screen and (min-width: 1920px)  ****/

@@ -78,11 +78,11 @@ body {
 }
 
 .disable {
-    color: rgba(0, 0, 0, 0.4);
+    color: rgba(7, 10, 18, 0.4);
 }
 
 .blue-shadow {
-    box-shadow: 0.45rem 0.45rem 0.9rem #1d2b51;
+    box-shadow: 0.45rem 0.45rem 0.9rem var(--std__blue);
 }
 
 .cart-img-shadow,
@@ -91,12 +91,12 @@ body {
 }
 
 .btn-blue-white {
-    color: #1d2b51;
+    color: var(--std__blue);
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     background: transparent;
-    border: 0.25rem solid #1d2b51;
+    border: 0.25rem solid var(--std__blue);
     border-radius: 0.6rem;
     height: 2rem;
     cursor: pointer;
@@ -104,8 +104,8 @@ body {
 }
 
 .btn-blue-white:hover {
-    color: #fff;
-    background: #1d2b51;
+    color: var(--almost__white);
+    background: var(--std__blue);
     transition: all 0.3s;
 }
 
@@ -116,12 +116,12 @@ body {
 }
 
 .btn-white {
-    color: #fff;
+    color: var(--almost__white);
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     background: transparent;
-    border: 0.25rem solid #fff;
+    border: 0.25rem solid var(--almost__white);
     border-radius: 0.6rem;
     height: 2rem;
     cursor: pointer;
@@ -129,24 +129,24 @@ body {
 }
 
 .btn-white:hover {
-    color: rgba(0, 0, 0, 0.8);
-    background: #fff;
+    color: rgba(7, 10, 18, 0.8);
+    background: var(--almost__white);
     transition: all 0.3s;
 }
 
 .btn-white:active {
-    background: rgba(255, 255, 255, 0.6);
-    border: 0.1rem solid rgba(255, 255, 255, 0.6);
+    background: rgba(254, 253, 252, 0.6);
+    border: 0.1rem solid rgba(254, 253, 252, 0.6);
     transition: all 0.3s;
 }
 
 .btn-greyed-out {
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(7, 10, 18, 0.3);
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     background: transparent;
-    border: 0.25rem solid rgba(0, 0, 0, 0.3);
+    border: 0.25rem solid rgba(7, 10, 18, 0.3);
     border-radius: 0.6rem;
     height: 2rem;
 }

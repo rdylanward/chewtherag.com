@@ -57,19 +57,6 @@
 /**********************************-***********************************/
 
 
-/* .cart-items {
-    grid-area: crt-itm;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, max-content);
-    grid-template-areas: 
-        "itm-hdr"
-        "itm-lst";
-    justify-self: center;
-    width: 100%;
-    margin: 0rem 2rem 6rem;
-} */
-
 .cart-items-header {
     grid-area: itm-hdr;
     display: none;
@@ -91,48 +78,6 @@
     margin: 0rem 2rem 6rem;
 }
 
-/* .label-detail {
-    grid-area: itm-lbl-dtl;
-    background: rgba(29, 43, 81, 0.25);
-}
-
-.label-sku {
-    grid-area: itm-lbl-sku;
-    background: rgba(29, 43, 81, 0.15);
-}
-
-.label-descritption {
-    grid-area: itm-lbl-dsc;
-    background: rgba(29, 43, 81, 0.25);
-}
-
-.label-size {
-    grid-area: itm-lbl-siz;
-    background: rgba(29, 43, 81, 0.15);
-}
-
-.label-price {
-    grid-area: itm-lbl-prc;
-    background: rgba(29, 43, 81, 0.25);
-}
-
-.label-quantity {
-    grid-area: itm-lbl-qty;
-    background: rgba(29, 43, 81, 0.15);
-}
-
-.label-subtotal {
-    grid-area: itm-lbl-sub;
-    background: rgba(29, 43, 81, 0.25);
-}
-
-.items-header-label {
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 1rem;
-} */
-
 .cart-items-list {
     grid-area: itm-lst;
     display: grid;
@@ -144,14 +89,6 @@
         "itm-lst-btn";
     padding: 0rem;
 }
-
-/* .list-items-ordered {
-    grid-area: itm-lst-ord;
-    display: grid;
-    grid-template-columns: 15.7% 9.5% auto 4% 7% 7.5% 8%;
-    width: 100%;
-    justify-self: center;
-} */
 
 .list-items-ordered {
     grid-area: itm-lst-ord;
@@ -169,45 +106,6 @@
         "itm-ord-siz itm-ord-qty itm-ord-sub";
     margin: 0rem 0rem 2rem;
 }
-
-/* .list-items-ordered > span {
-    padding: 2rem 1rem;
-} */
-
-/* .list-items-ordered > span:nth-child(7n+1) {
-    background: rgba(29, 43, 81, 0.1);
-    padding: 2rem 0.8rem;
-}
-
-.list-items-ordered > span:nth-child(7n+2) {
-    background: rgba(29, 43, 81, 0.05);
-    padding: 2rem 0.9rem;
-}
-
-.list-items-ordered > span:nth-child(7n+3) {
-    background: rgba(29, 43, 81, 0.1);
-}
-
-.list-items-ordered > span:nth-child(7n+4) {
-    background: rgba(29, 43, 81, 0.05);
-}
-
-.list-items-ordered > span:nth-child(7n+5) {
-    background: rgba(29, 43, 81, 0.1);
-}
-
-.list-items-ordered > span:nth-child(7n+6) {
-    background: rgba(29, 43, 81, 0.05);
-    padding: 3rem 0.3rem 0rem 0.3rem;
-}
-
-.list-items-ordered > span:nth-child(7n+7) {
-    background: rgba(29, 43, 81, 0.1);
-} */
-
-/* .list-items-ordered > span > p {
-    margin: 1rem 0rem 0rem 0rem;
-} */
 
 .span1 {
     grid-area: itm-ord-img;
@@ -427,20 +325,26 @@
 
 .cart-actions {
     grid-area: itm-lst-btn;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
+        "crt-act-shp"
+        "crt-act-chk";
     place-self: center center;
     margin: 1rem 0rem;
 }
 
 .cart-actions-shopping {
-    width: 16rem;
-    height: 4rem;
+    grid-area: crt-act-shp;
+    width: 20rem;
     padding: 0.75rem 1rem 0.76rem 1rem;
-    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 .cart-actions-checkout {
-    width: 24rem;
-    height: 4rem;
+    grid-area: crt-act-chk;
+    width: 20rem;
     padding: 0.75rem 1rem 0.76rem 1rem;
 }
 
@@ -449,6 +353,7 @@
 }
 
 .cart-empty {
+    grid-area: itm-lst-btn;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, max-content);
@@ -466,19 +371,27 @@
 
 .empty-buttons {
     grid-area: emp-btn;
-    place-self: center center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas:
+        "crt-emp-shp"
+        "crt-emp-chk";
+    place-content: center center;
 }
 
 .cart-empty-shopping {
-    width: 16rem;
-    height: 4rem;
+    grid-area: crt-emp-shp;
+    width: 19rem;
+    place-self: center center;
     padding: 0.75rem 1rem 0.75rem 1rem;
-    margin-right: 0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 .cart-empty-checkout {
-    width: 24rem;
-    height: 4rem;
+    grid-area: crt-emp-chk;
+    width: 19rem;
+    place-self: center center;
     padding: 0.75rem 1rem 0.76rem 1rem;
 }
 
