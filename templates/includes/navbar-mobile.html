@@ -118,10 +118,10 @@
             </li>
             <li class="sliding-cart">
                 <div class="sliding-icons">
-                    <a href="javascript:void(0);" class="no-decoration">
+                    <a href="{% url 'cart' %}" class="no-decoration">
                             <i class="fas fa-shopping-cart"></i>
                     </a>
-                    <a href="javascript:void(0);" class="no-decoration uppercase">
+                    <a href="{% url 'cart' %}" class="no-decoration uppercase">
                         {% if items_reserved %}
                             {{ items_reserved }}
                         {% else %}

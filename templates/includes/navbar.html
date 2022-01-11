@@ -126,12 +126,12 @@
     -->
     <div class="navbar-icons">
         <div class="navbar-icons-cart">
-            <a href="javascript:void(0);" class="no-decoration">
+            <a href="{% url 'cart' %}" class="no-decoration">
                 <i class="fas fa-shopping-cart"></i>
             </a>
         </div>
         <div class="navbar-cart-text">
-            <a href="javascript:void(0);" class="no-decoration uppercase">
+            <a href="{% url 'cart' %}" class="no-decoration uppercase">
                 {% if items_reserved %}
                     {{ items_reserved }}
                 {% else %}

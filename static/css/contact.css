@@ -6,7 +6,7 @@
 .container-contact {
     font-family: 'Montserrat', sans-serif;
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr;
     grid-template-rows: 100vh repeat(2, max-content);
     grid-template-areas: 
         "ctc-hdr"

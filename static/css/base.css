@@ -87,7 +87,7 @@ body {
 
 .cart-img-shadow,
 .checkout-img-shadow {
-    box-shadow: 0.45rem 0.45rem 0.9rem rgba(29, 43, 81, 0.5);
+    box-shadow: 0.3rem 0.3rem 0.5rem var(--std__blue);
 }
 
 .btn-blue-white {
@@ -729,7 +729,7 @@ body {
     background: var(--footer__orange);
     color: var(--std__blue);
     display: grid;
-    grid-template-columns: repeat(2, 50vw);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5, max-content);
     grid-template-areas:
         "men pol"
@@ -801,7 +801,7 @@ body {
 .footer-middle {
     grid-area: mid;
     display: grid;
-    grid-template-columns: 100vw;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(2, max-content);
     grid-template-areas:
         "com"

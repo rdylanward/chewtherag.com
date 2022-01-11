@@ -13,33 +13,6 @@ $(document).ready(function() {
         };
     };
 
-    /* Toggle sticky menu
-    function toggleStickyMenu() {
-        var sticky = 120;
-        var mobile_sticky = 80;
-        var winWidth = $(window).innerWidth();
-
-        if (winWidth < 1024 && $(window).scrollTop() > mobile_sticky) {
-            $(".container-mobile").addClass("sticky-container-mobile");
-        } else if (winWidth < 1024 && $(window).scrollTop() <= mobile_sticky) {
-            $(".container-mobile").removeClass("sticky-container-mobile");
-        } else if (winWidth > 1023 && $(window).scrollTop() > sticky) {
-            $(".container-navbar").addClass("sticky-navbar");
-            $(".navbar-brand").addClass("sticky-navbar-brand");
-            $(".navbar-menu").addClass("sticky-navbar-menu");
-            $(".navbar-message").addClass("sticky-navbar-message");
-            $(".navbar-icons").addClass("sticky-navbar-icons");
-            $(".navbar-mobile").addClass("sticky-navbar-mobile");
-        } else {
-            $(".container-navbar").removeClass("sticky-navbar");
-            $(".navbar-brand").removeClass("sticky-navbar-brand");
-            $(".navbar-menu").removeClass("sticky-navbar-menu");
-            $(".navbar-message").removeClass("sticky-navbar-message");
-            $(".navbar-icons").removeClass("sticky-navbar-icons");
-            $(".navbar-mobile").removeClass("sticky-navbar-mobile");
-        };
-    }; */
-
     /* Toggle sticky menu */
     function toggleStickyMenu() {
         var sticky = 80;

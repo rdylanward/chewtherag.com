@@ -40,31 +40,45 @@
             {% if cart_items %}
                 <div class="list-items-ordered">
                 {% for item in cart_items %}
-                    <span><img class="ordered-image cart-img-shadow" src="{{ item.item.image.url }}"></span>
-                    <span><p class="ordered-sku">{{ item.item.sku|upper }}</p></span>
-                    <span><p class="ordered-name"><strong>{{ item.item.name }}</strong></p></span>
-                    <span><p class="ordered-size">{% if item.item.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p></span>
-                    <span><p class="ordered-price">&euro;{{ item.item.price }}</p></span>
-                    <span class="ordered-quantity">
-                        <form class="detail-quantity" method="POST" action="{% url 'update_cart' item.item_id %}">
-                            {% csrf_token %}
-                            <button class="quantity-input-decrement quantity-control blue" data-item_id="{{ item.item_id }}" id="decrement_qty_{{ item.item_id }}">
-                                <i class="fas fa-minus"></i>
-                            </button>
-                            <input class="quantity-input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="999" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
-                            <button class="quantity-input-increment quantity-control blue" data-item_id="{{ item.item_id }}" id="increment_qty_{{ item.item_id }}">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                            {% if item.item.has_sizes %}
-                                <input type="hidden" name="item_size" value="{{ item.size }}">
-                            {% endif %}
-                        </form>
-                        <div class="update-remove-wrapper">
-                            <a class="update-quantity update-remove no-decoration"><i class="fas fa-sync-alt"></i></a>
-                            <a class="remove-item update-remove no-decoration" id="remove_{{ item.item_id }}" data-item_size="{{ item.size }}"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </span>
-                    <span><p class="ordered-total">&euro;{{ item.subtotal }}</p></span>
+                   <div class="list-items-wrapper">
+                        <span class="span1">
+                            <img class="ordered-image cart-img-shadow" src="{{ item.item.image.url }}">
+                        </span>
+                        <span class="span2">
+                            <p class="ordered-sku">{{ item.item.sku|upper }}</p>
+                        </span>
+                        <span class="span3">
+                            <p class="ordered-name"><strong>{{ item.item.name }}</strong></p>
+                        </span>
+                        <span class="span4">
+                            <p class="ordered-size">{% if item.item.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                        </span>
+                        <span class="spanX">
+                            <p class="ordered-price">&euro;{{ item.item.price }}</p>
+                        </span>
+                        <span class="ordered-quantity span5">
+                            <form class="detail-quantity" method="POST" action="{% url 'update_cart' item.item_id %}">
+                                {% csrf_token %}
+                                <button class="quantity-input-decrement quantity-control blue" data-item_id="{{ item.item_id }}" id="decrement_qty_{{ item.item_id }}">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input class="quantity-input" type="number" name="quantity" value="{{ item.quantity }}" min="1" max="999" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                <button class="quantity-input-increment quantity-control blue" data-item_id="{{ item.item_id }}" id="increment_qty_{{ item.item_id }}">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                                {% if item.item.has_sizes %}
+                                    <input type="hidden" name="item_size" value="{{ item.size }}">
+                                {% endif %}
+                            </form>
+                            <div class="update-remove-wrapper">
+                                <a class="update-quantity update-remove no-decoration"><i class="fas fa-sync-alt"></i></a>
+                                <a class="remove-item update-remove no-decoration" id="remove_{{ item.item_id }}" data-item_size="{{ item.size }}"><i class="fas fa-trash"></i></a>
+                            </div>
+                        </span>
+                        <span class="span6">
+                            <p class="ordered-total">&euro;{{ item.subtotal }}</p>
+                        </span>
+                    </div>
                 {% endfor %}
                 </div>
                 <div class="list-items-tally">
