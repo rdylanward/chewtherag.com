@@ -181,7 +181,7 @@ $(document).ready(function() {
 
     /* Auto-close toast */
     $(".toast-wrapper").ready(function() {
-        $(".toast-wrapper").delay(2000).fadeOut("slow", "swing");
+        $(".toast-wrapper").delay(12000).fadeOut("slow", "swing");
 
         /* Close the toast by clicking the button */
         $(".toast-close").click(function() {

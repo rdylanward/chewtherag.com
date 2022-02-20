@@ -227,6 +227,7 @@ body {
 .toast-message p {
     font-size: 1.4rem;
     font-weight: 500;
+    color: var(--almost__white);
     margin: 1.2rem;
 }
 

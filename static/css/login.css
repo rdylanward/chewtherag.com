@@ -1,0 +1,42 @@
+/**********************************************************************/
+/***                        Login Container                         ***/
+/**********************************-***********************************/
+
+
+.container-login {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas:
+        "lgn-hdr";
+}
+
+
+/**********************************************************************/
+/***                          Login Header                          ***/
+/**********************************-***********************************/
+
+
+.login-header {
+    grid-area: lgn-hdr;
+    color: var(--almost__white);
+    background-image: linear-gradient(rgba(7, 10, 18, 0.6), rgba(7, 10, 18, 0.6)), url('/media/laptop-on-login-screen.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    color: var(--almost__white);
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: minmax(7rem, 9rem) max-content;
+    grid-template-areas:
+        "lgn-hdr-ttl"
+        "lgn-hdr-reg"
+        "lgn-hdr-lgn"
+        "lgn-hdr-pwd"
+        "lgn-hdr-rem"
+        "lgn-hdr-frm";
+    place-content: center start;
+    margin: 0rem 2rem;
+}
